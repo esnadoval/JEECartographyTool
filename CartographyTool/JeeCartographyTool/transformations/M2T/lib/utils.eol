@@ -1,0 +1,219 @@
+operation getJTADataSource() : String{
+	return "jdbc/conciso";
+}
+
+//Manejo de cadenas
+operation String toLowerFirst() : String{
+ return ((self.charAt(0)+"").toLowerCase())+self.subString(1,self.length);
+}
+ 
+operation String toUpperFirst() : String{
+ return ((self.charAt(0)+"").toUpperCase())+self.subString(1,self.length);
+}
+
+operation toLowerFirst(cadena : String) : String{
+ return ((cadena.charAt(0)+"").toLowerCase())+cadena.subString(1,cadena.length);
+}
+ 
+operation toUpperFirst(cadena : String) : String{
+ return ((cadena.charAt(0)+"").toUpperCase())+cadena.subString(1,cadena.length);
+}
+
+operation removeAmpersands(cadena : String) : String{
+	return cadena.replace("&","");
+}
+
+operation projectName() : String{
+	return "AplicacionMigrada";
+}
+
+//Creaci�n de directorios
+//Para directorios en los que se almacenan clases java primero crear
+//la función que devuelve el paquete y después utilizar 
+//la función packageToDir(package) sobre este paquete.
+operation baseDir() : String{
+	return "src/main/";
+}
+
+operation webDir() : String {
+	return projectName()+"/" +baseDir() + "webapp/";
+}
+
+operation srcDir() : String {
+	return projectName() + "/" + baseDir() + "java/";
+}
+
+operation rscDir() : String {
+	return projectName() + "/" + baseDir() + "resources/";
+}
+
+//JAVA src directories
+operation entityDir() : String{
+	return srcDir()+packageToDir(entityPackage());
+}
+
+operation bbeansDir() : String{
+	return srcDir()+packageToDir(bbeansPackage());
+}
+
+operation bbeansUtilDir() : String{
+	return srcDir()+packageToDir(bbeansUtilPackage());
+}
+
+operation persistenceControllerDir() : String{
+	return srcDir()+packageToDir(persistenceManagerPackage());
+}
+
+operation validacionDir() : String{
+	return srcDir()+packageToDir(validacionPackage());
+}
+
+operation templatesDir() : String{
+	return webDir()+"templates/";
+}
+
+operation adminDir() : String{
+	return webDir()+"admin/";
+}
+
+//Resources directory
+operation resourcesMetainfDir(){
+	return projectName()+"/"+baseDir()+"resources/META-INF/";
+}
+
+//Webapp directories
+operation webResourcesDir() : String{
+	return webDir()+"resources/";
+}
+
+operation cssResourcesDir() : String{
+	return webResourcesDir()+"css/";
+}
+
+operation jsResourcesDir() : String{
+	return webResourcesDir()+"js/";
+}
+
+operation webinfDir() : String{
+	return webDir()+"WEB-INF/";
+}
+
+//Creacion de paquetes
+//Src package is the package that goes inside de src folder
+operation basePackage() : String{
+	return "com.asesoftware.pilotoconciso";
+}
+
+operation basePackageDir() : String {
+	return packageToDir(basePackage());
+}
+
+operation packageToDir(package : String) : String {
+	var packageFolders : String;
+	for(folder in package.split("\\.")){
+		packageFolders = packageFolders + folder + "/";
+	}
+	return packageFolders;
+}
+
+operation entityPackage() : String{
+	return basePackage()+".entity";
+}
+
+operation bbeansPackage() : String{
+	return basePackage()+".bbeans";
+}
+
+operation bbeansUtilPackage() : String{
+	return bbeansPackage()+".util";
+}
+
+operation validacionPackage() : String{
+	return basePackage()+".validacion";
+}
+
+operation persistenceManagerPackage(){
+	return basePackage()+".persistence.controller";
+}
+
+//Add file extensions
+operation addJavaExtension(nombre : String) : String {
+	return nombre+".java";
+}
+
+operation addXhtmlExtension(nombre : String) : String {
+	return nombre+".xhtml";
+}
+
+operation generateEntityController(entidad : String) : String{
+	return addJavaExtension(entidad+"Controller");
+}
+
+//DIRECTORIOS EGLS
+operation mainEGLFolder() : String{
+	return "EGLsAplicacion";
+}
+
+operation eglWebDir() : String {
+	return mainEGLFolder()+"/" +baseDir() + "webapp/";
+}
+
+operation eglSrcDir() : String {
+	return mainEGLFolder() + "/" + baseDir() + "java/";
+}
+
+operation eglRscDir() : String {
+	return mainEGLFolder() + "/" + baseDir() + "resources/";
+}
+
+//DIRECTORIOS EGLS - JAVA src directories
+operation eglEntityDir() : String{
+	return eglSrcDir()+packageToDir(entityPackage());
+}
+
+operation eglBbeansDir() : String{
+	return eglSrcDir()+packageToDir(bbeansPackage());
+}
+
+operation eglBbeansUtilDir() : String{
+	return eglSrcDir()+packageToDir(bbeansUtilPackage());
+}
+
+operation eglPersistenceControllerDir() : String{
+	return eglSrcDir()+packageToDir(persistenceManagerPackage());
+}
+
+operation eglValidacionDir() : String{
+	return eglSrcDir()+packageToDir(validacionPackage());
+}
+
+//DIRECTORIOS EGLS - Resources directory
+operation eglResourcesMetainfDir(){
+	return eglRscDir()+"META-INF/";
+}
+
+//DIRECTORIOS EGLS - Webapp directories
+operation eglWebResourcesDir() : String{
+	return eglWebDir()+"resources/";
+}
+
+operation eglCssResourcesDir() : String{
+	return eglWebResourcesDir()+"css/";
+}
+
+operation eglJsResourcesDir() : String{
+	return eglWebResourcesDir()+"js/";
+}
+
+operation eglWebinfDir() : String{
+	return eglWebDir()+"WEB-INF/";
+}
+
+operation eglTemplatesDir() : String{
+	return eglWebDir()+"templates/";
+}
+
+operation eglAdminDir() : String{
+	return eglWebDir()+"admin/";
+}
+ 

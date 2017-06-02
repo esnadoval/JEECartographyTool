@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/JeeCartographyDomain/src-gen" editDirectory="/JeeCartographyDomain.edit/src-gen"
+    editorDirectory="/JeeCartographyDomain.editor/src-gen" modelPluginID="JeeCartographyDomain"
+    modelName="CartographyDescription" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>CartographyDescription.ecore</foreignModel>
+  <genPackages prefix="CartographyDescription" disposableProviderFactory="true" ecorePackage="CartographyDescription.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CartographyDescription.ecore#//RelationType">
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//RelationType/asosiation"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//RelationType/realization"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//RelationType/use"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//RelationType/implements"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//RelationType/tests"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CartographyDescription.ecore#//Visibility">
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//Visibility/none"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//Visibility/public"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//Visibility/private"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//Visibility/protected"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CartographyDescription.ecore#//Inhertance">
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//Inhertance/none"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//Inhertance/abstract"/>
+      <genEnumLiterals ecoreEnumLiteral="CartographyDescription.ecore#//Inhertance/final"/>
+    </genEnums>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Application">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Application/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Application/layers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Application/compilationUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Application/appRelations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Application/paterns"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Module">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Module/subModules"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Module/cartographyElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Module/layers"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Pattern">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Pattern/modules"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Entity/frameworkType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Entity/dbTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Entity/persistenceMode"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Bussiness">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Bussiness/frameworkType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Bussiness/usageStrategy"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//UI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//UI/frameworkType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//UI/forDevice"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Class/visibility"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Class/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Class/methods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Class/modiscoClassDeclaration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Class/inhertance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Class/implements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Class/extends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Class/originalFileName"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Layer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Layer/compilationUnits"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Attribute/visibility"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Attribute/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Service/type"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Method/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Method/code"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Method/returnType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Method/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Method/inhertance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Method/exceptions"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Annotation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Annotation/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Annotation/params"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Variable/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Variable/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Variable/inhertance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Variable/static"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Interface"/>
+    <genClasses ecoreClass="CartographyDescription.ecore#//ElementRelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//ElementRelation/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//ElementRelation/dest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//ElementRelation/relationType"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//UnitTest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//UnitTest/type"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//VarType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//VarType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//StaticMetrics">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//StaticMetrics/locs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//StaticMetrics/comments"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//AnnotatedObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//CartographyElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//CartographyElement/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//CartographyElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//CartographyElement/migRelations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//CartographyElement/parentModule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//PersistenceManager">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//PersistenceManager/persistenceType"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//AnnotationParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//AnnotationParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//AnnotationParameter/value"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Exception">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Exception/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,439 @@
+operation String toLowerFirst() : String{
+ return ((self.charAt(0)+"").toLowerCase())+self.subString(1,self.length);
+}
+ 
+operation String toUpperFirst() : String{
+ return ((self.charAt(0)+"").toUpperCase())+self.subString(1,self.length);
+}
+
+operation Class lowerName() : String{
+	return self.name.toLowerCase();
+}
+
+operation Class DTOName() : String{
+	return self.name.toUpperFirst().concat('DTO');
+}
+
+operation Class PageName() : String{
+	return self.name.toUpperFirst().concat('PageDTO');
+}
+
+operation Class name() : String{
+	return self.name.toUpperFirst();
+}
+
+operation Class toLower() : String{
+	return self.name.toLowerCase();
+}
+
+operation Class jsFileName() : String{
+	return self.name.firstToLowerCase();
+}
+
+operation Class toLowerFirst() : String{
+	return self.name.firstToLowerCase();
+}
+
+operation String toLowerFirst() : String{
+	return self.firstToLowerCase();
+}
+
+operation String toLower() : String{
+	return self.toLowerCase();
+}
+
+operation Class basePckPath() : String {
+ 	return getBasePackagePath()+'/'+self.name.toLowerCase();
+}
+
+operation Class masterBasePckPath() : String {
+ 	return self.basePckPath()+"/master";
+}
+
+operation Class basePck() : String {
+ 	return getBasePackage()+'.'+self.name.toLowerCase();
+}
+
+function getBasePackagePath(){
+ if(groupName<>null and groupName.size()>0){
+ 	return 'co/edu/uniandes/csw/'+groupName;
+ } else {
+ 	return 'co/edu/uniandes/csw';
+ }
+}
+
+function getBasePackage(){
+ if(groupName<>null and groupName.size()>0){
+ 	return 'co.edu.uniandes.csw.'+groupName;
+ } else {
+ 	return 'co.edu.uniandes.csw';
+ }
+}
+
+operation Class getListTypeAttributes() {
+ var resp = new List;
+ for(attr in self.attribute){
+  if(attr.ownedComment->size()>0){
+   resp.add(attr);
+  }
+ }
+ return resp;
+}
+
+
+
+operation Class master_src_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.logic/src/main/java';
+	} else{
+		return self.name.toLowerCase()+'.master.service.subsystem/src/main/java';
+	}
+}
+
+operation Class master_test_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.logic/src/test/java';
+	} else{
+		return self.name.toLowerCase()+'.master.service.subsystem/src/test/java';
+	}
+}
+
+operation Class master_rsc_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.logic/src/main/resources';
+	} else{
+		return self.name.toLowerCase()+'.master.service.subsystem/src/main/resources';
+	}
+}
+
+operation Class master_web_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.web/src/main/webapp';
+	} else{
+		return self.name.toLowerCase()+'.master.service.subsystem/src/main/webapp';
+	}
+}
+
+
+@cache
+operation Class mock_src_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.mock/src/main/java';
+	} else{
+		return self.subsystem_src_dir();
+	}
+}
+
+@cache
+operation Class api_src_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.api/src/main/java';
+	} else{
+		return self.subsystem_src_dir();
+	}
+}
+
+@cache
+operation Class subsystem_src_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.logic/src/main/java';
+	} else{
+		return self.name.toLowerCase()+'.service.subsystem/src/main/java';
+	}
+}
+
+@cache
+operation Class subsystem_rsc_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.logic/src/main/resources';
+	} else{
+		return self.name.toLowerCase()+'.service.subsystem/src/main/resources';
+	}		
+}
+
+@cache
+operation Class subsystem_test_src_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.logic/src/test/java';
+	} else{
+		return self.name.toLowerCase()+'.service.subsystem/src/test/java';
+	}
+}
+
+
+operation Class service_web_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.web/src/main/webapp';
+	} else{
+		return self.name.toLowerCase()+'.service.subsystem.web/src/main/webapp';
+	}
+}
+
+operation Class service_src_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.web/src/main/java';
+	} else{
+		return self.name.toLowerCase()+'.service.subsystem/src/main/java';
+	}
+}
+
+operation Class service_rsc_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.web/src/main/resources';
+	} else{
+		return self.name.toLowerCase()+'.service.subsystem.web/src/main/resources';
+	}
+}
+
+operation Class client_web_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.web/src/main/webapp';
+	} else{
+		return self.name.toLowerCase()+'.web/src/main/webapp';
+	}
+}
+
+operation Class client_src_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.web/src/main/java';
+	} else{
+		return self.name.toLowerCase()+'.web/src/main/java';
+	}
+}
+
+operation Class client_rsc_dir() : String{
+	if(useBasicConfiguration=='true'){
+		return projectName+'.web/src/main/resources';
+	} else{
+		return self.name.toLowerCase()+'.web/src/main/resources';
+	}
+}
+
+
+@cache
+function Class hasReferences() :Boolean{
+	return self.getContainmentEntities().size()>0 or self.getSharedEntities().size()>0;
+}
+
+@cache
+function Class getAllAssociatedEntities() : List{
+ var resp = new List;
+ resp.addAll(self.getContainmentEntities());
+ resp.addAll(self.getSharedEntities());
+ return resp;
+}
+
+@cache
+function Class getAllAssociations() : List{
+ var resp = new List;
+ resp.addAll(self.getContainmentAssociations());
+ resp.addAll(self.getSharedAssociations());
+ return resp;
+}
+
+@cache
+function Class getAllAssociatedEntitiesUnique() : Set{
+ var resp = new Set;
+ resp.addAll(self.getContainmentEntities());
+ resp.addAll(self.getSharedEntities());
+ return resp;
+}
+
+
+@cache
+function Class getContainmentAssociations(){
+    var associations = new List;
+    for(asc in self.getAssociations()){
+     if(asc.binary){
+      // check that the first attribute is the type of the class
+      var firstEnd = asc.getMemberEnds().first();
+      var secondEnd =  asc.getMemberEnds().second();
+      if(firstEnd.type=self and secondEnd.upperBound=-1 and secondEnd.aggregation.toString()='composite'){
+       associations.add(asc);
+      }
+     }
+    }
+    return associations;
+} 
+
+@cache
+function Class getContainmentEntities(){
+    var classes = new List;
+    for(asc in self.getAssociations()){
+     if(asc.binary){
+      // check that the first attribute is the type of the class
+      var firstEnd = asc.getMemberEnds().first();
+      var secondEnd =  asc.getMemberEnds().second();
+      if(firstEnd.type=self and secondEnd.upperBound=-1 and secondEnd.aggregation.toString()='composite'){
+       secondEnd.type.~ascName = asc.name;
+       classes.add(secondEnd.type);
+      }
+     }
+    }
+    return classes;
+} 
+
+
+@cache
+function Class getSharedAssociations(){
+    var associations = new List;
+    for(asc in self.getAssociations()){
+     if(asc.binary){
+      // check that the first attribute is the type of the class
+      var firstEnd = asc.getMemberEnds().first();
+      var secondEnd =  asc.getMemberEnds().second();
+      if(firstEnd.type=self and secondEnd.upperBound=-1 and secondEnd.aggregation.toString()='shared'){
+       associations.add(asc);
+      }
+     }
+    }
+    return associations;
+}
+
+@cache
+function Class getSharedEntities(){
+    var classes = new List;
+    for(asc in self.getAssociations()){
+     if(asc.binary){
+      // check that the first attribute is the type of the class
+      var firstEnd = asc.getMemberEnds().first();
+      var secondEnd =  asc.getMemberEnds().second();
+      if(firstEnd.type=self and secondEnd.upperBound=-1 and secondEnd.aggregation.toString()='shared'){
+       secondEnd.type.~ascName = asc.name;
+       classes.add(secondEnd.type);
+      }
+     }
+    }
+    return classes;
+}
+
+-- ASSOCIATIONS METHODS
+
+@cache
+function Association getListQueryName(){
+    return 'getByMasterId';
+}
+
+@cache
+function Association getDeleteQueryName(){
+    return 'delete'+self.getSourceEntity().name+self.getName()+'Entity';
+}
+
+@cache
+function Association getEntityName(){
+    return self.getSourceEntity().name+self.getName()+'Entity';
+}
+
+@cache
+function Association getEntityIdName(){
+    return self.getSourceEntity().name.firstToLowerCase()+'Id';
+}
+
+@cache
+function Association getEndEntityIdName(){
+    return self.getName().firstToLowerCase()+'Id';
+}
+
+
+@cache
+function Association getSourceEntity(){
+    return self.getMemberEnds().first().type;
+}
+
+
+@cache
+function Association getEndEntity(){
+    return self.getMemberEnds().second().type;
+}
+
+@cache
+function Association getName(){
+    return self.getMemberEnds().second().name;
+}
+
+
+-- PROJECT MANAGEMENT
+
+@cache
+function getProjectUtils(){
+	return new Native("co.edu.uniandes.ticsw.spl.util.ProjectUtils");
+}
+
+function genProjectStructure(){
+	var projectUtils = getProjectUtils();
+	if(target=='heroku'){
+		"Creando estructura de proyecto para Heroku".println();
+	} else {
+		if(useBasicConfiguration=='true'){
+	    	projectUtils.genWebProject(output,projectName + ".web");	
+	    	projectUtils.genJarProject(output,projectName + ".api");
+	    	projectUtils.genJarProject(output,projectName + ".logic");
+	    	projectUtils.genJarProject(output,projectName + ".mock");
+	    	//projectUtils.genJarProject(projectName + ".service.subsystem");
+		} else{ 
+			for(cls in Class.all){
+				projectUtils.genWebProject(output,cls.getName().toLowerCase() + ".service.subsystem.web");
+				projectUtils.genWebProject(output,cls.getName().toLowerCase() + ".web");		
+				projectUtils.genJarProject(output,cls.getName().toLowerCase() + ".service.subsystem");
+			}
+		}
+	}
+}
+
+@cache
+function license(){
+	return " ========================================================================\n"+
+	" * Copyright 2014 " + groupName + "\n"+
+	" *\n"+
+	" * Licensed under the MIT, The MIT License (MIT)\n"+
+	" * Copyright (c) 2014 " + groupName + "\n"+
+	"\n"+
+	"Permission is hereby granted, free of charge, to any person obtaining a copy\n"+
+	"of this software and associated documentation files (the \"Software\"), to deal\n"+
+	"in the Software without restriction, including without limitation the rights\n"+
+	"to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n"+
+	"copies of the Software, and to permit persons to whom the Software is\n"+
+	"furnished to do so, subject to the following conditions:\n"+
+	"\n"+
+	"The above copyright notice and this permission notice shall be included in\n"+
+	"all copies or substantial portions of the Software.\n"+
+	"\n"+
+	"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n"+
+	"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"+
+	"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"+
+	"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"+
+	"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n"+
+	"OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n"+
+	"THE SOFTWARE.\n"+
+	" * ========================================================================\n"+
+	"\n"+
+	"\n"+
+	"Source generated by CrudMaker version "+ plugginVersion + "\n"+
+	"\n";
+}
+
+function genMasterProjectStructure(){
+	var projectUtils = getProjectUtils();
+	if(useBasicConfiguration=='true'){
+	--    projectUtils.genWebProject(projectName + ".web");	
+	--    projectUtils.genWebProject(projectName + ".service.subsystem.web");
+	} else{ 
+		for(cls in Class.all){
+			if(cls.hasReferences()){
+				projectUtils.genWebProject(output,cls.getName().toLowerCase() + ".master.service.subsystem");
+		 	}
+		}
+	}
+}
+
+function genFile(templName : String, targetFile: String, class: Any){
+ var templateName : Template;
+ templateName := TemplateFactory.load(templName+'.egl');
+ templateName.populate('aClass', class);
+ if(not "_".isSubstringOf(templName)){ 
+   templateName.generate(targetFile,false,false);
+ }else{
+  templateName.generate(targetFile);
+ }
+}
+

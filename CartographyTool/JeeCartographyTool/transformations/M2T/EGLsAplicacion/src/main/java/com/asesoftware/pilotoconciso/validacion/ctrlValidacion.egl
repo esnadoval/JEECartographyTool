@@ -1,0 +1,13 @@
+[%import "../../../../../../../../lib/utils.eol";%]
+[%
+	//Archivos estáticos - solo dinamico el paquete
+	var DoubleValidatorJAVA : Template;
+	DoubleValidatorJAVA := TemplateFactory.load(eglValidacionDir()+'DoubleValidatorJAVA.egl');
+	DoubleValidatorJAVA.generate(validacionDir()+"DoubleValidator.java");
+	
+	var DoubleRestrictionJAVA : Template;
+	DoubleRestrictionJAVA := TemplateFactory.load(eglValidacionDir()+'DoubleRestrictionJAVA.egl');
+	DoubleRestrictionJAVA.generate(validacionDir()+"DoubleRestriction.java");
+	
+
+%]

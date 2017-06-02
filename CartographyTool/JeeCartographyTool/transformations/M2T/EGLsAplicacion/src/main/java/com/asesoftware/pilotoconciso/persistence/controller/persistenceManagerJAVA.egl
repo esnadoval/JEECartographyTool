@@ -1,0 +1,281 @@
+[%import "../../../../../../../../../lib/utils.eol";%]
+package [%=persistenceManagerPackage()%];
+
+import java.io.InputStream;
+import java.io.Serializable;
+import java.lang.reflect.Field;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.UUID;
+import java.util.concurrent.Callable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.ejb.Stateless;
+import javax.naming.InitialContext;
+import javax.persistence.EntityManager;
+import javax.persistence.Id;
+import javax.persistence.Parameter;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+/**
+ * Administrador de persitencia para todas las tareas que incluyan acceso a la
+ * base de datos.
+ *
+ * @author Camilo Alvarez at <cadmilo@gmail.com>
+ */
+@Stateless
+public class PersistenceManager implements Serializable {
+
+    /**
+     * JNDI para la EJB del manejador de persistencia
+     */
+    public final static String EJB_REFERENCE = "java:global/[%=projectName()%]/PersistenceManager";
+    // Atributos
+    @PersistenceContext
+    private EntityManager em;
+
+    /**
+     * Persite un objeto en la base de datos.
+     *
+     * @param obj
+     */
+    public void create(Object obj) {
+        em.persist(obj);
+    }
+
+    /**
+     * Elimina un objeto de la obase de datos.
+     *
+     * @param Class c
+     * @param int obj
+     */
+    public void delete(Class c, Object obj) {
+        Field[] campos = c.getDeclaredFields();
+        String idFieldName = "";
+        for (Field field : campos) {
+            field.setAccessible(true);
+            if (field.isAnnotationPresent(Id.class)) {
+                idFieldName = field.getName();
+                break;
+            }
+        }
+        String param = "delete from " + c.getSimpleName() + " where " + idFieldName + " =" + obj;
+        Query q = em.createQuery(param);
+        q.executeUpdate();
+    }
+
+    /**
+     * Elimina los objetos en cascada deacuerdo a su mapeo
+     *
+     * @param Class c
+     * @param int obj
+     */
+    public void deleteCascade(Object o) {
+        em.remove(em.merge(o));
+    }
+
+    /**
+     * Limpia toda la informaci√≥n en cache para la sesi√≥n actual
+     */
+    public void clear() {
+        em.clear();
+    }
+
+    /**
+     * Elimina un objeto de la base de datos.
+     *
+     * @param Object obj
+     */
+    public void delete(Object obj) {
+        em.remove(em.merge(obj));
+    }
+
+    /**
+     * Actualiza un objeto en la base de datos.
+     *
+     * @param Object obj
+     */
+    public void update(Object obj) {
+        em.merge(obj);
+    }
+
+    /**
+     * Actualiza un objeto desde la base de datos.
+     *
+     * @param Object obj
+     */
+    public void refresh(Object obj) {
+        em.refresh(obj);
+    }
+
+    /**
+     * Busca un objeto en la base de datos.
+     *
+     * @param Class cl
+     * @param Object pk
+     * @return Object
+     */
+    public <T> T find(Class<T> cl, Object pk) {
+        return em.find(cl, pk);
+    }
+
+    /**
+     * Obtiene una lista con todos los resultados de una entidad.
+     *
+     * @param Object obj
+     * @return List
+     */
+    public List listData(Object obj) {
+        return em.createNamedQuery(obj.getClass().getSimpleName() + ".findAll").getResultList();
+    }
+
+    /**
+     * Obtiene una lista con todos los resultados de una entidad.
+     *
+     * @param Object obj
+     * @return List
+     */
+    public List listData(Class obj) {
+        return em.createNamedQuery(obj.getSimpleName() + ".findAll").getResultList();
+    }
+
+    /**
+     * Obtiene una lista con todos los resultados de un query.
+     *
+     * @param Query obj
+     * @return List
+     */
+    public List listData(Query q) {
+        return q.getResultList();
+    }
+
+    /**
+     * Crea un nuevo query JPQL
+     * @param sql El query en formato JPQL
+     * @return El query
+     */
+    public Query createQuery(String sql) {
+        return em.createQuery(sql);
+    }
+
+    /**
+     * Crea un nuevo query a partir del nombre dado
+     * @param sql El nombre del query nombrado
+     * @return El query
+     */
+    public Query createNamedQuery(String sql) {
+        return em.createNamedQuery(sql);
+    }
+
+    /**
+     * Obtiene un referencia a una instancia de la clase dada
+     *
+     * @param clazz La clase del objeto
+     * @param id El id del objeto
+     * @return Una referencia al objeto con la llave dada
+     */
+    public <R> R getReference(Class<R> clazz, Object id) {
+        return em.getReference(clazz, id);
+    }
+
+    public int getCount(Class c) {
+        return ((Long) em.createQuery("select count(c) from " + c.getSimpleName() + " c").getSingleResult()).intValue();
+    }
+
+    /**
+     * Alamacena un archivo utilizando JDBC directamente para ser eficiente
+     * @param fis El imputstream del archivo
+     * @param fileName El nombre del archivo
+     * @param mimeType el mime type del archivo
+     * @param size El tamaño del archivo 
+     * @return El identificador único con el que fue almacenado en la base de datos
+     */
+    public String uploadFile(InputStream fis, String fileName, String mimeType, long size) {
+        try {
+            String id = UUID.randomUUID().toString();
+            Connection conn = em.unwrap(Connection.class);
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO archivos(id_archivo,archivo,file_name,mime_type) VALUES (?, ?, ?,?)");
+            ps.setString(1, id);
+            ps.setBinaryStream(2, fis, (int) size);
+            ps.setString(3, fileName);
+            ps.setString(4, mimeType);
+            ps.executeUpdate();
+            ps.close();
+            fis.close();
+            return id;
+        } catch (Exception ex) {
+            Logger.getLogger(PersistenceManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    /**
+     * Ejecuta el "Callable" que llega como parametro en el contexto de persistencia
+     * @param <V> El tipo de resultado generado por el "Callable"
+     * @param c El "Callable"
+     * @return El resultado de la ejecución
+     */
+    public <V> V executeInPersistenceContext(Callable<V> c) {
+        try {
+            return c.call();
+        } catch (Exception ex) {
+            Logger.getLogger(PersistenceManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    /**
+     * Estbablece el valor del parametro en el query deado
+     * @param q El query
+     * @param p El parametro
+     * @param value El valor
+     */
+    public static void setParameter(Query q, Parameter p, String value) {
+        Class c = p.getParameterType();
+        if (value == null) {
+            q.setParameter(p, value);
+        } else if (c.equals(String.class)) {
+            q.setParameter(p, value);
+        } else if (c.equals(Integer.class) || (c.isPrimitive() && c.getName().equals("int"))) {
+            q.setParameter(p, new Integer(value));
+        } else if (c.equals(Boolean.class)) {
+            q.setParameter(p, Boolean.parseBoolean(value));
+        }
+    }
+
+    /**
+     * Consulta un archivo de la base de dataos utilizando su identificador a través de JDBC para ser eficiente
+     * @param realId El Id del archivo
+     * @return El InputStream del archivo
+     */
+    public InputStream getFileStream(String realId) {
+        try {
+            Connection con = em.unwrap(Connection.class);
+            PreparedStatement pStatement = con.prepareStatement("select archivo from archivos where id_archivo=?");
+            pStatement.setString(1, realId);
+            ResultSet rs = pStatement.executeQuery();
+            rs.next();
+            return rs.getBinaryStream(1);
+        } catch (SQLException ex) {
+            Logger.getLogger(PersistenceManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    /**
+     * Crea una nueva EJB de persistencia utilizando los valores por defecto del registro
+     * @return Una nueva instancia del manejador de persistencia
+     */
+    public static PersistenceManager getNewPersistenceManager() {
+        try {
+            return (PersistenceManager) new InitialContext().lookup(EJB_REFERENCE);
+        } catch (Exception ex) {
+            Logger.getLogger(PersistenceManager.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException(ex);
+        }
+    }
+}

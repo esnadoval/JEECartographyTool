@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="jeecartographytool.heuristics" name="JeeCartographyToolHeuristics" schema="schema/jeecartographytool.heuristics.exsd"/>
+
+   <extension
+         id="jeeCartographyProjectBuilder.heuristics"
+         name="Jee Cartography Project Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="jeecartographytool.builder.JeeCartographyProjectBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="jeeCrtographyProjectBuilder"
+         name="Jee Cartography Project Builder"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="jeecartographytool.builder.JeeCartographyProjectBuilder">
+         </run>
+      </runtime>
+      <builder
+            id="JeeCartographyTool.jeeCrtographyProjectBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Jee Cartography Project Builder commands"
+            id="JeeCartographyTool.jeeCrtographyProjectBuilder.category">
+      </category>
+      <command
+            name="Add/RemoveJee Cartography Project Builder"
+            defaultHandler="jeecartographytool.builder.AddRemoveJeeCartographyProjectBuilderHandler"
+            categoryId="JeeCartographyTool.jeeCrtographyProjectBuilder.category"
+            id="JeeCartographyTool.addRemoveJeeCartographyProjectBuilder">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.projectConfigure?after=additions">
+         <command
+               commandId="JeeCartographyTool.addRemoveJeeCartographyProjectBuilder"
+               label="Disable Jee Cartography Nature"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <adapt
+                           type="org.eclipse.core.resources.IProject">
+                        <test
+                              value="JeeCartographyTool.jeeCrtographyProjectBuilder"
+                              property="org.eclipse.core.resources.projectNature">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="JeeCartographyTool.addRemoveJeeCartographyProjectBuilder"
+               label="Enable Jee Cartography Nature"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <adapt
+                           type="org.eclipse.core.resources.IProject">
+                        <not>
+                           <test
+                                 value="JeeCartographyTool.jeeCrtographyProjectBuilder"
+                                 property="org.eclipse.core.resources.projectNature">
+                           </test>
+                        </not>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         id="xmlProblem"
+         name="XML Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="JeeCartographyTool"
+            name="Java Migration Wizards">
+      </category>
+      <wizard
+            category="JeeCartographyTool"
+            class="jeecartographytool.wizards.AppToModelWizard"
+            icon="icons/sample.gif"
+            id="jeecartographytool.wizards.SampleNewWizard"
+            name="Jee Cartography Project"
+            project="true">
+      </wizard>
+   </extension>
+   <extension
+         id="jeeCartography.icon.natures"
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="icons/nat.gif"
+            id="JeeCartographyTool.nat"
+            natureId="JeeCartographyTool.jeeCrtographyProjectBuilder">
+      </image>
+   </extension>
+   <extension
+         point="jeecartographytool.heuristics">
+      <jeecartographytool.heuristic.extension
+            class="jeecartographytool.defops.RelationResolver">
+      </jeecartographytool.heuristic.extension>
+      <jeecartographytool.heuristic.extension
+            class="jeecartographytool.defops.TierResolver">
+      </jeecartographytool.heuristic.extension>
+      <jeecartographytool.heuristic.extension
+            class="jeecartographytool.defops.WeightingResolver">
+      </jeecartographytool.heuristic.extension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="JeeCartographyTool.contribution1"
+            nameFilter="*.jcp"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="JeeCartographyTool.menu1"
+               label="Code Organization"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="jeecartographytool.popup.actions.GenerateReorganizedJavaProject"
+               enablesFor="1"
+               id="JeeCartographyTool.newAction"
+               label="Reorganize Java Project"
+               menubarPath="JeeCartographyTool.menu1/group1">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.sirius.externalJavaAction">
+      <javaActions
+            actionClass="jeecartographytool.handlers.OpenClassFile"
+            id="JeeCartographyTool.openclass">
+      </javaActions>
+      <javaActions
+            actionClass="jeecartographytool.handlers.SetPropertiesView"
+            id="JeeCartographyTool.setpropsview">
+      </javaActions>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="JeeCartographyTool.category1"
+            class="jeecartographytool.views.ElementPropertiesView"
+            icon="icons/sample.gif"
+            id="jeecartographytool.views.MigrationPropertiesView"
+            name="JEE Cartography Details "
+            restorable="true">
+      </view>
+      <category
+            id="JeeCartographyTool.category1"
+            name="JEE Cartography Tool">
+      </category>
+   </extension>
+
+</plugin>

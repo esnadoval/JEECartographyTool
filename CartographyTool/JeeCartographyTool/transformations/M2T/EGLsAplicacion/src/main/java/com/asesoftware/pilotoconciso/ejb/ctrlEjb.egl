@@ -1,0 +1,10 @@
+[%import "../../../../../../../../lib/utils.eol";%]
+[%
+//Por el momento no está siendo utilizada
+for(entity in Entity.all){
+	var templateName : Template;
+	templateName := TemplateFactory.load('ejbJAVA.egl');
+	templateName.populate('entity', entity);
+	templateName.generate('targetFile');
+}
+%]

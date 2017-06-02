@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="../templates/crud-template.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:param name="pageName" value="CUENTAS " />
+    <ui:param name="controller" value="#{cB_CUENTASController}" />
+    <ui:param name="fieldId" value="CTA_NUMERO"  />
+    <body>
+
+        <ui:define name="view-columns">
+        		<p:column headerText="CTA_CTACIA" filterBy="#{cr.CTA_CTACIA}">
+                	#{cr.CTA_CTACIA}
+            	</p:column>	
+        		<p:column headerText="CTA_CTAENF" filterBy="#{cr.CTA_CTAENF}">
+                	#{cr.CTA_CTAENF}
+            	</p:column>	
+        		<p:column headerText="CTA_NUMERO" filterBy="#{cr.CTA_NUMERO}">
+                	#{cr.CTA_NUMERO}
+            	</p:column>	
+        		<p:column headerText="CTA_CTAINT" filterBy="#{cr.CTA_CTAINT}">
+                	#{cr.CTA_CTAINT}
+            	</p:column>	
+        		<p:column headerText="CTA_CODCOM" filterBy="#{cr.CTA_CODCOM}">
+                	#{cr.CTA_CODCOM}
+            	</p:column>	
+        		<p:column headerText="CTA_SUC_NUMERO" filterBy="#{cr.CTA_SUC_NUMERO}">
+                	#{cr.CTA_SUC_NUMERO}
+            	</p:column>	
+        		<p:column headerText="CTA_EMP_CODIGO" filterBy="#{cr.CTA_EMP_CODIGO}">
+                	#{cr.CTA_EMP_CODIGO}
+            	</p:column>	
+        		<p:column headerText="CTA_PRS_IDENT" filterBy="#{cr.CTA_PRS_IDENT}">
+                	#{cr.CTA_PRS_IDENT}
+            	</p:column>	
+        		<p:column headerText="CTA_SUC_EMPNUM" filterBy="#{cr.CTA_SUC_EMPNUM}">
+                	#{cr.CTA_SUC_EMPNUM}
+            	</p:column>	
+        		<p:column headerText="CTA_CLASE_CUENTA" filterBy="#{cr.CTA_CLASE_CUENTA}">
+                	#{cr.CTA_CLASE_CUENTA}
+            	</p:column>	
+        		<p:column headerText="CTA_USUARIO_PROPIETARIO" filterBy="#{cr.CTA_USUARIO_PROPIETARIO}">
+                	#{cr.CTA_USUARIO_PROPIETARIO}
+            	</p:column>	
+        		<p:column headerText="CTA_ACTIVA" filterBy="#{cr.CTA_ACTIVA}">
+                	#{cr.CTA_ACTIVA}
+            	</p:column>	
+        		<p:column headerText="CTA_EN_PROCESO" filterBy="#{cr.CTA_EN_PROCESO}">
+                	#{cr.CTA_EN_PROCESO}
+            	</p:column>	
+        		<p:column headerText="CTA_BANCARIA" filterBy="#{cr.CTA_BANCARIA}">
+                	#{cr.CTA_BANCARIA}
+            	</p:column>	
+        		<p:column headerText="CTA_ACUMULA_SALDOS" filterBy="#{cr.CTA_ACUMULA_SALDOS}">
+                	#{cr.CTA_ACUMULA_SALDOS}
+            	</p:column>	
+        		<p:column headerText="CTA_PRO_CODIGO" filterBy="#{cr.CTA_PRO_CODIGO}">
+                	#{cr.CTA_PRO_CODIGO}
+            	</p:column>	
+        		<p:column headerText="CTA_SUB_CODIGO" filterBy="#{cr.CTA_SUB_CODIGO}">
+                	#{cr.CTA_SUB_CODIGO}
+            	</p:column>	
+        		<p:column headerText="CTA_TIPO_CUENTA" filterBy="#{cr.CTA_TIPO_CUENTA}">
+                	#{cr.CTA_TIPO_CUENTA}
+            	</p:column>	
+        		<p:column headerText="CTA_CODIGO_MONEDA" filterBy="#{cr.CTA_CODIGO_MONEDA}">
+                	#{cr.CTA_CODIGO_MONEDA}
+            	</p:column>	
+        </ui:define>
+
+        <ui:define name="edit">
+            <h:panelGrid columns="2">
+            	<p:outputLabel value="CTA_CTACIA" for="inpCTA_CTACIA" />
+                <p:inputText id="inpCTA_CTACIA" label="CTA_CTACIA" value="#{cB_CUENTASController.co.CTA_CTACIA}" size="54" />
+            	<p:outputLabel value="CTA_CTAENF" for="inpCTA_CTAENF" />
+                <p:inputText id="inpCTA_CTAENF" label="CTA_CTAENF" value="#{cB_CUENTASController.co.CTA_CTAENF}" size="54" />
+            	<p:outputLabel value="CTA_NUMERO" for="inpCTA_NUMERO" />
+                <p:inputText id="inpCTA_NUMERO" label="CTA_NUMERO" value="#{cB_CUENTASController.co.CTA_NUMERO}" size="54" />
+            	<p:outputLabel value="CTA_CTAINT" for="inpCTA_CTAINT" />
+                <p:inputText id="inpCTA_CTAINT" label="CTA_CTAINT" value="#{cB_CUENTASController.co.CTA_CTAINT}" size="54" />
+            	<p:outputLabel value="CTA_CODCOM" for="inpCTA_CODCOM" />
+                <p:inputText id="inpCTA_CODCOM" label="CTA_CODCOM" value="#{cB_CUENTASController.co.CTA_CODCOM}" size="54" />
+            	<p:outputLabel value="CTA_SUC_NUMERO" for="inpCTA_SUC_NUMERO" />
+                <p:inputText id="inpCTA_SUC_NUMERO" label="CTA_SUC_NUMERO" value="#{cB_CUENTASController.co.CTA_SUC_NUMERO}" size="54" />
+            	<p:outputLabel value="CTA_EMP_CODIGO" for="inpCTA_EMP_CODIGO" />
+                <p:inputText id="inpCTA_EMP_CODIGO" label="CTA_EMP_CODIGO" value="#{cB_CUENTASController.co.CTA_EMP_CODIGO}" size="54" />
+            	<p:outputLabel value="CTA_PRS_IDENT" for="inpCTA_PRS_IDENT" />
+                <p:inputText id="inpCTA_PRS_IDENT" label="CTA_PRS_IDENT" value="#{cB_CUENTASController.co.CTA_PRS_IDENT}" size="54" />
+            	<p:outputLabel value="CTA_SUC_EMPNUM" for="inpCTA_SUC_EMPNUM" />
+                <p:inputText id="inpCTA_SUC_EMPNUM" label="CTA_SUC_EMPNUM" value="#{cB_CUENTASController.co.CTA_SUC_EMPNUM}" size="54" />
+            	<p:outputLabel value="CTA_CLASE_CUENTA" for="inpCTA_CLASE_CUENTA" />
+                <p:inputText id="inpCTA_CLASE_CUENTA" label="CTA_CLASE_CUENTA" value="#{cB_CUENTASController.co.CTA_CLASE_CUENTA}" size="54" />
+            	<p:outputLabel value="CTA_USUARIO_PROPIETARIO" for="inpCTA_USUARIO_PROPIETARIO" />
+                <p:inputText id="inpCTA_USUARIO_PROPIETARIO" label="CTA_USUARIO_PROPIETARIO" value="#{cB_CUENTASController.co.CTA_USUARIO_PROPIETARIO}" size="54" />
+            	<p:outputLabel value="CTA_ACTIVA" for="inpCTA_ACTIVA" />
+                <p:inputText id="inpCTA_ACTIVA" label="CTA_ACTIVA" value="#{cB_CUENTASController.co.CTA_ACTIVA}" size="54" />
+            	<p:outputLabel value="CTA_EN_PROCESO" for="inpCTA_EN_PROCESO" />
+                <p:inputText id="inpCTA_EN_PROCESO" label="CTA_EN_PROCESO" value="#{cB_CUENTASController.co.CTA_EN_PROCESO}" size="54" />
+            	<p:outputLabel value="CTA_BANCARIA" for="inpCTA_BANCARIA" />
+                <p:inputText id="inpCTA_BANCARIA" label="CTA_BANCARIA" value="#{cB_CUENTASController.co.CTA_BANCARIA}" size="54" />
+            	<p:outputLabel value="CTA_ACUMULA_SALDOS" for="inpCTA_ACUMULA_SALDOS" />
+                <p:inputText id="inpCTA_ACUMULA_SALDOS" label="CTA_ACUMULA_SALDOS" value="#{cB_CUENTASController.co.CTA_ACUMULA_SALDOS}" size="54" />
+            	<p:outputLabel value="CTA_PRO_CODIGO" for="inpCTA_PRO_CODIGO" />
+                <p:inputText id="inpCTA_PRO_CODIGO" label="CTA_PRO_CODIGO" value="#{cB_CUENTASController.co.CTA_PRO_CODIGO}" size="54" />
+            	<p:outputLabel value="CTA_SUB_CODIGO" for="inpCTA_SUB_CODIGO" />
+                <p:inputText id="inpCTA_SUB_CODIGO" label="CTA_SUB_CODIGO" value="#{cB_CUENTASController.co.CTA_SUB_CODIGO}" size="54" />
+            	<p:outputLabel value="CTA_TIPO_CUENTA" for="inpCTA_TIPO_CUENTA" />
+                <p:inputText id="inpCTA_TIPO_CUENTA" label="CTA_TIPO_CUENTA" value="#{cB_CUENTASController.co.CTA_TIPO_CUENTA}" size="54" />
+            	<p:outputLabel value="CTA_CODIGO_MONEDA" for="inpCTA_CODIGO_MONEDA" />
+                <p:inputText id="inpCTA_CODIGO_MONEDA" label="CTA_CODIGO_MONEDA" value="#{cB_CUENTASController.co.CTA_CODIGO_MONEDA}" size="54" />
+            </h:panelGrid>
+            
+        </ui:define>
+    </body>
+</ui:composition>

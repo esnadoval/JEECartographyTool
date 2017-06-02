@@ -1,0 +1,53 @@
+[%import "../../../../../../../../lib/utils.eol";%]
+package [%=entityPackage()%];
+
+[% if(entity.attributes->size()>0){%]
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+[% } %]
+
+@Entity
+@Table(name="SYSTEM.[%=entity.dbTableName%]")
+[% var caracter : String = entity.name.substring(0,1).toLowerCase(); %]
+@NamedQueries({
+    @NamedQuery(name = "[%=entity.name%].findAll", query = "SELECT [%=caracter%] FROM [%=entity.name%] [%=caracter%]")
+    [% for(attribute in entity.attributes){ %]
+	[% if(attribute.isTypeOf(BasicAttribute)){%]
+    , @NamedQuery(name = "[%=entity.name%].findBy[%=toUpperFirst(attribute.name)%]", query = "SELECT [%=caracter%] FROM [%=entity.name%] [%=caracter%] WHERE [%=caracter%].[%=attribute.name%] = :[%=attribute.name%]")
+    [%}%]
+[% } %]
+})
+public class [%=entity.name%] implements Serializable{
+
+private static final long serialVersionUID = 1L;
+
+[%for(attribute in entity.attributes){%]
+	[% if(attribute.isTypeOf(BasicAttribute)){%]
+		[% //PUNTO_ACTUALIZACION: manejo de primary keys multiples 
+		if(entity.primaryKey.includes(attribute)){ %]
+		@Id
+		[% } %]
+	    @Column(name="[%=attribute.dbColumnName%]")
+		private [%=attribute.type%] [%=attribute.name%];
+	
+	[%}%]
+[% } %]
+
+[%for(attribute in entity.attributes){%]
+	[% if(attribute.isTypeOf(BasicAttribute)){%]
+		public [%=attribute.type%] get[%=toUpperFirst(attribute.name)%](){
+			return this.[%=attribute.name%];
+		}
+		
+		public void set[%=toUpperFirst(attribute.name)%]([%=attribute.type%] [%=attribute.name%]){
+			this.[%=attribute.name%] = [%=attribute.name%];
+		}
+		
+	[%}%]
+[% } %]
+} 

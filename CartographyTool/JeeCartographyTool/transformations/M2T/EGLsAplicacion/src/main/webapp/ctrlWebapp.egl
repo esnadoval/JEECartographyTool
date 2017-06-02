@@ -1,0 +1,70 @@
+[%import "../../../../lib/utils.eol";%]
+[%
+	//NOTA: se generan todos los archivos webapp a excepción de la carpeta resources/img.
+	//Estos archivos se deben insertar manualmente.
+	
+	"Generacion del WebApp".println();
+	
+	//Archivos estáticos
+	
+	//Index.xhtml
+	var indexXHTML : Template;
+	indexXHTML := TemplateFactory.load(eglWebDir()+'indexXHTML.egl');
+	indexXHTML.generate(webDir()+"index.xhtml");
+	
+	//Resources
+	var crudUtilsJS : Template;
+	crudUtilsJS := TemplateFactory.load(eglJsResourcesDir()+'crud-utilsJS.egl');
+	crudUtilsJS.generate(jsResourcesDir()+"crud-utils.js");
+	
+	var webCSS : Template;
+	webCSS := TemplateFactory.load(eglCssResourcesDir()+'webCSS.egl');
+	webCSS.generate(cssResourcesDir()+"web.css");
+	
+	//WEB-INF
+	
+	var facesConfigXML : Template;
+	facesConfigXML := TemplateFactory.load(eglWebinfDir()+'faces-configXML.egl');
+	facesConfigXML.generate(webinfDir()+"faces-config.xml");
+	
+	var webXML : Template;
+	webXML := TemplateFactory.load(eglWebinfDir()+'webXML.egl');
+	webXML.generate(webinfDir()+"web.xml");
+	
+	//Templates
+	
+	"Generacion de templates".println();
+	var commonTemplateXHTML : Template;
+	commonTemplateXHTML = TemplateFactory.load(eglTemplatesDir()+"commonTemplateXHTML.egl");
+	commonTemplateXHTML.populate("menus",Application.all[0].menus);
+	commonTemplateXHTML.generate(templatesDir()+addXhtmlExtension("common-template"));
+	
+	var crudTemplateXHTML : Template;
+	crudTemplateXHTML = TemplateFactory.load(eglTemplatesDir()+"crud-templateXHTML.egl");
+	crudTemplateXHTML.generate(templatesDir()+addXhtmlExtension("crud-template"));
+		
+	//Generacion vistas tipo formulario
+	
+	"Generacion de las vistas tipo formulario".println();
+	var basicForms : Set ;
+	for(composedWebForm in ComposedWebForm.All){
+		for( displayItem in composedWebForm.children){
+			if(displayItem.webForm.size()>0 and displayItem.webForm.isKindOf(BasicWebForm)){
+				basicForms.add(displayItem.webForm);
+			}
+		}
+	}
+	
+	for( webForm in BasicWebForm.all.excludingAll(basicForms)){
+		
+		if(webForm.isTypeOf(BasicWebForm)){
+			if(not webForm.mainMaster.mainEntity.primaryKey.isEmpty() and webForm.mainMaster.innerMasters.isEmpty() and webForm.mainMaster.details.isEmpty()){
+				var dataDefinitionXHTML : Template;
+				dataDefinitionXHTML := TemplateFactory.load(eglAdminDir()+'dataDefinitionXHTML.egl');
+				dataDefinitionXHTML.populate("master", webForm.mainMaster);
+				dataDefinitionXHTML.generate(adminDir()+addXhtmlExtension(webForm.mainMaster.mainEntity.name));
+			}
+		}
+	}
+	
+%]

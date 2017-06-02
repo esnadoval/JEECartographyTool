@@ -1,0 +1,3 @@
+javax.faces.validator.BeanValidator.MESSAGE={1}: {0}
+sigaces.validator.DoubleRestriction.message=El valor debe estar entre {minValue} y {maxValue} y tener m\u00e1ximo {maxDecimalPlaces} cifras decimales.
+sigaces.validator.UniqueId.message=Ya existe un usuario registrado con este documento de identidad.

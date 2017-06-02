@@ -1,0 +1,26 @@
+[%
+	import "../../../../lib/utils.eol";
+	
+	//Archivos estáticos	
+	var validationMessagesPROPERTIES : Template;
+	validationMessagesPROPERTIES := TemplateFactory.load(eglSrcDir()+'validationMessagesPROPERTIES.egl');
+	validationMessagesPROPERTIES.generate(srcDir()+"ValidationMessages.properties");
+	
+	//Ejecucion de controladores
+	var ctrlBBeans : Template;
+	ctrlBBeans := TemplateFactory.load(eglBbeansDir()+'ctrlBbeans.egl');
+	ctrlBBeans.process();
+	
+	var ctrlEntity : Template;
+	ctrlEntity := TemplateFactory.load(eglEntityDir()+'ctrlEntity.egl');
+	ctrlEntity.process();
+	
+	var ctrlPersistence : Template;
+	ctrlPersistence := TemplateFactory.load(eglPersistenceControllerDir()+'ctrlPersistence.egl');
+	ctrlPersistence.process();
+	
+	var ctrlValidacion : Template;
+	ctrlValidacion := TemplateFactory.load(eglValidacionDir()+'ctrlValidacion.egl');
+	ctrlValidacion.process();
+	
+%]

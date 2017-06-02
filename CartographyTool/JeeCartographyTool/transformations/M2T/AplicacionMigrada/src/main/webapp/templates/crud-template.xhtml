@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <body>
+        <ui:composition template="../templates/common-template.xhtml">
+            <ui:param name="title" value="#{pageName}" />
+            <ui:param name="refrehsIds" value="#{pageName}" />
+            <ui:define name="scripts">
+                <ui:insert name="add-scripts" />
+                <h:outputScript library="js" target="body" name="crud-utils.js"  />
+            </ui:define>
+            <ui:define name="body">
+                <p:layout >
+                    <p:layoutUnit position="center">
+                        <ui:insert name="view">
+                            <ui:insert name="desc" />
+                            <ui:insert name="toolbar" >
+                                <h:form>
+                                    <p:toolbar rendered="true">
+                                        <p:toolbarGroup align="left" style="font-size: 25px; font-weight: bold">
+                                            <p:spacer width="8" /> <p:outputLabel value="#{pageName}" />
+                                        </p:toolbarGroup>
+                                        <p:toolbarGroup align="right">
+                                            <p:commandButton value="Agregar" rendered="#{hideAddButton==null}" icon="ui-icon-document" action="#{controller.createNew}" update=":frmEdit" oncomplete="newRow=true; PrimeFaces.widgets.editDlg.show()" >
+                                              <f:actionListener type="org.omnifaces.eventlistener.ResetInputAjaxActionListener" />
+                                            </p:commandButton>
+                                            <ui:insert name="end-toolbar" />
+                                        </p:toolbarGroup>
+                                    </p:toolbar>
+                                </h:form>
+                            </ui:insert>
+                            <h:form id="frmView"> 
+                                <p:dataTable id="tblData" var="cr" widgetVar="wTblData" rows="10" paginator="true" filterEvent="enter"
+                                             paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                                             rowsPerPageTemplate="5,10,15"
+                                             value="#{controller.dModel}" lazy="true" emptyMessage="No se encontraron registros." >
+                                    <ui:insert name="view-columns">
+
+                                    </ui:insert>
+                                    <p:column>
+                                        <ui:insert name="add-before-action-column">
+
+                                        </ui:insert>
+                                        <ui:insert name="action-column">
+                                            <p:button rendered="#{hideEditButton==null}" onclick="newRow = false;
+                                                    fncEdit('#{cr[fieldId]}');
+                                                    return false;" icon="ui-icon-pencil" />
+                                            <p:commandButton rendered="#{hideRemoveButton==null}" icon="ui-icon-trash"  onclick="fncDelete('#{cr[fieldId]}');" >
+                                                <p:confirm header="Confirmación" message="¿Esta seguro de eliminar el registro seleccionado?" icon="ui-icon-alert" />
+                                            </p:commandButton>
+                                            <p:confirmDialog global="true" showEffect="fade">
+                                                <p:commandButton value="Si" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                                                <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />   
+                                            </p:confirmDialog>  
+                                        </ui:insert>
+                                        <ui:insert name="add-after-action-column">
+
+                                        </ui:insert>
+                                    </p:column>
+                                </p:dataTable> 
+                            </h:form>
+                        </ui:insert>
+                    </p:layoutUnit>
+                </p:layout>
+                <ui:insert name="functions">
+                    <h:form>
+                        <pe:remoteCommand id="fncEdit" name="fncEdit" process="@this" update=":frmEdit" oncomplete="PrimeFaces.widgets.editDlg.show()" immediate="true" actionListener="#{controller.move}" >
+                            <pe:assignableParam name="idSelected" assignTo="#{controller.idSelected}"/>  
+                           <f:actionListener type="org.omnifaces.eventlistener.ResetInputAjaxActionListener" />
+                        </pe:remoteCommand>
+                    </h:form>
+                    <h:form>
+                        <pe:remoteCommand id="fncDelete" name="fncDelete" process="@this" update=":frmView" oncomplete="deleteConfirmation.hide()" actionListener="#{controller.delete}" >
+                            <pe:assignableParam name="idSelected" assignTo="#{controller.idSelected}"/>  
+                        </pe:remoteCommand>
+                        <pe:remoteCommand id="fncDownload" name="fncDownload" process="@this" update=":downDlg" oncomplete="downloadDlg.show()" actionListener="#{controller.genDownloadId}" >
+                            <pe:assignableParam name="fileId" assignTo="#{requestScope['fileId']}"  />  
+                        </pe:remoteCommand>
+                        <ui:insert name="add-functions" />
+                    </h:form>
+                </ui:insert>
+            </ui:define>
+            <ui:define name="appendToBody">
+                <p:dialog widgetVar="editDlg"  closeOnEscape="true" modal="true" closable="true" header="Edición - #{pageName}">
+                    <h:form id="frmEdit">
+                        <input type="hidden" id="id" name="id" value="#{controller.co[fieldId]}" />
+                        <p:messages autoUpdate="true"  closable="true"  />
+                        <ui:insert name="edit" >
+                        </ui:insert>
+                        <p:separator />
+                        <p:fieldset>
+                            <p:button  value="Grabar" rendered="#{!hideSaveButton}" icon="ui-icon-disk" onclick="save();
+                                                    return false;" />
+                            <ui:insert name="add-edit-buttons">
+                            </ui:insert>
+                        </p:fieldset>
+                        <ui:insert name="functions">
+                            <pe:remoteCommand id="fncCreate" name="fncCreate" process="@form" update=":frmEdit" actionListener="#{controller.create}" oncomplete="restoreFiltersValues()" />
+                            <pe:remoteCommand id="fncUpdate" name="fncUpdate" process="@form" update=":frmEdit" actionListener="#{controller.update}" oncomplete="restoreFiltersValues()" />
+                        </ui:insert>
+                    </h:form>
+                </p:dialog>
+                <p:dialog id="downDlg" widgetVar="downloadDlg"  closeOnEscape="true" modal="true" closable="true" header="Descarga de archivos">
+                    Haga click en el siguiente link para descargar el archivo <br></br>
+                    <a style="color: blue" href="../f?fid=#{requestScope['fid']}" onclick="downloadDlg.hide();" >Descargar el archivo</a>
+                </p:dialog>
+                <ui:insert name="dialogs" />
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

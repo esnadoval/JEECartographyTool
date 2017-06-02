@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated CartographyDescription -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="CartographyDescription.presentation.CartographyDescriptionModelWizardID"
+            name="%_UI_CartographyDescriptionModelWizard_label"
+            class="CartographyDescription.presentation.CartographyDescriptionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CartographyDescriptionModelFile.gif">
+         <description>%_UI_CartographyDescriptionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated CartographyDescription -->
+      <editor
+            id="CartographyDescription.presentation.CartographyDescriptionEditorID"
+            name="%_UI_CartographyDescriptionEditor_label"
+            icon="icons/full/obj16/CartographyDescriptionModelFile.gif"
+            extensions="jcp"
+            class="CartographyDescription.presentation.CartographyDescriptionEditor"
+            contributorClass="CartographyDescription.presentation.CartographyDescriptionActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

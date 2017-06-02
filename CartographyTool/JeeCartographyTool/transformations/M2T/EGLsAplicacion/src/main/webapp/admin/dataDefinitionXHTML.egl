@@ -1,0 +1,36 @@
+[%import "../../../../../lib/utils.eol";%]
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="../templates/crud-template.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:param name="pageName" value="[%=master.label%] " />
+    <ui:param name="controller" value="#{[%=toLowerFirst(master.mainEntity.name)%]Controller}" />
+    [% for(attribute in master.mainEntity.attributes){ 
+    	if(master.mainEntity.primaryKey.includes(attribute)){%]
+    <ui:param name="fieldId" value="[%=attribute.name%]"  />
+    [%	}
+    } %]
+    <body>
+
+        <ui:define name="view-columns">
+        	[% for(attribute in master.mainEntity.attributes) { %]
+        		<p:column headerText="[%=attribute.name%]" filterBy="#{cr.[%=attribute.name%]}">
+                	#{cr.[%=attribute.name%]}
+            	</p:column>	
+        	[% } %]
+        </ui:define>
+
+        <ui:define name="edit">
+            <h:panelGrid columns="2">
+            	[% for(attribute in master.mainEntity.attributes){ %]
+            	<p:outputLabel value="[%=attribute.name%]" for="inp[%=attribute.name%]" />
+                <p:inputText id="inp[%=attribute.name%]" label="[%=attribute.name%]" value="#{[%=toLowerFirst(master.mainEntity.name)%]Controller.co.[%=attribute.name%]}" size="54" />
+            	[% } %]
+            </h:panelGrid>
+            
+        </ui:define>
+    </body>
+</ui:composition>

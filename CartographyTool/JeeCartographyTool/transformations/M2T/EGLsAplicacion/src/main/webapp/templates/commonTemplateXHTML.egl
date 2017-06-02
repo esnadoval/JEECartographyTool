@@ -1,0 +1,106 @@
+[%import "../../../../../lib/utils.eol";%]
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:pe="http://primefaces.org/ui/extensions">
+    <h:head>
+        <title>#{title} - Nombre Empresa</title>
+        <link rel="shortcut icon" href="#{request.contextPath}/favicon.ico" />
+        <h:outputStylesheet library="css" name="web.css"  />
+        <ui:insert name="scripts" />
+    </h:head>
+
+    <h:body>
+    <!--        <f:event type="javax.faces.event.PreRenderViewEvent" listener="{applicationBean.preRenderView}" />-->
+        <p:growl autoUpdate="true"  />
+        <ui:insert name="appendToBody" />
+        <p:layout fullPage="true"  style="height: auto; margin: auto"  >
+
+            <p:layoutUnit id="tImage" position="north" resizable="false" closable="false" collapsible="false"> 
+                Banner
+            </p:layoutUnit> 
+
+            <p:layoutUnit position="center">
+                <h:form> 
+                    <p:growl id="messages"/>
+                   <p:menubar>
+                    	[% for(menu in MenuItem.all->select(m | m.webform.isDefined())) { 
+   							if(menu.webform.isTypeOf(BasicWebForm) and not menu.webform.mainMaster.mainEntity.primaryKey.isEmpty()){%]                 		
+                    		<p:submenu label="[%=removeAmpersands(menu.label)%]" icon="ui-icon-document">
+                            	<p:menuitem value="[%=menu.webform.mainMaster.mainEntity.name%]" url="admin/[%=menu.webform.mainMaster.mainEntity.name%].html" />
+                        	</p:submenu>
+                    	[% 
+                    		}
+                    	} %]
+                        <f:facet name="options">
+                            <p:commandButton type="button" value="Salir" icon="ui-icon-extlink" />
+                        </f:facet>
+                    </p:menubar>
+                </h:form>
+                <p:toolbar rendered="#{mostrarEncabezado=='true'}">
+                    <p:toolbarGroup align="left" style="font-size: 25px; font-weight: bold">
+                        <p:outputLabel value="#{nombrePagina}" />
+                    </p:toolbarGroup>
+                </p:toolbar>
+                <ui:insert name="body" />
+            </p:layoutUnit>
+
+
+
+            <p:layoutUnit position="south" size="60" style="background-color: lightgray;" resizable="false" closable="false"  collapsible="false">
+                <table style="background-color: lightgray;width: 100%" width="100%">
+                    <tr>
+                        <td>2015 Todos los derechos reservados
+                        </td>
+                    </tr>
+                </table>
+
+            </p:layoutUnit>
+
+        </p:layout>
+
+
+        <!-- Di�logos y ventanas modales -->
+
+        <p:dialog modal="true" widgetVar="statusDialog"
+                  draggable="false" closable="false">
+            Procesando ...<br></br>
+            <p:graphicImage library="img" name="ajaxloadingbar.gif" />
+        </p:dialog>
+        <p:ajaxStatus onstart="PrimeFaces.widgets.statusDialog.show();" onerror="alert('Error ejecutando la operaci�n.')" oncomplete="PrimeFaces.widgets.statusDialog.hide();" />  
+        <p:idleMonitor timeout="1800000"  
+                       onidle="idleDialog.show()" />
+
+        <p:dialog header="Sesi�n Terminada" resizable="false" closable="false"
+                  widgetVar="idleDialog" modal="true" width="400">
+            <h:outputText value="Su sesi�n ha terminado por inactividad." /><br></br>
+            <h:outputText value="Haga click en el bot�n Nueva Sesi�n para obtener una nueva." />
+            <br></br>
+            <p:button value="Nueva Sesi�n" onclick="location.reload();" />
+        </p:dialog> 
+
+        <p:dialog header="Cambio de contrase�a" resizable="false" closable="true" closeOnEscape="true"
+                  widgetVar="chgPwdDialog" modal="true" width="400">
+            <h:form>
+                <p:fieldset>
+                    <h:panelGrid columns="2">
+                        <p:outputLabel value="Contrase�a anterior"/>
+                        <p:password value="" feedback="false" />
+                        <p:outputLabel value="Nueva contrase�a"/>
+                        <p:password id="pwd1" weakLabel="D�bil" strongLabel="Fuerte" goodLabel="Buena" label="Nueva Contrase�a" feedback="true" value="" />
+                        <p:outputLabel  value="Confirmar nueva contrase�a"/>
+                        <p:password id="pwd2"  label="Confirmaci�n Nueva Contrase�a" value="" />
+                    </h:panelGrid>
+                </p:fieldset>
+                <p:messages id="pwdMsgs" />
+                <p:separator />
+                <p:commandButton value="Cambiar Contrase�a"  update="pwdMsgs" icon="ui-icon-check" style="float: right" />
+            </h:form>
+        </p:dialog> 
+
+    </h:body>
+</html>

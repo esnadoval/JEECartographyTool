@@ -1,0 +1,30 @@
+[%import "../../../../../../../../lib/utils.eol";%]
+package [%=bbeansPackage()%];
+
+import com.asesoftware.pilotoconciso.entity.[%=entity.name%];
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+@ManagedBean
+@RequestScoped
+public class  [%=entity.name%]Controller extends CrudController< [%=entity.name%],Object,[%=entity.primaryKey.first().type%]> {
+
+    public  [%=entity.name%]Controller() {
+        entityClass = [%=entity.name%].class;
+        [%
+        var filterAtt : BasicAttribute = null; 
+        for(attribute in entity.attributes){ %]
+        [% //PUNTO_ACTUALIZACION: definir manejo de orden para llaves primarias compuestas
+        if(entity.primaryKey.includes(attribute)){ 
+        filterAtt := attribute;
+        %]
+        defaultOrder = "p.[%=attribute.name%]";
+        [% break;%]
+        [% } %]
+        [% } %]
+        [% if(filterAtt<>null){ %]
+        filterTypes.put("[%=filterAtt.name%]", "text");
+        [% } %]
+    }
+
+}

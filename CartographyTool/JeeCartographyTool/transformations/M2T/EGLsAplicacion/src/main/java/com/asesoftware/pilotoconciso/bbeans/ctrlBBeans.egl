@@ -1,0 +1,30 @@
+[%import "../../../../../../../../lib/utils.eol";%]
+[%
+for(entity in Entity.all){
+	if(not entity.primaryKey.isEmpty()){
+		var controllerJAVA : Template;
+		controllerJAVA := TemplateFactory.load(eglBbeansDir()+'controllerJAVA.egl');
+		controllerJAVA.populate('entity', entity);
+		controllerJAVA.generate(bbeansDir()+generateEntityController(entity.name));
+	}
+}
+
+//Archivos estáticos - solo dinámico el paquete
+
+	var CrudControllerJAVA : Template;
+	CrudControllerJAVA := TemplateFactory.load(eglBbeansDir()+'CrudControllerJAVA.egl');
+	CrudControllerJAVA.generate(bbeansDir()+"CrudController.java");
+	
+	var FacesBeanJAVA : Template;
+	FacesBeanJAVA := TemplateFactory.load(eglBbeansDir()+'FacesBeanJAVA.egl');
+	FacesBeanJAVA.generate(bbeansDir()+"FacesBean.java");
+	
+	var SessionUtilsJAVA : Template;
+	SessionUtilsJAVA := TemplateFactory.load(eglBbeansDir()+'SessionUtilsJAVA.egl');
+	SessionUtilsJAVA.generate(bbeansDir()+"SessionUtils.java");
+	
+	var FileUtilsJAVA : Template;
+	FileUtilsJAVA := TemplateFactory.load(eglBbeansUtilDir()+'FileUtilsJAVA.egl');
+	FileUtilsJAVA.generate(bbeansUtilDir()+"FileUtils.java");
+	
+%]

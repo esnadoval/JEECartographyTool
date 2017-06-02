@@ -1,0 +1,9 @@
+[%import "../../../../lib/utils.eol";%]
+[%
+	//Archivos estáticos - solo dinamico el paquete
+	var persistenceXML : Template;
+	persistenceXML := TemplateFactory.load(eglResourcesMetainfDir()+'persistenceXML.egl');
+	persistenceXML.generate(resourcesMetainfDir()+"persistence.xml");
+
+	
+%]

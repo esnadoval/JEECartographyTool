@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<eef-gen:EEFGenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:eef-gen="http://www.eclipse.org/emf/eef/generation/1.0.0" genDirectory="/JeeCartographyDomain.edit/src-gen">
+  <editionContexts basePackage="" descriptorsGenericPropertiesViews="true">
+    <PropertiesEditionContext href="CartographyDescription.components#_CA_MUPD-EeSLnaDcLqfUGg"/>
+  </editionContexts>
+  <viewsRepositories basePackage="CartographyDescription" swtViews="true" formViews="true">
+    <viewsRepository href="CartographyDescription.components#_CA_0XfD-EeSLnaDcLqfUGg"/>
+  </viewsRepositories>
+</eef-gen:EEFGenModel>

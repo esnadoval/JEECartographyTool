@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eef-components="http://www.eclipse.org/emf/eef/components/1.0.0" xmlns:eef-views="http://www.eclipse.org/emf/eef/views/1.0.0">
+  <eef-components:PropertiesEditionContext xmi:id="_CA_MUPD-EeSLnaDcLqfUGg" documentation="Edition Context for CartographyDescription GenPackage">
+    <categories xmi:id="_CA_MUfD-EeSLnaDcLqfUGg" name="CartographyDescription">
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_MUvD-EeSLnaDcLqfUGg" name="Application" views="_CA_0X_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MU_D-EeSLnaDcLqfUGg" name="locs" views="_CA_0YfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MVPD-EeSLnaDcLqfUGg" name="comments" views="_CA_0YvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MVfD-EeSLnaDcLqfUGg" name="anotations" views="_CA_0Y_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MVvD-EeSLnaDcLqfUGg" name="weight" views="_CA_0ZPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MV_D-EeSLnaDcLqfUGg" name="name" views="_CA_0ZfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MWPD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_0ZvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MWfD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_0Z_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MWvD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_0aPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MW_D-EeSLnaDcLqfUGg" name="parentModule" views="_CA_0afD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MXPD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_0avD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MXfD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_0a_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MXvD-EeSLnaDcLqfUGg" name="modules" views="_CA_0bPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Application/modules"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MX_D-EeSLnaDcLqfUGg" name="layers" views="_CA_0bfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Application/layers"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_MYPD-EeSLnaDcLqfUGg" name="compilationUnits" views="_CA_0bvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Application/compilationUnits"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zYPD-EeSLnaDcLqfUGg" name="appRelations" views="_CA_0b_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Application/appRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zYfD-EeSLnaDcLqfUGg" name="paterns" views="_CA_0cPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Application/paterns"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Application"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_zYvD-EeSLnaDcLqfUGg" name="Module" views="_CA_0cfD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zY_D-EeSLnaDcLqfUGg" name="locs" views="_CA_0c_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zZPD-EeSLnaDcLqfUGg" name="comments" views="_CA_0dPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zZfD-EeSLnaDcLqfUGg" name="anotations" views="_CA_0dfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zZvD-EeSLnaDcLqfUGg" name="weight" views="_CA_0dvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zZ_D-EeSLnaDcLqfUGg" name="name" views="_CA_0d_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zaPD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_0ePD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zafD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_0efD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zavD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_0evD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_za_D-EeSLnaDcLqfUGg" name="parentModule" views="_CA_0e_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zbPD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_0fPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zbfD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_0ffD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zbvD-EeSLnaDcLqfUGg" name="subModules" views="_CA_0fvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Module/subModules"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zb_D-EeSLnaDcLqfUGg" name="cartographyElements" views="_CA_0f_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Module/cartographyElements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zcPD-EeSLnaDcLqfUGg" name="layers" views="_CA_0gPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Module/layers"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Module"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_zcfD-EeSLnaDcLqfUGg" name="Pattern" views="_CA_0gfD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zcvD-EeSLnaDcLqfUGg" name="locs" views="_CA_0g_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zc_D-EeSLnaDcLqfUGg" name="comments" views="_CA_0hPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zdPD-EeSLnaDcLqfUGg" name="anotations" views="_CA_0hfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zdfD-EeSLnaDcLqfUGg" name="weight" views="_CA_0hvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zdvD-EeSLnaDcLqfUGg" name="name" views="_CA_0h_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zd_D-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_0iPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zePD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_0ifD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zefD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_0ivD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zevD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_0i_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_ze_D-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_0jPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zfPD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_0jfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zffD-EeSLnaDcLqfUGg" name="modules" views="_CA_0jvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Pattern/modules"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Pattern"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_zfvD-EeSLnaDcLqfUGg" name="Entity" views="_CA_0j_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zf_D-EeSLnaDcLqfUGg" name="locs" views="_CA_0kfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zgPD-EeSLnaDcLqfUGg" name="comments" views="_CA_0kvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zgfD-EeSLnaDcLqfUGg" name="anotations" views="_CA_0k_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zgvD-EeSLnaDcLqfUGg" name="weight" views="_CA_0lPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zg_D-EeSLnaDcLqfUGg" name="name" views="_CA_0lfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zhPD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_0lvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zhfD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_0l_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zhvD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_0mPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zh_D-EeSLnaDcLqfUGg" name="parentModule" views="_CA_0mfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_ziPD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_0mvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zifD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_0m_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zivD-EeSLnaDcLqfUGg" name="visibility" views="_CA_0nPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zi_D-EeSLnaDcLqfUGg" name="attributes" views="_CA_0nfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zjPD-EeSLnaDcLqfUGg" name="methods" views="_CA_0nvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zjfD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_0n_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zjvD-EeSLnaDcLqfUGg" name="implements" views="_CA_0oPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zj_D-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_0ofD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zkPD-EeSLnaDcLqfUGg" name="frameworkType" views="_CA_0ovD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Entity/frameworkType"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zkfD-EeSLnaDcLqfUGg" name="dbTable" views="_CA_0o_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Entity/dbTable"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zkvD-EeSLnaDcLqfUGg" name="persistenceMode" views="_CA_0pPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Entity/persistenceMode"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Entity"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_zk_D-EeSLnaDcLqfUGg" name="Bussiness" views="_CA_0pfD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zlPD-EeSLnaDcLqfUGg" name="locs" views="_CA_0p_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zlfD-EeSLnaDcLqfUGg" name="comments" views="_CA_0qPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zlvD-EeSLnaDcLqfUGg" name="anotations" views="_CA_0qfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zl_D-EeSLnaDcLqfUGg" name="weight" views="_CA_0qvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zmPD-EeSLnaDcLqfUGg" name="name" views="_CA_0q_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zmfD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_0rPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zmvD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_0rfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zm_D-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_0rvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_znPD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_0r_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_znfD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_0sPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_znvD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_0sfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zn_D-EeSLnaDcLqfUGg" name="visibility" views="_CA_0svD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zoPD-EeSLnaDcLqfUGg" name="attributes" views="_CA_0s_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zofD-EeSLnaDcLqfUGg" name="methods" views="_CA_0tPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zovD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_0tfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zo_D-EeSLnaDcLqfUGg" name="implements" views="_CA_0tvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zpPD-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_0t_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zpfD-EeSLnaDcLqfUGg" name="frameworkType" views="_CA_0uPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Bussiness/frameworkType"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zpvD-EeSLnaDcLqfUGg" name="usageStrategy" views="_CA_0ufD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Bussiness/usageStrategy"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Bussiness"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_zp_D-EeSLnaDcLqfUGg" name="UI" views="_CA_0uvD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zqPD-EeSLnaDcLqfUGg" name="locs" views="_CA_0vPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zqfD-EeSLnaDcLqfUGg" name="comments" views="_CA_0vfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zqvD-EeSLnaDcLqfUGg" name="anotations" views="_CA_0vvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zq_D-EeSLnaDcLqfUGg" name="weight" views="_CA_0v_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zrPD-EeSLnaDcLqfUGg" name="name" views="_CA_0wPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zrfD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_0wfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zrvD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_0wvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zr_D-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_0w_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zsPD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_0xPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zsfD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_0xfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zsvD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_0xvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zs_D-EeSLnaDcLqfUGg" name="visibility" views="_CA_0x_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_ztPD-EeSLnaDcLqfUGg" name="attributes" views="_CA_0yPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_ztfD-EeSLnaDcLqfUGg" name="methods" views="_CA_0yfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_ztvD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_0yvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zt_D-EeSLnaDcLqfUGg" name="implements" views="_CA_0y_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zuPD-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_0zPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zufD-EeSLnaDcLqfUGg" name="frameworkType" views="_CA_0zfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//UI/frameworkType"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zuvD-EeSLnaDcLqfUGg" name="forDevice" views="_CA_0zvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//UI/forDevice"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//UI"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_zu_D-EeSLnaDcLqfUGg" name="Class" views="_CA_0z_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zvPD-EeSLnaDcLqfUGg" name="locs" views="_CA_00fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zvfD-EeSLnaDcLqfUGg" name="comments" views="_CA_00vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zvvD-EeSLnaDcLqfUGg" name="anotations" views="_CA_00_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zv_D-EeSLnaDcLqfUGg" name="weight" views="_CA_01PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zwPD-EeSLnaDcLqfUGg" name="name" views="_CA_01fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zwfD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_01vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zwvD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_01_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zw_D-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_02PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zxPD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_02fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zxfD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_02vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zxvD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_02_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zx_D-EeSLnaDcLqfUGg" name="visibility" views="_CA_03PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zyPD-EeSLnaDcLqfUGg" name="attributes" views="_CA_03fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zyfD-EeSLnaDcLqfUGg" name="methods" views="_CA_03vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zyvD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_03_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zy_D-EeSLnaDcLqfUGg" name="implements" views="_CA_04PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zzPD-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_04fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_zzfD-EeSLnaDcLqfUGg" name="Layer" views="_CA_04vD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zzvD-EeSLnaDcLqfUGg" name="locs" views="_CA_05PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_zz_D-EeSLnaDcLqfUGg" name="comments" views="_CA_05fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z0PD-EeSLnaDcLqfUGg" name="anotations" views="_CA_05vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z0fD-EeSLnaDcLqfUGg" name="weight" views="_CA_05_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z0vD-EeSLnaDcLqfUGg" name="name" views="_CA_06PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z0_D-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_06fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z1PD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_06vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z1fD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_06_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z1vD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_07PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z1_D-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_07fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z2PD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_07vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z2fD-EeSLnaDcLqfUGg" name="compilationUnits" views="_CA_07_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Layer/compilationUnits"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Layer"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_z2vD-EeSLnaDcLqfUGg" name="Attribute" views="_CA_08PD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z2_D-EeSLnaDcLqfUGg" name="anotations" views="_CA_08vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z3PD-EeSLnaDcLqfUGg" name="visibility" views="_CA_08_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Attribute/visibility"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Attribute"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_z3fD-EeSLnaDcLqfUGg" name="Service" views="_CA_09PD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z3vD-EeSLnaDcLqfUGg" name="locs" views="_CA_09vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z3_D-EeSLnaDcLqfUGg" name="comments" views="_CA_09_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z4PD-EeSLnaDcLqfUGg" name="anotations" views="_CA_0-PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z4fD-EeSLnaDcLqfUGg" name="weight" views="_CA_0-fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z4vD-EeSLnaDcLqfUGg" name="name" views="_CA_0-vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z4_D-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_0-_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z5PD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_0_PD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z5fD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_0_fD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z5vD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_0_vD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z5_D-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_0__D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z6PD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_1APD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z6fD-EeSLnaDcLqfUGg" name="visibility" views="_CA_1AfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z6vD-EeSLnaDcLqfUGg" name="attributes" views="_CA_1AvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z6_D-EeSLnaDcLqfUGg" name="methods" views="_CA_1A_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z7PD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_1BPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z7fD-EeSLnaDcLqfUGg" name="implements" views="_CA_1BfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z7vD-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_1BvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z7_D-EeSLnaDcLqfUGg" name="type" views="_CA_1B_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Service/type"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Service"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_z8PD-EeSLnaDcLqfUGg" name="Method" views="_CA_1CPD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z8fD-EeSLnaDcLqfUGg" name="locs" views="_CA_1CvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z8vD-EeSLnaDcLqfUGg" name="comments" views="_CA_1C_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z8_D-EeSLnaDcLqfUGg" name="anotations" views="_CA_1DPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z9PD-EeSLnaDcLqfUGg" name="weight" views="_CA_1DfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z9fD-EeSLnaDcLqfUGg" name="name" views="_CA_1DvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z9vD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_1D_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z9_D-EeSLnaDcLqfUGg" name="migRelations" views="_CA_1EPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z-PD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_1EfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z-fD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_1EvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z-vD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_1E_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z-_D-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_1FPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z_PD-EeSLnaDcLqfUGg" name="visibility" views="_CA_1FfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Method/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z_fD-EeSLnaDcLqfUGg" name="code" views="_CA_1FvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Method/code"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z_vD-EeSLnaDcLqfUGg" name="parameters" views="_CA_1F_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Method/parameters"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_z__D-EeSLnaDcLqfUGg" name="inhertance" views="_CA_1GPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Method/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0APD-EeSLnaDcLqfUGg" name="exceptions" views="_CA_1GfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Method/exceptions"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Method"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0AfD-EeSLnaDcLqfUGg" name="Annotation" views="_CA_1GvD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0AvD-EeSLnaDcLqfUGg" name="name" views="_CA_1HPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Annotation/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0A_D-EeSLnaDcLqfUGg" name="description" views="_CA_1HfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Annotation/description"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0BPD-EeSLnaDcLqfUGg" name="params" views="_CA_1HvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Annotation/params"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Annotation"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0BfD-EeSLnaDcLqfUGg" name="Variable" views="_CA_1H_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0BvD-EeSLnaDcLqfUGg" name="name" views="_CA_1IfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Variable/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0B_D-EeSLnaDcLqfUGg" name="inhertance" views="_CA_1IvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Variable/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0CPD-EeSLnaDcLqfUGg" name="static" views="_CA_1I_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Variable/static"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Variable"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0CfD-EeSLnaDcLqfUGg" name="Interface" views="_CA_1JPD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0CvD-EeSLnaDcLqfUGg" name="locs" views="_CA_1JvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0C_D-EeSLnaDcLqfUGg" name="comments" views="_CA_1J_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0DPD-EeSLnaDcLqfUGg" name="anotations" views="_CA_1KPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0DfD-EeSLnaDcLqfUGg" name="weight" views="_CA_1KfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0DvD-EeSLnaDcLqfUGg" name="name" views="_CA_1KvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0D_D-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_1K_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0EPD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_1LPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0EfD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_1LfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0EvD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_1LvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0E_D-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_1L_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0FPD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_1MPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0FfD-EeSLnaDcLqfUGg" name="visibility" views="_CA_1MfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0FvD-EeSLnaDcLqfUGg" name="attributes" views="_CA_1MvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0F_D-EeSLnaDcLqfUGg" name="methods" views="_CA_1M_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0GPD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_1NPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0GfD-EeSLnaDcLqfUGg" name="implements" views="_CA_1NfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0GvD-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_1NvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Interface"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0G_D-EeSLnaDcLqfUGg" name="ElementRelation" views="_CA_1N_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0HPD-EeSLnaDcLqfUGg" name="src" views="_CA_1OfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//ElementRelation/src"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0HfD-EeSLnaDcLqfUGg" name="dest" views="_CA_1OvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//ElementRelation/dest"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0HvD-EeSLnaDcLqfUGg" name="relationType" views="_CA_1O_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//ElementRelation/relationType"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//ElementRelation"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0H_D-EeSLnaDcLqfUGg" name="UnitTest" views="_CA_1PPD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0IPD-EeSLnaDcLqfUGg" name="locs" views="_CA_1PvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0IfD-EeSLnaDcLqfUGg" name="comments" views="_CA_1P_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0IvD-EeSLnaDcLqfUGg" name="anotations" views="_CA_1QPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0I_D-EeSLnaDcLqfUGg" name="weight" views="_CA_1QfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0JPD-EeSLnaDcLqfUGg" name="name" views="_CA_1QvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0JfD-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_1Q_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0JvD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_1RPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0J_D-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_1RfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0KPD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_1RvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0KfD-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_1R_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0KvD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_1SPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0K_D-EeSLnaDcLqfUGg" name="visibility" views="_CA_1SfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0LPD-EeSLnaDcLqfUGg" name="attributes" views="_CA_1SvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0LfD-EeSLnaDcLqfUGg" name="methods" views="_CA_1S_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0LvD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_1TPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0L_D-EeSLnaDcLqfUGg" name="implements" views="_CA_1TfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0MPD-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_1TvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0MfD-EeSLnaDcLqfUGg" name="type" views="_CA_1T_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//UnitTest/type"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//UnitTest"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0MvD-EeSLnaDcLqfUGg" name="VarType" views="_CA_1UPD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0M_D-EeSLnaDcLqfUGg" name="name" views="_CA_1UvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//VarType/name"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//VarType"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0NPD-EeSLnaDcLqfUGg" name="StaticMetrics" views="_CA_1U_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0NfD-EeSLnaDcLqfUGg" name="locs" views="_CA_1VfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0NvD-EeSLnaDcLqfUGg" name="comments" views="_CA_1VvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0N_D-EeSLnaDcLqfUGg" name="AnnotatedObject" views="_CA_1V_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0OPD-EeSLnaDcLqfUGg" name="anotations" views="_CA_1WfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0OfD-EeSLnaDcLqfUGg" name="CartographyElement" views="_CA_1WvD-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0OvD-EeSLnaDcLqfUGg" name="locs" views="_CA_1XPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0O_D-EeSLnaDcLqfUGg" name="comments" views="_CA_1XfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0PPD-EeSLnaDcLqfUGg" name="anotations" views="_CA_1XvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0PfD-EeSLnaDcLqfUGg" name="weight" views="_CA_1X_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0PvD-EeSLnaDcLqfUGg" name="name" views="_CA_1YPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0P_D-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_1YfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0QPD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_1YvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0QfD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_1Y_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0QvD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_1ZPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0Q_D-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_1ZfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0RPD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_1ZvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0RfD-EeSLnaDcLqfUGg" name="PersistenceManager" views="_CA_1Z_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0RvD-EeSLnaDcLqfUGg" name="locs" views="_CA_1afD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/locs"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0R_D-EeSLnaDcLqfUGg" name="comments" views="_CA_1avD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//StaticMetrics/comments"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0SPD-EeSLnaDcLqfUGg" name="anotations" views="_CA_1a_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotatedObject/anotations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0SfD-EeSLnaDcLqfUGg" name="weight" views="_CA_1bPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/weight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0SvD-EeSLnaDcLqfUGg" name="name" views="_CA_1bfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0S_D-EeSLnaDcLqfUGg" name="maxWeight" views="_CA_1bvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/maxWeight"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0TPD-EeSLnaDcLqfUGg" name="migRelations" views="_CA_1b_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/migRelations"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0TfD-EeSLnaDcLqfUGg" name="parentLayer" views="_CA_1cPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentLayer"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0TvD-EeSLnaDcLqfUGg" name="parentModule" views="_CA_1cfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/parentModule"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0T_D-EeSLnaDcLqfUGg" name="originalFilePath" views="_CA_1cvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/originalFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0UPD-EeSLnaDcLqfUGg" name="newFilePath" views="_CA_1c_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//CartographyElement/newFilePath"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0UfD-EeSLnaDcLqfUGg" name="visibility" views="_CA_1dPD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/visibility"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0UvD-EeSLnaDcLqfUGg" name="attributes" views="_CA_1dfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/attributes"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0U_D-EeSLnaDcLqfUGg" name="methods" views="_CA_1dvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/methods"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0VPD-EeSLnaDcLqfUGg" name="inhertance" views="_CA_1d_D-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/inhertance"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0VfD-EeSLnaDcLqfUGg" name="implements" views="_CA_1ePD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EReference" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/implements"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0VvD-EeSLnaDcLqfUGg" name="originalFileName" views="_CA_1efD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Class/originalFileName"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0V_D-EeSLnaDcLqfUGg" name="persistenceType" views="_CA_1evD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//PersistenceManager/persistenceType"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//PersistenceManager"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0WPD-EeSLnaDcLqfUGg" name="AnnotationParameter" views="_CA_1e_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0WfD-EeSLnaDcLqfUGg" name="name" views="_CA_1ffD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotationParameter/name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0WvD-EeSLnaDcLqfUGg" name="value" views="_CA_1fvD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotationParameter/value"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//AnnotationParameter"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_CA_0W_D-EeSLnaDcLqfUGg" name="Exception" views="_CA_1f_D-EeSLnaDcLqfUGg">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_CA_0XPD-EeSLnaDcLqfUGg" name="name" views="_CA_1gfD-EeSLnaDcLqfUGg">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Exception/name"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/JeeCartographyDomain/CartographyDescription.ecore#//Exception"/>
+      </bindings>
+    </categories>
+    <model href="platform:/resource/JeeCartographyDomain/CartographyDescription.genmodel#//CartographyDescription"/>
+  </eef-components:PropertiesEditionContext>
+  <eef-views:ViewsRepository xmi:id="_CA_0XfD-EeSLnaDcLqfUGg" documentation="Views repository for CartographyDescription GenPackage" name="CartographyDescription">
+    <RepositoryKind>SWT</RepositoryKind>
+    <RepositoryKind>Form</RepositoryKind>
+    <categories xmi:id="_CA_0XvD-EeSLnaDcLqfUGg" name="CartographyDescription">
+      <views xmi:id="_CA_0X_D-EeSLnaDcLqfUGg" name="Application">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_0YPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0YfD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0YvD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0Y_D-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ZPD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ZfD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ZvD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0Z_D-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0aPD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0afD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0avD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0a_D-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0bPD-EeSLnaDcLqfUGg" name="modules">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0bfD-EeSLnaDcLqfUGg" name="layers">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0bvD-EeSLnaDcLqfUGg" name="compilationUnits">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0b_D-EeSLnaDcLqfUGg" name="appRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0cPD-EeSLnaDcLqfUGg" name="paterns">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_0cfD-EeSLnaDcLqfUGg" name="Module">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_0cvD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0c_D-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0dPD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0dfD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0dvD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0d_D-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ePD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0efD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0evD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0e_D-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0fPD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ffD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0fvD-EeSLnaDcLqfUGg" name="subModules">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0f_D-EeSLnaDcLqfUGg" name="cartographyElements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0gPD-EeSLnaDcLqfUGg" name="layers">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_0gfD-EeSLnaDcLqfUGg" name="Pattern">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_0gvD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0g_D-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0hPD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0hfD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0hvD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0h_D-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0iPD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ifD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ivD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0i_D-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0jPD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0jfD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0jvD-EeSLnaDcLqfUGg" name="modules">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_0j_D-EeSLnaDcLqfUGg" name="Entity">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_0kPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0kfD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0kvD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0k_D-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0lPD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0lfD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0lvD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0l_D-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0mPD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0mfD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0mvD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0m_D-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0nPD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0nfD-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0nvD-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0n_D-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0oPD-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ofD-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ovD-EeSLnaDcLqfUGg" name="frameworkType">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0o_D-EeSLnaDcLqfUGg" name="dbTable">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0pPD-EeSLnaDcLqfUGg" name="persistenceMode">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_0pfD-EeSLnaDcLqfUGg" name="Bussiness">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_0pvD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0p_D-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0qPD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0qfD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0qvD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0q_D-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0rPD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0rfD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0rvD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0r_D-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0sPD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0sfD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0svD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0s_D-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0tPD-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0tfD-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0tvD-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0t_D-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0uPD-EeSLnaDcLqfUGg" name="frameworkType">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0ufD-EeSLnaDcLqfUGg" name="usageStrategy">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_0uvD-EeSLnaDcLqfUGg" name="UI">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_0u_D-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0vPD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0vfD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0vvD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0v_D-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0wPD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0wfD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0wvD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0w_D-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0xPD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0xfD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0xvD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0x_D-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0yPD-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0yfD-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0yvD-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0y_D-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0zPD-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0zfD-EeSLnaDcLqfUGg" name="frameworkType">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0zvD-EeSLnaDcLqfUGg" name="forDevice">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_0z_D-EeSLnaDcLqfUGg" name="Class">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_00PD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_00fD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_00vD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_00_D-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_01PD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_01fD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_01vD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_01_D-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_02PD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_02fD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_02vD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_02_D-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_03PD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_03fD-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_03vD-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_03_D-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_04PD-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_04fD-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_04vD-EeSLnaDcLqfUGg" name="Layer">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_04_D-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_05PD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_05fD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_05vD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_05_D-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_06PD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_06fD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_06vD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_06_D-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_07PD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_07fD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_07vD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_07_D-EeSLnaDcLqfUGg" name="compilationUnits">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_08PD-EeSLnaDcLqfUGg" name="Attribute">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_08fD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_08vD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_08_D-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_09PD-EeSLnaDcLqfUGg" name="Service">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_09fD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_09vD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_09_D-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0-PD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0-fD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0-vD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0-_D-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0_PD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0_fD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0_vD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_0__D-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1APD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1AfD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1AvD-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1A_D-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1BPD-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1BfD-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1BvD-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1B_D-EeSLnaDcLqfUGg" name="type">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1CPD-EeSLnaDcLqfUGg" name="Method">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1CfD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1CvD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1C_D-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1DPD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1DfD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1DvD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1D_D-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1EPD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1EfD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1EvD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1E_D-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1FPD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1FfD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1FvD-EeSLnaDcLqfUGg" name="code">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1F_D-EeSLnaDcLqfUGg" name="parameters">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1GPD-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1GfD-EeSLnaDcLqfUGg" name="exceptions">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1GvD-EeSLnaDcLqfUGg" name="Annotation">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1G_D-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1HPD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1HfD-EeSLnaDcLqfUGg" name="description">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1HvD-EeSLnaDcLqfUGg" name="params">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1H_D-EeSLnaDcLqfUGg" name="Variable">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1IPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1IfD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1IvD-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1I_D-EeSLnaDcLqfUGg" name="static">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.1"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1JPD-EeSLnaDcLqfUGg" name="Interface">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1JfD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1JvD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1J_D-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1KPD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1KfD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1KvD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1K_D-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1LPD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1LfD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1LvD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1L_D-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1MPD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1MfD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1MvD-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1M_D-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1NPD-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1NfD-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1NvD-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1N_D-EeSLnaDcLqfUGg" name="ElementRelation">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1OPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1OfD-EeSLnaDcLqfUGg" name="src">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1OvD-EeSLnaDcLqfUGg" name="dest">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1O_D-EeSLnaDcLqfUGg" name="relationType">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1PPD-EeSLnaDcLqfUGg" name="UnitTest">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1PfD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1PvD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1P_D-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1QPD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1QfD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1QvD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1Q_D-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1RPD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1RfD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1RvD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1R_D-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1SPD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1SfD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1SvD-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1S_D-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1TPD-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1TfD-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1TvD-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1T_D-EeSLnaDcLqfUGg" name="type">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1UPD-EeSLnaDcLqfUGg" name="VarType">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1UfD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1UvD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1U_D-EeSLnaDcLqfUGg" name="StaticMetrics">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1VPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1VfD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1VvD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1V_D-EeSLnaDcLqfUGg" name="AnnotatedObject">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1WPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1WfD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1WvD-EeSLnaDcLqfUGg" name="CartographyElement">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1W_D-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1XPD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1XfD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1XvD-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1X_D-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1YPD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1YfD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1YvD-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1Y_D-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1ZPD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1ZfD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1ZvD-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1Z_D-EeSLnaDcLqfUGg" name="PersistenceManager">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1aPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1afD-EeSLnaDcLqfUGg" name="locs">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1avD-EeSLnaDcLqfUGg" name="comments">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1a_D-EeSLnaDcLqfUGg" name="anotations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1bPD-EeSLnaDcLqfUGg" name="weight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1bfD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1bvD-EeSLnaDcLqfUGg" name="maxWeight">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1b_D-EeSLnaDcLqfUGg" name="migRelations">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1cPD-EeSLnaDcLqfUGg" name="parentLayer">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1cfD-EeSLnaDcLqfUGg" name="parentModule">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1cvD-EeSLnaDcLqfUGg" name="originalFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1c_D-EeSLnaDcLqfUGg" name="newFilePath">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1dPD-EeSLnaDcLqfUGg" name="visibility">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1dfD-EeSLnaDcLqfUGg" name="attributes">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1dvD-EeSLnaDcLqfUGg" name="methods">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1d_D-EeSLnaDcLqfUGg" name="inhertance">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.2"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1ePD-EeSLnaDcLqfUGg" name="implements">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1efD-EeSLnaDcLqfUGg" name="originalFileName">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1evD-EeSLnaDcLqfUGg" name="persistenceType">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1e_D-EeSLnaDcLqfUGg" name="AnnotationParameter">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1fPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1ffD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1fvD-EeSLnaDcLqfUGg" name="value">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_CA_1f_D-EeSLnaDcLqfUGg" name="Exception">
+        <elements xsi:type="eef-views:Container" xmi:id="_CA_1gPD-EeSLnaDcLqfUGg" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CA_1gfD-EeSLnaDcLqfUGg" name="name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+    </categories>
+  </eef-views:ViewsRepository>
+</xmi:XMI>

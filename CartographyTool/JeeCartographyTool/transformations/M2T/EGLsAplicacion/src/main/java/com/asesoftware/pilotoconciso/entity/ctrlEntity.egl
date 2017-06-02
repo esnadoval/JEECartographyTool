@@ -1,0 +1,11 @@
+[%import "../../../../../../../../lib/utils.eol";%]
+[%
+for(entity in Entity.all){
+	if(not entity.primaryKey.isEmpty()){
+		var entityJAVA : Template;
+		entityJAVA := TemplateFactory.load(eglEntityDir()+'entityJAVA.egl');
+		entityJAVA.populate('entity', entity);
+		entityJAVA.generate(entityDir()+addJavaExtension(entity.name));
+	}
+}
+%]

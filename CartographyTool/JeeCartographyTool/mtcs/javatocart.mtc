@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.mtcflow.model:MTC xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.mtcflow.model="http://com.mtcflow.mtc/1.1">
+  <metamodels name="Modisco Java" URI="" metamodelURI="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java"/>
+  <metamodels name="Cartography Description" URI="" metamodelURI="www.csw.uniandes.edu.co/CartographyDescription/1.0"/>
+  <models name="Java App" URI="${JavaModel}" metamodels="//@metamodels.0"/>
+  <models name="Basic Cartography Model" URI="${CartographyModel}" metamodels="//@metamodels.1"/>
+  <models name="Processed Cartography Model" URI="${CartographyModel}" metamodels="//@metamodels.1"/>
+  <inputModels model="//@models.0" transformation="//@transformations.0"/>
+  <inputModels model="//@models.1" transformation="//@transformations.1"/>
+  <inputModels model="//@models.1" transformation="//@transformations.2"/>
+  <inputModels model="//@models.1" transformation="//@transformations.3"/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="JavaToCartography" URI="ModiscoToCartography.etl" technology=""/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="Project Heuristic" URI="ProjectHeuristic.eol"/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="Package Heuristic" URI="PackageHeuristic.eol" implementationClass=""/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="Dependency Beetweness Heuristic" URI="BeetwenessHeuristic.eol"/>
+  <outputModels model="//@models.1" transformation="//@transformations.0"/>
+  <outputModels model="//@models.2" transformation="//@transformations.1"/>
+  <outputModels model="//@models.2" transformation="//@transformations.2"/>
+  <outputModels model="//@models.2" transformation="//@transformations.3"/>
+  <configurations>
+    <variables name="JavaModel"/>
+    <variables name="CartographyModel"/>
+  </configurations>
+</com.mtcflow.model:MTC>

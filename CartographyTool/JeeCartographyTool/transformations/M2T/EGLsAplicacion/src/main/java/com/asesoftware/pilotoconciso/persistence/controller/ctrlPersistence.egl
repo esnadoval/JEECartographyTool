@@ -1,0 +1,9 @@
+[%import "../../../../../../../../../lib/utils.eol";%]
+[%
+//Archivos estáticos - solo dinámico el paquete
+
+	var CrudControllerJAVA : Template;
+	CrudControllerJAVA := TemplateFactory.load(eglPersistenceControllerDir()+'persistenceManagerJAVA.egl');
+	CrudControllerJAVA.generate(persistenceControllerDir()+"PersistenceManager.java");
+	
+%]

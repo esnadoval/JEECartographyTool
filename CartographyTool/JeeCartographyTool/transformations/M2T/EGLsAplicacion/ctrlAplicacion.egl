@@ -1,0 +1,29 @@
+[%import "../lib/utils.eol";%]
+[%
+	//Archivos estáticos
+	var faces_configNAVDATA : Template;
+	faces_configNAVDATA := TemplateFactory.load(mainEGLFolder()+'/'+'faces-configNAVDATA.egl');
+	faces_configNAVDATA.generate(projectName()+"/faces-config.NavData");
+	
+	var nb_configurationXML : Template;
+	nb_configurationXML := TemplateFactory.load(mainEGLFolder()+'/'+'nb-configurationXML.egl');
+	nb_configurationXML.generate(projectName()+"/nb-configuration.xml");
+	
+	var pomXML : Template;
+	pomXML := TemplateFactory.load(mainEGLFolder()+'/'+'pomXML.egl');
+	pomXML.generate(projectName()+"/pom.xml");
+	
+	//Procesamiento de controladores
+	var ctrlJava : Template;
+	ctrlJava := TemplateFactory.load(eglSrcDir()+'ctrlJava.egl');
+	ctrlJava.process();
+	
+	var ctrlResources : Template;
+	ctrlResources := TemplateFactory.load(eglRscDir()+'ctrlResources.egl');
+	ctrlResources.process();
+	
+	var ctrlWebapp : Template;
+	ctrlWebapp := TemplateFactory.load(eglWebDir()+'ctrlWebapp.egl');
+	ctrlWebapp.process();
+	
+%]

@@ -1,0 +1,8 @@
+[% 
+import "./lib/utils.eol";
+
+var implementation : Template;
+implementation = TemplateFactory.load(mainEGLFolder()+"/ctrlAplicacion.egl");
+implementation.process();
+
+%]
