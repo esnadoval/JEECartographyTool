@@ -1,8 +1,5 @@
 package jeecartographytool.extensions;
 
-import org.eclipse.gmt.modisco.java.CompilationUnit;
-import org.eclipse.gmt.modisco.java.Model;
-
 import CartographyDescription.Application;
 
 

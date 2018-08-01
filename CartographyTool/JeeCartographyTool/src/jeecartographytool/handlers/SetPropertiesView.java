@@ -9,10 +9,12 @@ import jeecartographytool.utils.ModelUtils;
 import jeecartographytool.views.ElementPropertiesView;
 import jeecartographytool.views.IMigrationPropertiesContentChanger;
 
+import org.eclipse.core.internal.dtree.DataDeltaNode;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.diagram.DEdge;
 import org.eclipse.sirius.diagram.DNode;
+import org.eclipse.sirius.diagram.DNodeContainer;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 import org.eclipse.sirius.tree.DTreeItem;
 import org.eclipse.ui.IViewPart;
@@ -40,6 +42,8 @@ public class SetPropertiesView implements IExternalJavaAction {
 				return getSemanticElementValidation(((DEdge) eObject).getTarget());
 			}else if(eObject instanceof DTreeItem){
 				return getSemanticElementValidation(((DTreeItem) eObject).getTarget());
+			}else if(eObject instanceof DNodeContainer){
+				return getSemanticElementValidation(((DNodeContainer) eObject).getTarget());
 			}
 			return false;
 		}
@@ -98,6 +102,8 @@ public class SetPropertiesView implements IExternalJavaAction {
 				showProperties(((DEdge) eObject).getTarget());
 			}else if(eObject instanceof DTreeItem){
 				showProperties(((DTreeItem) eObject).getTarget());
+			}else if(eObject instanceof DNodeContainer){
+				showProperties(((DNodeContainer) eObject).getTarget());
 			}
 			
 			

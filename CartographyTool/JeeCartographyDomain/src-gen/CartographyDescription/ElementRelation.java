@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.ElementRelation#getSrc <em>Src</em>}</li>
  *   <li>{@link CartographyDescription.ElementRelation#getDest <em>Dest</em>}</li>
  *   <li>{@link CartographyDescription.ElementRelation#getRelationType <em>Relation Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getElementRelation()
  * @model

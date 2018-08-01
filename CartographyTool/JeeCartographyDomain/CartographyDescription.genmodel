@@ -131,5 +131,17 @@
     <genClasses ecoreClass="CartographyDescription.ecore#//Exception">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//Exception/name"/>
     </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Enumeration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//Enumeration/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//EnumLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//EnumLiteral/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//EnumLiteral/values"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//EnumLiteralvalue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CartographyDescription.ecore#//EnumLiteralvalue/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CartographyDescription.ecore#//EnumLiteralvalue/attr"/>
+    </genClasses>
+    <genClasses ecoreClass="CartographyDescription.ecore#//Constructor"/>
   </genPackages>
 </genmodel:GenModel>

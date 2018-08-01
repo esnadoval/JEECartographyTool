@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.BussinessImpl#getFrameworkType <em>Framework Type</em>}</li>
  *   <li>{@link CartographyDescription.impl.BussinessImpl#getUsageStrategy <em>Usage Strategy</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

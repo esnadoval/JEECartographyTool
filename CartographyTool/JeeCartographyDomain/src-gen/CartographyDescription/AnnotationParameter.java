@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.AnnotationParameter#getName <em>Name</em>}</li>
  *   <li>{@link CartographyDescription.AnnotationParameter#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getAnnotationParameter()
  * @model

@@ -10,11 +10,11 @@ package CartographyDescription;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.UI#getFrameworkType <em>Framework Type</em>}</li>
  *   <li>{@link CartographyDescription.UI#getForDevice <em>For Device</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getUI()
  * @model

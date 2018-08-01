@@ -11,8 +11,12 @@ import CartographyDescription.Bussiness;
 import CartographyDescription.CartographyDescriptionFactory;
 import CartographyDescription.CartographyDescriptionPackage;
 import CartographyDescription.CartographyElement;
+import CartographyDescription.Constructor;
 import CartographyDescription.ElementRelation;
 import CartographyDescription.Entity;
+import CartographyDescription.EnumLiteral;
+import CartographyDescription.EnumLiteralvalue;
+import CartographyDescription.Enumeration;
 import CartographyDescription.Inhertance;
 import CartographyDescription.Interface;
 import CartographyDescription.Layer;
@@ -203,6 +207,34 @@ public class CartographyDescriptionPackageImpl extends EPackageImpl implements C
 	 * @generated
 	 */
 	private EClass exceptionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass enumerationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass enumLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass enumLiteralvalueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass constructorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1047,6 +1079,87 @@ public class CartographyDescriptionPackageImpl extends EPackageImpl implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEnumeration() {
+		return enumerationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEnumeration_Literals() {
+		return (EReference)enumerationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEnumLiteral() {
+		return enumLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEnumLiteral_Name() {
+		return (EAttribute)enumLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEnumLiteral_Values() {
+		return (EReference)enumLiteralEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEnumLiteralvalue() {
+		return enumLiteralvalueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEnumLiteralvalue_Value() {
+		return (EAttribute)enumLiteralvalueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEnumLiteralvalue_Attr() {
+		return (EReference)enumLiteralvalueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConstructor() {
+		return constructorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getRelationType() {
 		return relationTypeEEnum;
 	}
@@ -1204,6 +1317,19 @@ public class CartographyDescriptionPackageImpl extends EPackageImpl implements C
 		exceptionEClass = createEClass(EXCEPTION);
 		createEAttribute(exceptionEClass, EXCEPTION__NAME);
 
+		enumerationEClass = createEClass(ENUMERATION);
+		createEReference(enumerationEClass, ENUMERATION__LITERALS);
+
+		enumLiteralEClass = createEClass(ENUM_LITERAL);
+		createEAttribute(enumLiteralEClass, ENUM_LITERAL__NAME);
+		createEReference(enumLiteralEClass, ENUM_LITERAL__VALUES);
+
+		enumLiteralvalueEClass = createEClass(ENUM_LITERALVALUE);
+		createEAttribute(enumLiteralvalueEClass, ENUM_LITERALVALUE__VALUE);
+		createEReference(enumLiteralvalueEClass, ENUM_LITERALVALUE__ATTR);
+
+		constructorEClass = createEClass(CONSTRUCTOR);
+
 		// Create enums
 		relationTypeEEnum = createEEnum(RELATION_TYPE);
 		visibilityEEnum = createEEnum(VISIBILITY);
@@ -1254,6 +1380,8 @@ public class CartographyDescriptionPackageImpl extends EPackageImpl implements C
 		cartographyElementEClass.getESuperTypes().add(this.getStaticMetrics());
 		cartographyElementEClass.getESuperTypes().add(this.getAnnotatedObject());
 		persistenceManagerEClass.getESuperTypes().add(this.getClass_());
+		enumerationEClass.getESuperTypes().add(this.getClass_());
+		constructorEClass.getESuperTypes().add(this.getMethod());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1362,6 +1490,19 @@ public class CartographyDescriptionPackageImpl extends EPackageImpl implements C
 
 		initEClass(exceptionEClass, CartographyDescription.Exception.class, "Exception", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getException_Name(), ecorePackage.getEString(), "name", null, 0, 1, CartographyDescription.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(enumerationEClass, Enumeration.class, "Enumeration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEnumeration_Literals(), this.getEnumLiteral(), null, "literals", null, 0, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(enumLiteralEClass, EnumLiteral.class, "EnumLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEnumLiteral_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumLiteral_Values(), this.getEnumLiteralvalue(), null, "values", null, 0, -1, EnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(enumLiteralvalueEClass, EnumLiteralvalue.class, "EnumLiteralvalue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEnumLiteralvalue_Value(), ecorePackage.getEString(), "value", null, 0, 1, EnumLiteralvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumLiteralvalue_Attr(), this.getVariable(), null, "attr", null, 1, 1, EnumLiteralvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(constructorEClass, Constructor.class, "Constructor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(relationTypeEEnum, RelationType.class, "RelationType");

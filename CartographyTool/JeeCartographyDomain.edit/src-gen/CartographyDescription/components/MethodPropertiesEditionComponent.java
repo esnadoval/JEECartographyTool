@@ -5,7 +5,6 @@ package CartographyDescription.components;
 
 // Start of user code for imports
 import CartographyDescription.Annotation;
-import CartographyDescription.Exception;
 import CartographyDescription.CartographyDescriptionFactory;
 import CartographyDescription.CartographyDescriptionPackage;
 import CartographyDescription.ElementRelation;
@@ -528,7 +527,7 @@ public class MethodPropertiesEditionComponent extends SinglePartPropertiesEditin
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
 				exceptionsSettings.removeFromReference((EObject) event.getNewValue());
 			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
-				exceptionsSettings.move(event.getNewIndex(), (Exception) event.getNewValue());
+				exceptionsSettings.move(event.getNewIndex(), (CartographyDescription.Exception) event.getNewValue());
 			}
 		}
 	}

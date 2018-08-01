@@ -2,6 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension-point id="jeecartographytool.heuristics" name="JeeCartographyToolHeuristics" schema="schema/jeecartographytool.heuristics.exsd"/>
+   <extension-point id="jeecartographytool.stereotypers" name="JeeCartographyToolStereoTypers" schema="schema/jeecartographytool.stereotypers.exsd"/>
 
    <extension
          id="jeeCartographyProjectBuilder.heuristics"
@@ -107,15 +108,11 @@
    </extension>
    <extension
          point="org.eclipse.ui.newWizards">
-      <category
-            id="JeeCartographyTool"
-            name="Java Migration Wizards">
-      </category>
       <wizard
-            category="JeeCartographyTool"
+            category="OracleForms6MigrationTool"
             class="jeecartographytool.wizards.AppToModelWizard"
             icon="icons/sample.gif"
-            id="jeecartographytool.wizards.SampleNewWizard"
+            id="jeecartographytool.wizards.AppToModelWizard"
             name="Jee Cartography Project"
             project="true">
       </wizard>
@@ -190,6 +187,11 @@
             id="JeeCartographyTool.category1"
             name="JEE Cartography Tool">
       </category>
+   </extension>
+   <extension
+         point="jeecartographytool.stereotypers">
+      <jeecartographytool.stereotypes.extension
+            class="jeecartographytool.defops.DefaultClassStereoTyper"></jeecartographytool.stereotypes.extension>
    </extension>
 
 </plugin>

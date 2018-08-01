@@ -1,10 +1,7 @@
 package jeecartographytool.wizards;
 
-import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.core.runtime.*;
@@ -13,39 +10,21 @@ import org.eclipse.jface.operation.*;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.regex.Pattern;
-
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.dialogs.ProgressMonitorDialog;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.core.resources.*;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.gmt.modisco.java.Model;
 
 import java.io.*;
 
-import jeecartographytool.CartographyModelParser;
 import jeecartographytool.TransformationChoreographer;
 import jeecartographytool.builder.BuildReorganizedProject;
-import jeecartographytool.builder.JeeCartographyProjectBuilder;
 import jeecartographytool.extensions.IModelHeuristic;
-import jeecartographytool.handlers.ModelHeuristicsHandler;
-import jeecartographytool.utils.FileUtils;
+import jeecartographytool.handlers.ModelStereoTyperHandler;
 import jeecartographytool.utils.ModelUtils;
 import jeecartographytool.utils.modisco.ModelGenerator;
-import jeecartographytool.utils.mtcflow.standalone.MTCStandaloneUtils;
-
 import org.eclipse.ui.*;
-import org.eclipse.ui.ide.IDE;
-
 import CartographyDescription.Application;
-
-import com.mtcflow.engine.core.MTCChoreographer;
 
 /**
  * This is a sample new wizard. Its role is to create a new file resource in the
@@ -84,18 +63,16 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 
 	public void addPages() {
 
-		page = new ProjectSelectionPage(this, "JEE Cartography Project Setup.",
-				selectedFiles);
+		page = new ProjectSelectionPage(this, "JEE Cartography Project Setup.", selectedFiles);
 		addPage(page);
-		pagei = new SelectedClassesPage("Selected Source Code Units.",
-				selectedFiles);
+		pagei = new SelectedClassesPage("Selected Source Code Units.", selectedFiles);
 		addPage(pagei);
 		pagePost = new SelectedHeuristicsPage("Heuristics.");
-		ArrayList<IModelHeuristic> postProcClas = new ModelHeuristicsHandler(
-				null).evaluate(Platform.getExtensionRegistry());
-		if (!postProcClas.isEmpty()) {
-			addPage(pagePost);
-		}
+		// ArrayList<IModelHeuristic> postProcClas = new
+		// ModelHeuristicsHandler().evaluate(Platform.getExtensionRegistry());
+		// if (!postProcClas.isEmpty()) {
+		addPage(pagePost);
+		// }
 
 	}
 
@@ -110,11 +87,9 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 	public boolean performFinish() {
 		// final String containerName = page.getContainerName();
 		final String fileName = page.getFileName();
-		selectedPostProcessingClasses = pagePost
-				.getSelectedPostProcessingClasses();
+		selectedPostProcessingClasses = pagePost.getSelectedPostProcessingClasses();
 		IRunnableWithProgress op = new IRunnableWithProgress() {
-			public void run(IProgressMonitor monitor)
-					throws InvocationTargetException {
+			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
 					doFinish(fileName, monitor);
 				} catch (Exception e) {
@@ -131,9 +106,7 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 			return false;
 		} catch (InvocationTargetException e) {
 
-			MessageDialog.openError(getShell(), "Error",
-					"An error ocurred during de parsing operation.\n"
-							+ e.getTargetException().getMessage());
+			MessageDialog.openError(getShell(), "Error", "An error ocurred during de parsing operation.\n" + e.getTargetException().getMessage());
 			e.printStackTrace();
 			return false;
 		}
@@ -156,11 +129,10 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		IProject project = root.getProject(fileName);
-		
+
 		project.create(null);
 		project.open(null);
-		
-		
+
 		IProjectDescription description = project.getDescription();
 		String[] natures = description.getNatureIds();
 		String[] newNatures = new String[natures.length + 1];
@@ -169,8 +141,6 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 		description.setNatureIds(newNatures);
 		project.setDescription(description, null);
 
-
-		
 		IResource resource = root.findMember(project.getFullPath() + "/Models");
 
 		IContainer container = (IContainer) resource;
@@ -186,8 +156,7 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 
 		rcs = openContentStream(monitor, fileName);
 		monitor.done();
-		monitor.beginTask("Saving Modisco model..",
-				3 + selectedPostProcessingClasses.size());
+		monitor.beginTask("Saving Modisco model..", 3 + selectedPostProcessingClasses.size());
 
 		/*
 		 * try { rcs.save(fout, null); } catch (Exception e) {
@@ -201,68 +170,35 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 
 		Model moapp = (Model) rcs.getContents().get(0);
 
-		TransformationChoreographer tc = new TransformationChoreographer(moapp,
-				project.getName(), selectedPostProcessingClasses,
-				pagei.getSelectedFiles());
+		
+		TransformationChoreographer tc = new TransformationChoreographer(moapp, project.getName(), selectedPostProcessingClasses, pagei.getSelectedFiles(),new ModelStereoTyperHandler().evaluate(Platform.getExtensionRegistry()).get(0));
 		Application appcrt = tc.excuteCartographyOperations(monitor);
 
 		System.out.println("+++>" + appcrt);
 
 		final IFile filecrt = container.getFile(new Path(fileName + "Cpy.jcp"));
-		
+
 		monitor.setTaskName("Reorganizing sources, please wait...");
 		monitor.worked(1);
-		new BuildReorganizedProject().createReorganizedProject(filecrt, appcrt,project);
-		//ModelUtils.saveModel(appcrt, filecrt);
 
-		// InputStream stream = new ByteArrayInputStream(cmp.getXMIModel(appcrt,
-		// fileName +"Cpy.xmi").getBytes());
-		/*
-		 * if (filecrt.exists()) { filecrt.setContents(stream, true, true,
-		 * monitor); } else { filecrt.create(stream, true, monitor); }
-		 * stream.close();
-		 */
+		if (pagei.isReorganizeCode()) {
+			new BuildReorganizedProject().createReorganizedProject(filecrt, appcrt, project);
+		}else{
+			ModelUtils.saveModel(appcrt, filecrt);
 
-		String prjPath = project.getLocation().toString() + "/";
-		/*
-		 * final HashMap<String, Object> variables = new HashMap<String,
-		 * Object>(); variables.put("JavaModel",fileName);
-		 * variables.put("CartographyModel", prjPath +
-		 * JeeCartographyProjectBuilder.MODELS_DIR + "/" + project.getName() +
-		 * "Cartography.xmi");
-		 * 
-		 * final MTCChoreographer choreographer =
-		 * MTCStandaloneUtils.startMTC(project, "JeeCartographyTool",
-		 * "javatocart.mtc", variables, null);
-		 * 
-		 * 
-		 * choreographer.start(); choreographer.modelReady("OraForms6 Model",
-		 * null);
-		 */
+		}
+
 
 		monitor.setTaskName("Opening Project and Model, please wait...");
 		monitor.worked(1);
 
-		/*
-		 * getShell().getDisplay().asyncExec(new Runnable() { public void run()
-		 * { IWorkbenchPage page = PlatformUI.getWorkbench()
-		 * .getActiveWorkbenchWindow().getActivePage(); try {
-		 * IDE.openEditor(page, file, true); } catch (PartInitException e) {
-		 * e.printStackTrace(); } } });
-		 */
-		
 		IFile repr = project.getFile("representations.aird"); // such as
 																// file.exists()
 																// == false
-		String contents = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<viewpoint:DAnalysis xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:CartographyDescription=\"www.csw.uniandes.edu.co/CartographyDescription/1.0\" xmlns:viewpoint=\"http://www.eclipse.org/sirius/1.1.0\" xmi:id=\"_2pmvAIO9EeS0-7BL-QPfmg\" version=\"8.1.1\">\n  <models xmi:type=\"CartographyDescription:Application\" href=\"Models/"
-				+ fileName + "Cpy.jcp#/\"/>\n</viewpoint:DAnalysis>";
+		String contents = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<viewpoint:DAnalysis xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:CartographyDescription=\"www.csw.uniandes.edu.co/CartographyDescription/1.0\" xmlns:viewpoint=\"http://www.eclipse.org/sirius/1.1.0\" xmi:id=\"_2pmvAIO9EeS0-7BL-QPfmg\" version=\"8.1.1\">\n  <models xmi:type=\"CartographyDescription:Application\" href=\"Models/" + fileName + "Cpy.jcp#/\"/>\n</viewpoint:DAnalysis>";
 		InputStream source = new ByteArrayInputStream(contents.getBytes());
 		repr.create(source, false, null);
 
-		
-		
-		
-		
 		monitor.worked(1);
 		System.out.println("-> Conversion finished without errors");
 		project.refreshLocal(IResource.DEPTH_INFINITE, null);
@@ -281,8 +217,7 @@ public class AppToModelWizard extends Wizard implements INewWizard {
 		ModelGenerator mg = new ModelGenerator();
 		mg.setMonitor(monitor);
 
-		Resource javaModel = mg.prepareVirtualProject(pagei.getSelectedFiles(),
-				filename + "Vrt");
+		Resource javaModel = mg.prepareVirtualProject(pagei.getSelectedFiles(), filename + "Vrt");
 
 		return javaModel;
 

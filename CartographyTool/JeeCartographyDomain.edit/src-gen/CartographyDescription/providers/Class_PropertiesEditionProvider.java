@@ -6,7 +6,7 @@ package CartographyDescription.providers;
 import CartographyDescription.CartographyDescriptionPackage;
 
 import CartographyDescription.components.ClassPropertiesEditionComponent;
-import CartographyDescription.Class;
+
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -50,7 +50,7 @@ public class Class_PropertiesEditionProvider extends PropertiesEditingProviderIm
 	 * 
 	 */
 	public boolean provides(PropertiesEditingContext editingContext) {
-		return (editingContext.getEObject() instanceof Class) 
+		return (editingContext.getEObject() instanceof CartographyDescription.Class) 
 					&& (CartographyDescriptionPackage.Literals.CLASS == editingContext.getEObject().eClass());
 	}
 
@@ -60,7 +60,7 @@ public class Class_PropertiesEditionProvider extends PropertiesEditingProviderIm
 	 * 
 	 */
 	public boolean provides(PropertiesEditingContext editingContext, String part) {
-		return (editingContext.getEObject() instanceof Class) && (ClassPropertiesEditionComponent.BASE_PART.equals(part));
+		return (editingContext.getEObject() instanceof CartographyDescription.Class) && (ClassPropertiesEditionComponent.BASE_PART.equals(part));
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class Class_PropertiesEditionProvider extends PropertiesEditingProviderIm
 	 */
 	@SuppressWarnings("rawtypes")
 	public boolean provides(PropertiesEditingContext editingContext, java.lang.Class refinement) {
-		return (editingContext.getEObject() instanceof Class) && (refinement == ClassPropertiesEditionComponent.class);
+		return (editingContext.getEObject() instanceof CartographyDescription.Class) && (refinement == ClassPropertiesEditionComponent.class);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class Class_PropertiesEditionProvider extends PropertiesEditingProviderIm
 	 */
 	@SuppressWarnings("rawtypes")
 	public boolean provides(PropertiesEditingContext editingContext, String part, java.lang.Class refinement) {
-		return (editingContext.getEObject() instanceof Class) && ((ClassPropertiesEditionComponent.BASE_PART.equals(part) && refinement == ClassPropertiesEditionComponent.class));
+		return (editingContext.getEObject() instanceof CartographyDescription.Class) && ((ClassPropertiesEditionComponent.BASE_PART.equals(part) && refinement == ClassPropertiesEditionComponent.class));
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class Class_PropertiesEditionProvider extends PropertiesEditingProviderIm
 	 * 
 	 */
 	public IPropertiesEditionComponent getPropertiesEditingComponent(PropertiesEditingContext editingContext, String mode) {
-		if (editingContext.getEObject() instanceof Class) {
+		if (editingContext.getEObject() instanceof CartographyDescription.Class) {
 			return new ClassPropertiesEditionComponent(editingContext, editingContext.getEObject(), mode);
 		}
 		return super.getPropertiesEditingComponent(editingContext, mode);
@@ -101,7 +101,7 @@ public class Class_PropertiesEditionProvider extends PropertiesEditingProviderIm
 	 * 
 	 */
 	public IPropertiesEditionComponent getPropertiesEditingComponent(PropertiesEditingContext editingContext, String mode, String part) {
-		if (editingContext.getEObject() instanceof Class) {
+		if (editingContext.getEObject() instanceof CartographyDescription.Class) {
 			if (ClassPropertiesEditionComponent.BASE_PART.equals(part))
 				return new ClassPropertiesEditionComponent(editingContext, editingContext.getEObject(), mode);
 		}
@@ -114,7 +114,7 @@ public class Class_PropertiesEditionProvider extends PropertiesEditingProviderIm
 	 */
 	@SuppressWarnings("rawtypes")
 	public IPropertiesEditionComponent getPropertiesEditingComponent(PropertiesEditingContext editingContext, String mode, String part, java.lang.Class refinement) {
-		if (editingContext.getEObject() instanceof Class) {
+		if (editingContext.getEObject() instanceof CartographyDescription.Class) {
 			if (ClassPropertiesEditionComponent.BASE_PART.equals(part)
 				&& refinement == ClassPropertiesEditionComponent.class)
 				return new ClassPropertiesEditionComponent(editingContext, editingContext.getEObject(), mode);

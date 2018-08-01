@@ -10,8 +10,12 @@ import CartographyDescription.Attribute;
 import CartographyDescription.Bussiness;
 import CartographyDescription.CartographyDescriptionPackage;
 import CartographyDescription.CartographyElement;
+import CartographyDescription.Constructor;
 import CartographyDescription.ElementRelation;
 import CartographyDescription.Entity;
+import CartographyDescription.EnumLiteral;
+import CartographyDescription.EnumLiteralvalue;
+import CartographyDescription.Enumeration;
 import CartographyDescription.Interface;
 import CartographyDescription.Layer;
 import CartographyDescription.Method;
@@ -179,6 +183,22 @@ public class CartographyDescriptionAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseException(CartographyDescription.Exception object) {
 				return createExceptionAdapter();
+			}
+			@Override
+			public Adapter caseEnumeration(Enumeration object) {
+				return createEnumerationAdapter();
+			}
+			@Override
+			public Adapter caseEnumLiteral(EnumLiteral object) {
+				return createEnumLiteralAdapter();
+			}
+			@Override
+			public Adapter caseEnumLiteralvalue(EnumLiteralvalue object) {
+				return createEnumLiteralvalueAdapter();
+			}
+			@Override
+			public Adapter caseConstructor(Constructor object) {
+				return createConstructorAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -519,6 +539,62 @@ public class CartographyDescriptionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExceptionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CartographyDescription.Enumeration <em>Enumeration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CartographyDescription.Enumeration
+	 * @generated
+	 */
+	public Adapter createEnumerationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CartographyDescription.EnumLiteral <em>Enum Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CartographyDescription.EnumLiteral
+	 * @generated
+	 */
+	public Adapter createEnumLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CartographyDescription.EnumLiteralvalue <em>Enum Literalvalue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CartographyDescription.EnumLiteralvalue
+	 * @generated
+	 */
+	public Adapter createEnumLiteralvalueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CartographyDescription.Constructor <em>Constructor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CartographyDescription.Constructor
+	 * @generated
+	 */
+	public Adapter createConstructorAdapter() {
 		return null;
 	}
 

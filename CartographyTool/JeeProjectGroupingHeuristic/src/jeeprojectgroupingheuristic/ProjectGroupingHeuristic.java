@@ -5,28 +5,19 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import CartographyDescription.Application;
-import CartographyDescription.Bussiness;
 import CartographyDescription.CartographyDescriptionFactory;
 import CartographyDescription.CartographyElement;
 import CartographyDescription.Class;
 import CartographyDescription.ElementRelation;
-import CartographyDescription.Entity;
-import CartographyDescription.Interface;
 import CartographyDescription.Layer;
 import CartographyDescription.Module;
-import CartographyDescription.PersistenceManager;
-import CartographyDescription.Service;
-import CartographyDescription.UI;
-import CartographyDescription.UnitTest;
 import jeecartographytool.extensions.IModelHeuristic;
 import jeecartographytool.utils.ModelUtils;
 
+
 public class ProjectGroupingHeuristic implements IModelHeuristic {
-	
-	
+
 	private ArrayList<File> originalFiles;
 	private HashMap<String, Class> classes;
 	private ArrayList<ElementRelation> relations = new ArrayList<ElementRelation>();
@@ -34,19 +25,40 @@ public class ProjectGroupingHeuristic implements IModelHeuristic {
 	private CartographyDescriptionFactory cartModelFactory = CartographyDescriptionFactory.eINSTANCE;
 	private String keyPath = "";
 	private int keyPathIdx = 0;
+	
 	public ProjectGroupingHeuristic() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
+	public String getHeuristicName() {
+		// TODO Auto-generated method stub
+		return "Project Grouping Heuristic";
+	}
+
+	@Override
+	public String getHeuristicDescription() {
+		// TODO Auto-generated method stub
+		return "Groups all the classes of an application based on its source project and packages, generating Module elements.";
+	}
+
+	@Override
+	public void setParams(Object[] params) {
+		classes = (HashMap<String, CartographyDescription.Class>) params[0];
+		originalFiles = (ArrayList<File>) params[1];
+		
+	}
+
+
 	public Boolean resolveHeuristic(Application root) {
 		this.root = root;
 		Module mroot = cartModelFactory.createModule();
 		mroot.setName("Project Grouping");
 		calculateDifPackage();
 		for (int i = 0; i < root.getCompilationUnits().size(); i++) {
-			
+			System.out.println("GC>"+root.getCompilationUnits().get(i));
 			Module m =createModule(mroot,getClassFileProject(root.getCompilationUnits().get(i)), root.getCompilationUnits().get(i));
+			System.out.println("G>"+m.getName());
 			mroot.setMaxWeight(mroot.getMaxWeight() < m.getWeight()? m.getWeight() : mroot.getMaxWeight());
 			mroot.setWeight(mroot.getMaxWeight() + m.getWeight());
 			root.getCompilationUnits().get(i).setParentModule(m);
@@ -192,23 +204,7 @@ public class ProjectGroupingHeuristic implements IModelHeuristic {
 		return "Unclassified";
 	}
 
-	@Override
-	public String getHeuristicName() {
-		// TODO Auto-generated method stub
-		return "Class grouping by project and packages.";
-	}
 
-	@Override
-	public String getHeuristicDescription() {
-		// TODO Auto-generated method stub
-		return "Groups all the classes of an application based on its source project and packages, generating Module elements."; 
-	}
-
-	@Override
-	public void setParams(Object[] params) {
-		classes = (HashMap<String, CartographyDescription.Class>) params[0];
-		originalFiles = (ArrayList<File>) params[1];
-		
-	}
-
+	
+	
 }

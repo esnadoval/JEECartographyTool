@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Layer#getCompilationUnits <em>Compilation Units</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getLayer()
  * @model

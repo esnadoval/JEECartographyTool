@@ -12,8 +12,6 @@ import CartographyDescription.ElementRelation;
 import CartographyDescription.Layer;
 import CartographyDescription.Module;
 import CartographyDescription.Pattern;
-import CartographyDescription.Class;
-
 
 import CartographyDescription.parts.ApplicationPropertiesEditionPart;
 import CartographyDescription.parts.CartographyDescriptionViewsRepository;
@@ -602,7 +600,7 @@ public class ApplicationPropertiesEditionComponent extends SinglePartPropertiesE
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
 				compilationUnitsSettings.removeFromReference((EObject) event.getNewValue());
 			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
-				compilationUnitsSettings.move(event.getNewIndex(), (Class) event.getNewValue());
+				compilationUnitsSettings.move(event.getNewIndex(), (CartographyDescription.Class) event.getNewValue());
 			}
 		}
 		if (CartographyDescriptionViewsRepository.Application.Properties.appRelations == event.getAffectedEditor()) {

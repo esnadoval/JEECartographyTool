@@ -11,6 +11,7 @@ import jeecartographytool.defops.RelationResolver;
 import jeecartographytool.defops.TierResolver;
 import jeecartographytool.defops.WeightingResolver;
 import jeecartographytool.extensions.IModelHeuristic;
+import jeecartographytool.extensions.IModelStereoTyper;
 import CartographyDescription.Application;
 import CartographyDescription.RelationType;
 
@@ -20,10 +21,10 @@ public class TransformationChoreographer {
 	private CartographyModelParser cartographyParser;
 	private ArrayList<File> originalFiles;
 	
-	public TransformationChoreographer(Model modiscoRoot, String appName,ArrayList<IModelHeuristic> heuristicsClasses,ArrayList<File>originalFiles){	
+	public TransformationChoreographer(Model modiscoRoot, String appName,ArrayList<IModelHeuristic> heuristicsClasses,ArrayList<File>originalFiles,IModelStereoTyper stereotyper){	
 		this.originalFiles = originalFiles;
 		
-		cartographyParser = new CartographyModelParser(modiscoRoot, appName,originalFiles);
+		cartographyParser = new CartographyModelParser(modiscoRoot, appName,originalFiles,stereotyper);
 		
 	
 		this.heuristicsClasses = heuristicsClasses;

@@ -21,11 +21,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.AttributeImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link CartographyDescription.impl.AttributeImpl#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

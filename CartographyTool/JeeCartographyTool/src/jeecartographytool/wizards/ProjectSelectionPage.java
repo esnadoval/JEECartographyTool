@@ -1,6 +1,5 @@
 package jeecartographytool.wizards;
 
-import java.awt.Dialog;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -9,14 +8,10 @@ import java.util.ArrayList;
 
 import jeecartographytool.utils.FileUtils;
 
-import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardPage;
-import org.eclipse.osgi.storage.bundlefile.FileBundleEntry;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
@@ -27,10 +22,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DirectoryDialog;
-import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -111,22 +104,7 @@ public class ProjectSelectionPage extends WizardPage {
 	 */
 
 	private void initialize() {
-		/*if (selection != null && selection.isEmpty() == false
-				&& selection instanceof IStructuredSelection) {
-			
-			IStructuredSelection ssel = (IStructuredSelection) selection;
-			if (ssel.size() > 1)
-				return;
-			Object obj = ssel.getFirstElement();
-			if (obj instanceof IResource) {
-				IContainer container;
-				if (obj instanceof IContainer)
-					container = (IContainer) obj;
-				else
-					container = ((IResource) obj).getParent();
-				containerText.setText(container.getFullPath().toString());
-			}
-		}*/
+
 		fileText.setText("JEECartographyProject");
 	}
 

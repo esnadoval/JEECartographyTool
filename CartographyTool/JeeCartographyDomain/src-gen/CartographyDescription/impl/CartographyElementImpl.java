@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.CartographyElementImpl#getAnotations <em>Anotations</em>}</li>
  *   <li>{@link CartographyDescription.impl.CartographyElementImpl#getWeight <em>Weight</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link CartographyDescription.impl.CartographyElementImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link CartographyDescription.impl.CartographyElementImpl#getNewFilePath <em>New File Path</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -28,12 +28,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.AnnotationImpl#getName <em>Name</em>}</li>
  *   <li>{@link CartographyDescription.impl.AnnotationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link CartographyDescription.impl.AnnotationImpl#getParams <em>Params</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -10,11 +10,11 @@ package CartographyDescription;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Bussiness#getFrameworkType <em>Framework Type</em>}</li>
  *   <li>{@link CartographyDescription.Bussiness#getUsageStrategy <em>Usage Strategy</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getBussiness()
  * @model

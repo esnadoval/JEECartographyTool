@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Variable#getName <em>Name</em>}</li>
  *   <li>{@link CartographyDescription.Variable#getType <em>Type</em>}</li>
  *   <li>{@link CartographyDescription.Variable#getInhertance <em>Inhertance</em>}</li>
  *   <li>{@link CartographyDescription.Variable#isStatic <em>Static</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getVariable()
  * @model

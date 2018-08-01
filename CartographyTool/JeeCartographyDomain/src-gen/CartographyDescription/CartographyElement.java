@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.CartographyElement#getWeight <em>Weight</em>}</li>
  *   <li>{@link CartographyDescription.CartographyElement#getName <em>Name</em>}</li>
@@ -21,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link CartographyDescription.CartographyElement#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link CartographyDescription.CartographyElement#getNewFilePath <em>New File Path</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getCartographyElement()
  * @model

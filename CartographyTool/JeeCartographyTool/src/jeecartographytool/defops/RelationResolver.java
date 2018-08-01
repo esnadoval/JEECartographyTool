@@ -34,6 +34,7 @@ public class RelationResolver implements IModelHeuristic {
 		
 		for (CartographyDescription.Class cls : app.getCompilationUnits()) {
 			
+
 			if(cls.getExtends() != null){
 				CartographyDescription.Class temp = classes.get(processTypeString(cls.getExtends().getName()));
 				if(temp != null){
@@ -48,15 +49,41 @@ public class RelationResolver implements IModelHeuristic {
 				}
 			}
 			
+			
 			for (Attribute attrs : cls.getAttributes()) {
-				CartographyDescription.Class temp = classes.get(processTypeString(attrs.getVariable().getType().getName()));
-				if(temp != null){
-					cls.getMigRelations().add(createRelation(cls, temp, RelationType.ASOSIATION_VALUE));
+				if(attrs.getVariable() != null){
+					if(attrs.getVariable().getType() != null){
+						if(attrs.getVariable().getType().getName() != null){
+							
+							CartographyDescription.Class temp = classes.get(processTypeString(attrs.getVariable().getType().getName()));
+							if(temp != null){
+								cls.getMigRelations().add(createRelation(cls, temp, RelationType.ASOSIATION_VALUE));
+							}
+							
+						}
+					}
 				}
+				
+
 			}
 			
 			
 			for (Method mtd : cls.getMethods()) {
+				
+				if(mtd.getCode() != null){
+				ArrayList<String> bdyClass = getClassesString(mtd.getCode());
+				
+				for (String string : bdyClass) {
+					CartographyDescription.Class temp = classes.get(string);
+					if(temp != null){
+						cls.getMigRelations().add(createRelation(cls, temp, RelationType.USE_VALUE));
+					}
+				}
+				
+				}
+				
+				
+				
 				
 				for (Variable prms : mtd.getParameters()) {
 					CartographyDescription.Class temp = classes.get(processTypeString(prms.getType().getName()));
@@ -78,6 +105,16 @@ public class RelationResolver implements IModelHeuristic {
 		return false;
 	}
 
+	private ArrayList<String> getClassesString(String ctnt){
+		ArrayList<String> clss = new ArrayList<String>();
+		for (Class cls : app.getCompilationUnits()) {
+			if(ctnt.toLowerCase().matches("[a-z0-9<>,.\\[\\]= -_@\"]*"+cls.getName().toLowerCase()+"[a-z0-9<>,.\\[\\]= -_@\"]*")){
+				clss.add(cls.getName());
+			}
+		}
+		
+		return clss;
+	}
 	private String processTypeString(String typeName){
 		
 		String last= typeName.split(".").length == 0 ? typeName:typeName.split(".")[typeName.split(".").length-1];
@@ -85,7 +122,7 @@ public class RelationResolver implements IModelHeuristic {
 		if(classes.get(last)==null){
 			
 			for (Class cls : app.getCompilationUnits()) {
-				if(last.toLowerCase().matches("[a-z0-9<>,.\\[\\]]*"+cls.getName()+"[a-z0-9<>,.\\[\\]]*")){
+				if(last.toLowerCase().matches("[a-z0-9<>,.\\[\\]]*"+cls.getName().toLowerCase()+"[a-z0-9<>,.\\[\\]]*")){
 					last = cls.getName();
 					return last;
 				}

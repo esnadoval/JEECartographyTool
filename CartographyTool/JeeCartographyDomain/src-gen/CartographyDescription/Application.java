@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Application#getModules <em>Modules</em>}</li>
  *   <li>{@link CartographyDescription.Application#getLayers <em>Layers</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link CartographyDescription.Application#getAppRelations <em>App Relations</em>}</li>
  *   <li>{@link CartographyDescription.Application#getPaterns <em>Paterns</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getApplication()
  * @model

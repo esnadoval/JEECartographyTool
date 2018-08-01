@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.LayerImpl#getCompilationUnits <em>Compilation Units</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

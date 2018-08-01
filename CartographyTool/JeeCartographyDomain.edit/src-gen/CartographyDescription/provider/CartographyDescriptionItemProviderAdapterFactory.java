@@ -601,6 +601,98 @@ public class CartographyDescriptionItemProviderAdapterFactory extends Cartograph
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link CartographyDescription.Enumeration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumerationItemProvider enumerationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link CartographyDescription.Enumeration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumerationAdapter() {
+		if (enumerationItemProvider == null) {
+			enumerationItemProvider = new EnumerationItemProvider(this);
+		}
+
+		return enumerationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link CartographyDescription.EnumLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumLiteralItemProvider enumLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link CartographyDescription.EnumLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumLiteralAdapter() {
+		if (enumLiteralItemProvider == null) {
+			enumLiteralItemProvider = new EnumLiteralItemProvider(this);
+		}
+
+		return enumLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link CartographyDescription.EnumLiteralvalue} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumLiteralvalueItemProvider enumLiteralvalueItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link CartographyDescription.EnumLiteralvalue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumLiteralvalueAdapter() {
+		if (enumLiteralvalueItemProvider == null) {
+			enumLiteralvalueItemProvider = new EnumLiteralvalueItemProvider(this);
+		}
+
+		return enumLiteralvalueItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link CartographyDescription.Constructor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConstructorItemProvider constructorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link CartographyDescription.Constructor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConstructorAdapter() {
+		if (constructorItemProvider == null) {
+			constructorItemProvider = new ConstructorItemProvider(this);
+		}
+
+		return constructorItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -722,6 +814,10 @@ public class CartographyDescriptionItemProviderAdapterFactory extends Cartograph
 		if (persistenceManagerItemProvider != null) persistenceManagerItemProvider.dispose();
 		if (annotationParameterItemProvider != null) annotationParameterItemProvider.dispose();
 		if (exceptionItemProvider != null) exceptionItemProvider.dispose();
+		if (enumerationItemProvider != null) enumerationItemProvider.dispose();
+		if (enumLiteralItemProvider != null) enumLiteralItemProvider.dispose();
+		if (enumLiteralvalueItemProvider != null) enumLiteralvalueItemProvider.dispose();
+		if (constructorItemProvider != null) constructorItemProvider.dispose();
 	}
 
 }

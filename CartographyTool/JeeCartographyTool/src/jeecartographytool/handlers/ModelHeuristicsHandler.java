@@ -1,13 +1,6 @@
 package jeecartographytool.handlers;
 
-
 import java.util.ArrayList;
-
-
-
-
-
-
 
 import jeecartographytool.extensions.IModelHeuristic;
 
@@ -20,53 +13,30 @@ import org.eclipse.gmt.modisco.java.Model;
 
 import CartographyDescription.Application;
 
-
-
-
-
 public class ModelHeuristicsHandler {
-  private static final String EXTENSION_ID = 
-      "jeecartographytool.heuristics";
+	private static final String EXTENSION_ID = "jeecartographytool.heuristics";
 
-  private Application model;
-  
-  private ArrayList<IModelHeuristic> postProcessingClasess = new ArrayList<IModelHeuristic>(); 
-  
-  public ModelHeuristicsHandler(Application model) {
-	this.model = model;
- }
- 
-    
-  public ArrayList<IModelHeuristic> evaluate(IExtensionRegistry registry) {
-    IConfigurationElement[] config =
-        registry.getConfigurationElementsFor(EXTENSION_ID);
-    try {
-      for (IConfigurationElement e : config) {
-        System.out.println("Evaluating extension");
-        final Object o =
-            e.createExecutableExtension("class");
-        if (o instanceof IModelHeuristic) {
-          postProcessingClasess.add((IModelHeuristic) o);
-        }
-      }
-    } catch (CoreException ex) {
-      System.out.println(ex.getMessage());
-    }
-    return postProcessingClasess;
-  }
+	private ArrayList<IModelHeuristic> postProcessingClasess = new ArrayList<IModelHeuristic>();
 
-  public void executeExtension(final Object o) {
-    ISafeRunnable runnable = new ISafeRunnable() {
-      @Override
-      public void handleException(Throwable e) {
-        System.out.println("Exception in client");
-      }
+	public ModelHeuristicsHandler() {
+		
+	}
 
-      @Override
-      public void run() throws Exception {
-        ((IModelHeuristic) o).resolveHeuristic(model);
-      }
-    };
-    SafeRunner.run(runnable);
-  }
-} 
+	public ArrayList<IModelHeuristic> evaluate(IExtensionRegistry registry) {
+		IConfigurationElement[] config = registry.getConfigurationElementsFor(EXTENSION_ID);
+		try {
+			for (IConfigurationElement e : config) {
+				System.out.println("Evaluating extension");
+				final Object o = e.createExecutableExtension("class");
+				if (o instanceof IModelHeuristic) {
+					postProcessingClasess.add((IModelHeuristic) o);
+				}
+			}
+		} catch (CoreException ex) {
+			System.out.println(ex.getMessage());
+		}
+		return postProcessingClasess;
+	}
+
+
+}

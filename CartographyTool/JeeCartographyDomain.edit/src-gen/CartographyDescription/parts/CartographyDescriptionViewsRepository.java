@@ -1025,4 +1025,166 @@ public class CartographyDescriptionViewsRepository {
 	
 	}
 
+	/**
+	 * Enumeration view descriptor
+	 * 
+	 */
+	public static class Enumeration {
+		public static class Properties {
+	
+			
+			public static String locs = "CartographyDescription::Enumeration::properties::locs";
+			
+			
+			public static String comments = "CartographyDescription::Enumeration::properties::comments";
+			
+			
+			public static String anotations = "CartographyDescription::Enumeration::properties::anotations";
+			
+			
+			public static String weight = "CartographyDescription::Enumeration::properties::weight";
+			
+			
+			public static String name = "CartographyDescription::Enumeration::properties::name";
+			
+			
+			public static String maxWeight = "CartographyDescription::Enumeration::properties::maxWeight";
+			
+			
+			public static String migRelations = "CartographyDescription::Enumeration::properties::migRelations";
+			
+			
+			public static String parentLayer = "CartographyDescription::Enumeration::properties::parentLayer";
+			
+			
+			public static String parentModule = "CartographyDescription::Enumeration::properties::parentModule";
+			
+			
+			public static String originalFilePath = "CartographyDescription::Enumeration::properties::originalFilePath";
+			
+			
+			public static String newFilePath = "CartographyDescription::Enumeration::properties::newFilePath";
+			
+			
+			public static String visibility = "CartographyDescription::Enumeration::properties::visibility";
+			
+			
+			public static String attributes = "CartographyDescription::Enumeration::properties::attributes";
+			
+			
+			public static String methods = "CartographyDescription::Enumeration::properties::methods";
+			
+			
+			public static String inhertance = "CartographyDescription::Enumeration::properties::inhertance";
+			
+			
+			public static String implements_ = "CartographyDescription::Enumeration::properties::implements";
+			
+			
+			public static String originalFileName = "CartographyDescription::Enumeration::properties::originalFileName";
+			
+			
+			public static String literals = "CartographyDescription::Enumeration::properties::literals";
+			
+	
+		}
+	
+	}
+
+	/**
+	 * EnumLiteral view descriptor
+	 * 
+	 */
+	public static class EnumLiteral {
+		public static class Properties {
+	
+			
+			public static String name = "CartographyDescription::EnumLiteral::properties::name";
+			
+			
+			public static String values = "CartographyDescription::EnumLiteral::properties::values";
+			
+	
+		}
+	
+	}
+
+	/**
+	 * EnumLiteralvalue view descriptor
+	 * 
+	 */
+	public static class EnumLiteralvalue {
+		public static class Properties {
+	
+			
+			public static String value = "CartographyDescription::EnumLiteralvalue::properties::value";
+			
+			
+			public static String attr = "CartographyDescription::EnumLiteralvalue::properties::attr";
+			
+	
+		}
+	
+	}
+
+	/**
+	 * Constructor view descriptor
+	 * 
+	 */
+	public static class Constructor {
+		public static class Properties {
+	
+			
+			public static String locs = "CartographyDescription::Constructor::properties::locs";
+			
+			
+			public static String comments = "CartographyDescription::Constructor::properties::comments";
+			
+			
+			public static String anotations = "CartographyDescription::Constructor::properties::anotations";
+			
+			
+			public static String weight = "CartographyDescription::Constructor::properties::weight";
+			
+			
+			public static String name = "CartographyDescription::Constructor::properties::name";
+			
+			
+			public static String maxWeight = "CartographyDescription::Constructor::properties::maxWeight";
+			
+			
+			public static String migRelations = "CartographyDescription::Constructor::properties::migRelations";
+			
+			
+			public static String parentLayer = "CartographyDescription::Constructor::properties::parentLayer";
+			
+			
+			public static String parentModule = "CartographyDescription::Constructor::properties::parentModule";
+			
+			
+			public static String originalFilePath = "CartographyDescription::Constructor::properties::originalFilePath";
+			
+			
+			public static String newFilePath = "CartographyDescription::Constructor::properties::newFilePath";
+			
+			
+			public static String visibility = "CartographyDescription::Constructor::properties::visibility";
+			
+			
+			public static String code = "CartographyDescription::Constructor::properties::code";
+			
+			
+			public static String parameters = "CartographyDescription::Constructor::properties::parameters";
+			
+			
+			public static String inhertance = "CartographyDescription::Constructor::properties::inhertance";
+			
+			
+			public static String exceptions = "CartographyDescription::Constructor::properties::exceptions";
+			
+	
+		}
+	
+	}
+
 }

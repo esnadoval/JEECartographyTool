@@ -11,8 +11,12 @@ import CartographyDescription.Bussiness;
 import CartographyDescription.CartographyDescriptionFactory;
 import CartographyDescription.CartographyDescriptionPackage;
 import CartographyDescription.CartographyElement;
+import CartographyDescription.Constructor;
 import CartographyDescription.ElementRelation;
 import CartographyDescription.Entity;
+import CartographyDescription.EnumLiteral;
+import CartographyDescription.EnumLiteralvalue;
+import CartographyDescription.Enumeration;
 import CartographyDescription.Inhertance;
 import CartographyDescription.Interface;
 import CartographyDescription.Layer;
@@ -105,6 +109,10 @@ public class CartographyDescriptionFactoryImpl extends EFactoryImpl implements C
 			case CartographyDescriptionPackage.PERSISTENCE_MANAGER: return createPersistenceManager();
 			case CartographyDescriptionPackage.ANNOTATION_PARAMETER: return createAnnotationParameter();
 			case CartographyDescriptionPackage.EXCEPTION: return createException();
+			case CartographyDescriptionPackage.ENUMERATION: return createEnumeration();
+			case CartographyDescriptionPackage.ENUM_LITERAL: return createEnumLiteral();
+			case CartographyDescriptionPackage.ENUM_LITERALVALUE: return createEnumLiteralvalue();
+			case CartographyDescriptionPackage.CONSTRUCTOR: return createConstructor();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -376,6 +384,46 @@ public class CartographyDescriptionFactoryImpl extends EFactoryImpl implements C
 	public CartographyDescription.Exception createException() {
 		ExceptionImpl exception = new ExceptionImpl();
 		return exception;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Enumeration createEnumeration() {
+		EnumerationImpl enumeration = new EnumerationImpl();
+		return enumeration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumLiteral createEnumLiteral() {
+		EnumLiteralImpl enumLiteral = new EnumLiteralImpl();
+		return enumLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumLiteralvalue createEnumLiteralvalue() {
+		EnumLiteralvalueImpl enumLiteralvalue = new EnumLiteralvalueImpl();
+		return enumLiteralvalue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Constructor createConstructor() {
+		ConstructorImpl constructor = new ConstructorImpl();
+		return constructor;
 	}
 
 	/**

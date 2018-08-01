@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Module#getSubModules <em>Sub Modules</em>}</li>
  *   <li>{@link CartographyDescription.Module#getCartographyElements <em>Cartography Elements</em>}</li>
  *   <li>{@link CartographyDescription.Module#getLayers <em>Layers</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getModule()
  * @model

@@ -26,12 +26,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.ModuleImpl#getSubModules <em>Sub Modules</em>}</li>
  *   <li>{@link CartographyDescription.impl.ModuleImpl#getCartographyElements <em>Cartography Elements</em>}</li>
  *   <li>{@link CartographyDescription.impl.ModuleImpl#getLayers <em>Layers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

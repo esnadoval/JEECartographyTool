@@ -6,8 +6,6 @@ package CartographyDescription.components;
 // Start of user code for imports
 import CartographyDescription.Annotation;
 import CartographyDescription.Attribute;
-import CartographyDescription.Class;
-
 import CartographyDescription.CartographyDescriptionFactory;
 import CartographyDescription.CartographyDescriptionPackage;
 import CartographyDescription.ElementRelation;
@@ -141,7 +139,7 @@ public class ClassPropertiesEditionComponent extends SinglePartPropertiesEditing
 		if (editingPart != null && key == partKey) {
 			editingPart.setContext(elt, allResource);
 			
-			final Class class_ = (Class)elt;
+			final CartographyDescription.Class class_ = (CartographyDescription.Class)elt;
 			final Class_PropertiesEditionPart basePart = (Class_PropertiesEditionPart)editingPart;
 			// init values
 			if (isAccessible(CartographyDescriptionViewsRepository.Class_.Properties.locs)) {
@@ -412,7 +410,7 @@ public class ClassPropertiesEditionComponent extends SinglePartPropertiesEditing
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
-		Class class_ = (Class)semanticObject;
+		CartographyDescription.Class class_ = (CartographyDescription.Class)semanticObject;
 		if (CartographyDescriptionViewsRepository.Class_.Properties.locs == event.getAffectedEditor()) {
 			class_.setLocs((EEFConverterUtil.createLongFromString(EcorePackage.Literals.ELONG, (String)event.getNewValue())));
 		}

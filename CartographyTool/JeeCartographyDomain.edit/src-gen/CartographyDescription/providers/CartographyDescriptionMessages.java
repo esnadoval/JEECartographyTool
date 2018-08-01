@@ -82,6 +82,18 @@ public class CartographyDescriptionMessages extends NLS {
 	
 	public static String ExceptionPropertiesEditionPart_PropertiesGroupLabel;
 
+	
+	public static String EnumerationPropertiesEditionPart_PropertiesGroupLabel;
+
+	
+	public static String EnumLiteralPropertiesEditionPart_PropertiesGroupLabel;
+
+	
+	public static String EnumLiteralvaluePropertiesEditionPart_PropertiesGroupLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_PropertiesGroupLabel;
+
 
 	
 	public static String Application_ReadOnly;
@@ -220,6 +232,30 @@ public class CartographyDescriptionMessages extends NLS {
 
 	
 	public static String Exception_Part_Title;
+
+	
+	public static String Enumeration_ReadOnly;
+
+	
+	public static String Enumeration_Part_Title;
+
+	
+	public static String EnumLiteral_ReadOnly;
+
+	
+	public static String EnumLiteral_Part_Title;
+
+	
+	public static String EnumLiteralvalue_ReadOnly;
+
+	
+	public static String EnumLiteralvalue_Part_Title;
+
+	
+	public static String Constructor_ReadOnly;
+
+	
+	public static String Constructor_Part_Title;
 
 
 	
@@ -956,6 +992,120 @@ public class CartographyDescriptionMessages extends NLS {
 
 	
 	public static String ExceptionPropertiesEditionPart_NameLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_LocsLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_CommentsLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_AnotationsLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_WeightLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_NameLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_MaxWeightLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_MigRelationsLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_ParentLayerLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_ParentModuleLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_OriginalFilePathLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_NewFilePathLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_VisibilityLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_AttributesLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_MethodsLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_InhertanceLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_Implements_Label;
+
+	
+	public static String EnumerationPropertiesEditionPart_OriginalFileNameLabel;
+
+	
+	public static String EnumerationPropertiesEditionPart_LiteralsLabel;
+
+	
+	public static String EnumLiteralPropertiesEditionPart_NameLabel;
+
+	
+	public static String EnumLiteralPropertiesEditionPart_ValuesLabel;
+
+	
+	public static String EnumLiteralvaluePropertiesEditionPart_ValueLabel;
+
+	
+	public static String EnumLiteralvaluePropertiesEditionPart_AttrLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_LocsLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_CommentsLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_AnotationsLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_WeightLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_NameLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_MaxWeightLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_MigRelationsLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_ParentLayerLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_ParentModuleLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_OriginalFilePathLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_NewFilePathLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_VisibilityLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_CodeLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_ParametersLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_InhertanceLabel;
+
+	
+	public static String ConstructorPropertiesEditionPart_ExceptionsLabel;
 
 
 	

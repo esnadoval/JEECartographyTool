@@ -4,13 +4,13 @@
   <artifactId>CHANGEMEB</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-        <!-- embedded glassfish 3.1.2 --> 
+     
         <dependency>
-            <groupId>org.glassfish.main.extras</groupId>
-            <artifactId>glassfish-embedded-all</artifactId>
-            <version>4.0</version> 
-            <scope>provided</scope> 
-        </dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+		</dependency>
+
         <dependency> 
             <groupId>javax.ws.rs</groupId>
             <artifactId>jsr311-api</artifactId>
@@ -43,6 +43,7 @@
             <scope>test</scope>
         </dependency>
         
-     
+     	CHANGEMEC
+     	
     </dependencies>
 </project>

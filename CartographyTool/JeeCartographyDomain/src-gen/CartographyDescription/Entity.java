@@ -10,12 +10,12 @@ package CartographyDescription;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Entity#getFrameworkType <em>Framework Type</em>}</li>
  *   <li>{@link CartographyDescription.Entity#getDbTable <em>Db Table</em>}</li>
  *   <li>{@link CartographyDescription.Entity#getPersistenceMode <em>Persistence Mode</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getEntity()
  * @model

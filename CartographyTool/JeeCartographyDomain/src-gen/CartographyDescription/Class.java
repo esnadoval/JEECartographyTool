@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Class#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link CartographyDescription.Class#getAttributes <em>Attributes</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link CartographyDescription.Class#getExtends <em>Extends</em>}</li>
  *   <li>{@link CartographyDescription.Class#getOriginalFileName <em>Original File Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getClass_()
  * @model

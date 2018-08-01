@@ -10,8 +10,12 @@ import CartographyDescription.Attribute;
 import CartographyDescription.Bussiness;
 import CartographyDescription.CartographyDescriptionPackage;
 import CartographyDescription.CartographyElement;
+import CartographyDescription.Constructor;
 import CartographyDescription.ElementRelation;
 import CartographyDescription.Entity;
+import CartographyDescription.EnumLiteral;
+import CartographyDescription.EnumLiteralvalue;
+import CartographyDescription.Enumeration;
 import CartographyDescription.Interface;
 import CartographyDescription.Layer;
 import CartographyDescription.Method;
@@ -68,7 +72,7 @@ public class CartographyDescriptionSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -271,6 +275,38 @@ public class CartographyDescriptionSwitch<T> extends Switch<T> {
 			case CartographyDescriptionPackage.EXCEPTION: {
 				CartographyDescription.Exception exception = (CartographyDescription.Exception)theEObject;
 				T result = caseException(exception);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CartographyDescriptionPackage.ENUMERATION: {
+				Enumeration enumeration = (Enumeration)theEObject;
+				T result = caseEnumeration(enumeration);
+				if (result == null) result = caseClass(enumeration);
+				if (result == null) result = caseCartographyElement(enumeration);
+				if (result == null) result = caseStaticMetrics(enumeration);
+				if (result == null) result = caseAnnotatedObject(enumeration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CartographyDescriptionPackage.ENUM_LITERAL: {
+				EnumLiteral enumLiteral = (EnumLiteral)theEObject;
+				T result = caseEnumLiteral(enumLiteral);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CartographyDescriptionPackage.ENUM_LITERALVALUE: {
+				EnumLiteralvalue enumLiteralvalue = (EnumLiteralvalue)theEObject;
+				T result = caseEnumLiteralvalue(enumLiteralvalue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CartographyDescriptionPackage.CONSTRUCTOR: {
+				Constructor constructor = (Constructor)theEObject;
+				T result = caseConstructor(constructor);
+				if (result == null) result = caseMethod(constructor);
+				if (result == null) result = caseCartographyElement(constructor);
+				if (result == null) result = caseStaticMetrics(constructor);
+				if (result == null) result = caseAnnotatedObject(constructor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -620,6 +656,66 @@ public class CartographyDescriptionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseException(CartographyDescription.Exception object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enumeration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enumeration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnumeration(Enumeration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enum Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enum Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnumLiteral(EnumLiteral object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enum Literalvalue</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enum Literalvalue</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnumLiteralvalue(EnumLiteralvalue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constructor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constructor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstructor(Constructor object) {
 		return null;
 	}
 

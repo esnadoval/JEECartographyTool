@@ -35,7 +35,7 @@ public class TierResolver implements IModelHeuristic {
 		paterns.put("Logic", itf);
 
 		Layer ui = cartModelFactory.createLayer();
-		ui.setName("User Interface");
+		ui.setName("UserInterface");
 		paterns.put("UI", ui);
 
 		Layer persist = cartModelFactory.createLayer();

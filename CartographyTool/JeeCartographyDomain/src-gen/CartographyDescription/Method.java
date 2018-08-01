@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Method#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link CartographyDescription.Method#getCode <em>Code</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link CartographyDescription.Method#getInhertance <em>Inhertance</em>}</li>
  *   <li>{@link CartographyDescription.Method#getExceptions <em>Exceptions</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getMethod()
  * @model

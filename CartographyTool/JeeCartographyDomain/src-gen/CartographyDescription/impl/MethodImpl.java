@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.MethodImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link CartographyDescription.impl.MethodImpl#getCode <em>Code</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link CartographyDescription.impl.MethodImpl#getInhertance <em>Inhertance</em>}</li>
  *   <li>{@link CartographyDescription.impl.MethodImpl#getExceptions <em>Exceptions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

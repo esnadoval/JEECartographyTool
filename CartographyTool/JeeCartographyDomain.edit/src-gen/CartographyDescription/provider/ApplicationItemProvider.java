@@ -196,6 +196,11 @@ public class ApplicationItemProvider extends CartographyElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CartographyDescriptionPackage.Literals.APPLICATION__COMPILATION_UNITS,
+				 CartographyDescriptionFactory.eINSTANCE.createEnumeration()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CartographyDescriptionPackage.Literals.APPLICATION__APP_RELATIONS,
 				 CartographyDescriptionFactory.eINSTANCE.createElementRelation()));
 

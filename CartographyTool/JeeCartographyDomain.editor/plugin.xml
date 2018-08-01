@@ -28,7 +28,7 @@
             id="CartographyDescription.presentation.CartographyDescriptionEditorID"
             name="%_UI_CartographyDescriptionEditor_label"
             icon="icons/full/obj16/CartographyDescriptionModelFile.gif"
-            extensions="jcp"
+            extensions="cartographydescription"
             class="CartographyDescription.presentation.CartographyDescriptionEditor"
             contributorClass="CartographyDescription.presentation.CartographyDescriptionActionBarContributor">
       </editor>

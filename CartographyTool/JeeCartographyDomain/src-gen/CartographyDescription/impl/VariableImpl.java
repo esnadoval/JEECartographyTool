@@ -22,13 +22,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link CartographyDescription.impl.VariableImpl#getType <em>Type</em>}</li>
  *   <li>{@link CartographyDescription.impl.VariableImpl#getInhertance <em>Inhertance</em>}</li>
  *   <li>{@link CartographyDescription.impl.VariableImpl#isStatic <em>Static</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

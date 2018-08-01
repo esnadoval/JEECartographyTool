@@ -1,19 +1,11 @@
 package jeecartographytool.wizards;
 
-import java.awt.FlowLayout;
-import java.io.File;
 import java.util.ArrayList;
 
 import jeecartographytool.extensions.IModelHeuristic;
 import jeecartographytool.handlers.ModelHeuristicsHandler;
 
-import org.eclipse.core.resources.IContainer;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
@@ -72,8 +64,7 @@ public class SelectedHeuristicsPage extends WizardPage {
 		used.setVisible(true);
 
 		midL = new Group(container, 0);
-		midL.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, true, 1,
-				2));
+		midL.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, true, 1, 2));
 		midL.setLayout(new FillLayout(SWT.VERTICAL));
 		midL.setText("Execution Order");
 		midL.setVisible(true);
@@ -202,8 +193,7 @@ public class SelectedHeuristicsPage extends WizardPage {
 		ava.setLayout(new FillLayout(SWT.HORIZONTAL));
 		ava.setVisible(true);
 
-		selectPostProc = new List(used, SWT.BORDER | SWT.V_SCROLL
-				| SWT.H_SCROLL);
+		selectPostProc = new List(used, SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL);
 
 		selectPostProc.addMouseListener(new MouseListener() {
 			int lastSelected;
@@ -258,19 +248,11 @@ public class SelectedHeuristicsPage extends WizardPage {
 			}
 		});
 
-		postProcClas = new ModelHeuristicsHandler(null).evaluate(Platform
-				.getExtensionRegistry());
+		postProcClas = new ModelHeuristicsHandler().evaluate(Platform.getExtensionRegistry());
 
 		for (IModelHeuristic iModelPostProcessing : postProcClas) {
 
 			selectPostProc.add(iModelPostProcessing.getHeuristicName());
-			/*
-			 * Button tmp = new Button(container, SWT.CHECK);
-			 * tmp.setText(iModelPostProcessing.getHeuristicName());
-			 * tmp.setToolTipText
-			 * (iModelPostProcessing.getHeuristicDescription());
-			 * tmp.setSelection(true); checks.add(tmp);
-			 */
 		}
 
 		setControl(container);
@@ -283,8 +265,7 @@ public class SelectedHeuristicsPage extends WizardPage {
 
 		for (int i = 0; i < selectPostProc.getItemCount(); i++) {
 			for (IModelHeuristic iModelHeuristic : postProcClas) {
-				if (selectPostProc.getItem(i).toString()
-						.equals(iModelHeuristic.getHeuristicName())) {
+				if (selectPostProc.getItem(i).toString().equals(iModelHeuristic.getHeuristicName())) {
 					selected.add(iModelHeuristic);
 				}
 			}

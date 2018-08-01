@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.StaticMetrics#getLocs <em>Locs</em>}</li>
  *   <li>{@link CartographyDescription.StaticMetrics#getComments <em>Comments</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getStaticMetrics()
  * @model

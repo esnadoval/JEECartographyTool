@@ -229,6 +229,42 @@ public interface CartographyDescriptionFactory extends EFactory {
 	Exception createException();
 
 	/**
+	 * Returns a new object of class '<em>Enumeration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enumeration</em>'.
+	 * @generated
+	 */
+	Enumeration createEnumeration();
+
+	/**
+	 * Returns a new object of class '<em>Enum Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enum Literal</em>'.
+	 * @generated
+	 */
+	EnumLiteral createEnumLiteral();
+
+	/**
+	 * Returns a new object of class '<em>Enum Literalvalue</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enum Literalvalue</em>'.
+	 * @generated
+	 */
+	EnumLiteralvalue createEnumLiteralvalue();
+
+	/**
+	 * Returns a new object of class '<em>Constructor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constructor</em>'.
+	 * @generated
+	 */
+	Constructor createConstructor();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

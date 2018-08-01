@@ -3078,6 +3078,487 @@ public interface CartographyDescriptionPackage extends EPackage {
 	int EXCEPTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link CartographyDescription.impl.EnumerationImpl <em>Enumeration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CartographyDescription.impl.EnumerationImpl
+	 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getEnumeration()
+	 * @generated
+	 */
+	int ENUMERATION = 23;
+
+	/**
+	 * The feature id for the '<em><b>Locs</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__LOCS = CLASS__LOCS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__COMMENTS = CLASS__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Anotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__ANOTATIONS = CLASS__ANOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__WEIGHT = CLASS__WEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__NAME = CLASS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Max Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__MAX_WEIGHT = CLASS__MAX_WEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Mig Relations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__MIG_RELATIONS = CLASS__MIG_RELATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Layer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__PARENT_LAYER = CLASS__PARENT_LAYER;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__PARENT_MODULE = CLASS__PARENT_MODULE;
+
+	/**
+	 * The feature id for the '<em><b>Original File Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__ORIGINAL_FILE_PATH = CLASS__ORIGINAL_FILE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>New File Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__NEW_FILE_PATH = CLASS__NEW_FILE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__VISIBILITY = CLASS__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__ATTRIBUTES = CLASS__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Methods</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__METHODS = CLASS__METHODS;
+
+	/**
+	 * The feature id for the '<em><b>Modisco Class Declaration</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__MODISCO_CLASS_DECLARATION = CLASS__MODISCO_CLASS_DECLARATION;
+
+	/**
+	 * The feature id for the '<em><b>Inhertance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__INHERTANCE = CLASS__INHERTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Implements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__IMPLEMENTS = CLASS__IMPLEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Extends</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__EXTENDS = CLASS__EXTENDS;
+
+	/**
+	 * The feature id for the '<em><b>Original File Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__ORIGINAL_FILE_NAME = CLASS__ORIGINAL_FILE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__LITERALS = CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Enumeration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_FEATURE_COUNT = CLASS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Enumeration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_OPERATION_COUNT = CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CartographyDescription.impl.EnumLiteralImpl <em>Enum Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CartographyDescription.impl.EnumLiteralImpl
+	 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getEnumLiteral()
+	 * @generated
+	 */
+	int ENUM_LITERAL = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERAL__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Values</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERAL__VALUES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Enum Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERAL_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Enum Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERAL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link CartographyDescription.impl.EnumLiteralvalueImpl <em>Enum Literalvalue</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CartographyDescription.impl.EnumLiteralvalueImpl
+	 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getEnumLiteralvalue()
+	 * @generated
+	 */
+	int ENUM_LITERALVALUE = 25;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERALVALUE__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Attr</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERALVALUE__ATTR = 1;
+
+	/**
+	 * The number of structural features of the '<em>Enum Literalvalue</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERALVALUE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Enum Literalvalue</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERALVALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link CartographyDescription.impl.ConstructorImpl <em>Constructor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CartographyDescription.impl.ConstructorImpl
+	 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getConstructor()
+	 * @generated
+	 */
+	int CONSTRUCTOR = 26;
+
+	/**
+	 * The feature id for the '<em><b>Locs</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__LOCS = METHOD__LOCS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__COMMENTS = METHOD__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Anotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__ANOTATIONS = METHOD__ANOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__WEIGHT = METHOD__WEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__NAME = METHOD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Max Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__MAX_WEIGHT = METHOD__MAX_WEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Mig Relations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__MIG_RELATIONS = METHOD__MIG_RELATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Layer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__PARENT_LAYER = METHOD__PARENT_LAYER;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__PARENT_MODULE = METHOD__PARENT_MODULE;
+
+	/**
+	 * The feature id for the '<em><b>Original File Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__ORIGINAL_FILE_PATH = METHOD__ORIGINAL_FILE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>New File Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__NEW_FILE_PATH = METHOD__NEW_FILE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__VISIBILITY = METHOD__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__CODE = METHOD__CODE;
+
+	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__RETURN_TYPE = METHOD__RETURN_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__PARAMETERS = METHOD__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Inhertance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__INHERTANCE = METHOD__INHERTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Exceptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR__EXCEPTIONS = METHOD__EXCEPTIONS;
+
+	/**
+	 * The number of structural features of the '<em>Constructor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_FEATURE_COUNT = METHOD_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Constructor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_OPERATION_COUNT = METHOD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link CartographyDescription.RelationType <em>Relation Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3085,7 +3566,7 @@ public interface CartographyDescriptionPackage extends EPackage {
 	 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getRelationType()
 	 * @generated
 	 */
-	int RELATION_TYPE = 23;
+	int RELATION_TYPE = 27;
 
 	/**
 	 * The meta object id for the '{@link CartographyDescription.Visibility <em>Visibility</em>}' enum.
@@ -3095,7 +3576,7 @@ public interface CartographyDescriptionPackage extends EPackage {
 	 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getVisibility()
 	 * @generated
 	 */
-	int VISIBILITY = 24;
+	int VISIBILITY = 28;
 
 	/**
 	 * The meta object id for the '{@link CartographyDescription.Inhertance <em>Inhertance</em>}' enum.
@@ -3105,7 +3586,7 @@ public interface CartographyDescriptionPackage extends EPackage {
 	 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getInhertance()
 	 * @generated
 	 */
-	int INHERTANCE = 25;
+	int INHERTANCE = 29;
 
 
 	/**
@@ -4010,6 +4491,101 @@ public interface CartographyDescriptionPackage extends EPackage {
 	EAttribute getException_Name();
 
 	/**
+	 * Returns the meta object for class '{@link CartographyDescription.Enumeration <em>Enumeration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enumeration</em>'.
+	 * @see CartographyDescription.Enumeration
+	 * @generated
+	 */
+	EClass getEnumeration();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link CartographyDescription.Enumeration#getLiterals <em>Literals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Literals</em>'.
+	 * @see CartographyDescription.Enumeration#getLiterals()
+	 * @see #getEnumeration()
+	 * @generated
+	 */
+	EReference getEnumeration_Literals();
+
+	/**
+	 * Returns the meta object for class '{@link CartographyDescription.EnumLiteral <em>Enum Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enum Literal</em>'.
+	 * @see CartographyDescription.EnumLiteral
+	 * @generated
+	 */
+	EClass getEnumLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CartographyDescription.EnumLiteral#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see CartographyDescription.EnumLiteral#getName()
+	 * @see #getEnumLiteral()
+	 * @generated
+	 */
+	EAttribute getEnumLiteral_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link CartographyDescription.EnumLiteral#getValues <em>Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Values</em>'.
+	 * @see CartographyDescription.EnumLiteral#getValues()
+	 * @see #getEnumLiteral()
+	 * @generated
+	 */
+	EReference getEnumLiteral_Values();
+
+	/**
+	 * Returns the meta object for class '{@link CartographyDescription.EnumLiteralvalue <em>Enum Literalvalue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enum Literalvalue</em>'.
+	 * @see CartographyDescription.EnumLiteralvalue
+	 * @generated
+	 */
+	EClass getEnumLiteralvalue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link CartographyDescription.EnumLiteralvalue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see CartographyDescription.EnumLiteralvalue#getValue()
+	 * @see #getEnumLiteralvalue()
+	 * @generated
+	 */
+	EAttribute getEnumLiteralvalue_Value();
+
+	/**
+	 * Returns the meta object for the reference '{@link CartographyDescription.EnumLiteralvalue#getAttr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Attr</em>'.
+	 * @see CartographyDescription.EnumLiteralvalue#getAttr()
+	 * @see #getEnumLiteralvalue()
+	 * @generated
+	 */
+	EReference getEnumLiteralvalue_Attr();
+
+	/**
+	 * Returns the meta object for class '{@link CartographyDescription.Constructor <em>Constructor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constructor</em>'.
+	 * @see CartographyDescription.Constructor
+	 * @generated
+	 */
+	EClass getConstructor();
+
+	/**
 	 * Returns the meta object for enum '{@link CartographyDescription.RelationType <em>Relation Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4779,6 +5355,86 @@ public interface CartographyDescriptionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXCEPTION__NAME = eINSTANCE.getException_Name();
+
+		/**
+		 * The meta object literal for the '{@link CartographyDescription.impl.EnumerationImpl <em>Enumeration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CartographyDescription.impl.EnumerationImpl
+		 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getEnumeration()
+		 * @generated
+		 */
+		EClass ENUMERATION = eINSTANCE.getEnumeration();
+
+		/**
+		 * The meta object literal for the '<em><b>Literals</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENUMERATION__LITERALS = eINSTANCE.getEnumeration_Literals();
+
+		/**
+		 * The meta object literal for the '{@link CartographyDescription.impl.EnumLiteralImpl <em>Enum Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CartographyDescription.impl.EnumLiteralImpl
+		 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getEnumLiteral()
+		 * @generated
+		 */
+		EClass ENUM_LITERAL = eINSTANCE.getEnumLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENUM_LITERAL__NAME = eINSTANCE.getEnumLiteral_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Values</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENUM_LITERAL__VALUES = eINSTANCE.getEnumLiteral_Values();
+
+		/**
+		 * The meta object literal for the '{@link CartographyDescription.impl.EnumLiteralvalueImpl <em>Enum Literalvalue</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CartographyDescription.impl.EnumLiteralvalueImpl
+		 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getEnumLiteralvalue()
+		 * @generated
+		 */
+		EClass ENUM_LITERALVALUE = eINSTANCE.getEnumLiteralvalue();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENUM_LITERALVALUE__VALUE = eINSTANCE.getEnumLiteralvalue_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Attr</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENUM_LITERALVALUE__ATTR = eINSTANCE.getEnumLiteralvalue_Attr();
+
+		/**
+		 * The meta object literal for the '{@link CartographyDescription.impl.ConstructorImpl <em>Constructor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CartographyDescription.impl.ConstructorImpl
+		 * @see CartographyDescription.impl.CartographyDescriptionPackageImpl#getConstructor()
+		 * @generated
+		 */
+		EClass CONSTRUCTOR = eINSTANCE.getConstructor();
 
 		/**
 		 * The meta object literal for the '{@link CartographyDescription.RelationType <em>Relation Type</em>}' enum.

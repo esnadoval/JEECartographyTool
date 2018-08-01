@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.ApplicationImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link CartographyDescription.impl.ApplicationImpl#getLayers <em>Layers</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link CartographyDescription.impl.ApplicationImpl#getAppRelations <em>App Relations</em>}</li>
  *   <li>{@link CartographyDescription.impl.ApplicationImpl#getPaterns <em>Paterns</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

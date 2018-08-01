@@ -13,8 +13,12 @@ import CartographyDescription.parts.forms.AttributePropertiesEditionPartForm;
 import CartographyDescription.parts.forms.BussinessPropertiesEditionPartForm;
 import CartographyDescription.parts.forms.CartographyElementPropertiesEditionPartForm;
 import CartographyDescription.parts.forms.Class_PropertiesEditionPartForm;
+import CartographyDescription.parts.forms.ConstructorPropertiesEditionPartForm;
 import CartographyDescription.parts.forms.ElementRelationPropertiesEditionPartForm;
 import CartographyDescription.parts.forms.EntityPropertiesEditionPartForm;
+import CartographyDescription.parts.forms.EnumLiteralPropertiesEditionPartForm;
+import CartographyDescription.parts.forms.EnumLiteralvaluePropertiesEditionPartForm;
+import CartographyDescription.parts.forms.EnumerationPropertiesEditionPartForm;
 import CartographyDescription.parts.forms.ExceptionPropertiesEditionPartForm;
 import CartographyDescription.parts.forms.Interface_PropertiesEditionPartForm;
 import CartographyDescription.parts.forms.LayerPropertiesEditionPartForm;
@@ -37,8 +41,12 @@ import CartographyDescription.parts.impl.AttributePropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.BussinessPropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.CartographyElementPropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.Class_PropertiesEditionPartImpl;
+import CartographyDescription.parts.impl.ConstructorPropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.ElementRelationPropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.EntityPropertiesEditionPartImpl;
+import CartographyDescription.parts.impl.EnumLiteralPropertiesEditionPartImpl;
+import CartographyDescription.parts.impl.EnumLiteralvaluePropertiesEditionPartImpl;
+import CartographyDescription.parts.impl.EnumerationPropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.ExceptionPropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.Interface_PropertiesEditionPartImpl;
 import CartographyDescription.parts.impl.LayerPropertiesEditionPartImpl;
@@ -217,6 +225,30 @@ public class CartographyDescriptionPropertiesEditionPartProvider implements IPro
 				return new ExceptionPropertiesEditionPartImpl(component);
 			if (kind == CartographyDescriptionViewsRepository.FORM_KIND)
 				return new ExceptionPropertiesEditionPartForm(component);
+		}
+		if (key == CartographyDescriptionViewsRepository.Enumeration.class) {
+			if (kind == CartographyDescriptionViewsRepository.SWT_KIND)
+				return new EnumerationPropertiesEditionPartImpl(component);
+			if (kind == CartographyDescriptionViewsRepository.FORM_KIND)
+				return new EnumerationPropertiesEditionPartForm(component);
+		}
+		if (key == CartographyDescriptionViewsRepository.EnumLiteral.class) {
+			if (kind == CartographyDescriptionViewsRepository.SWT_KIND)
+				return new EnumLiteralPropertiesEditionPartImpl(component);
+			if (kind == CartographyDescriptionViewsRepository.FORM_KIND)
+				return new EnumLiteralPropertiesEditionPartForm(component);
+		}
+		if (key == CartographyDescriptionViewsRepository.EnumLiteralvalue.class) {
+			if (kind == CartographyDescriptionViewsRepository.SWT_KIND)
+				return new EnumLiteralvaluePropertiesEditionPartImpl(component);
+			if (kind == CartographyDescriptionViewsRepository.FORM_KIND)
+				return new EnumLiteralvaluePropertiesEditionPartForm(component);
+		}
+		if (key == CartographyDescriptionViewsRepository.Constructor.class) {
+			if (kind == CartographyDescriptionViewsRepository.SWT_KIND)
+				return new ConstructorPropertiesEditionPartImpl(component);
+			if (kind == CartographyDescriptionViewsRepository.FORM_KIND)
+				return new ConstructorPropertiesEditionPartForm(component);
 		}
 		return null;
 	}

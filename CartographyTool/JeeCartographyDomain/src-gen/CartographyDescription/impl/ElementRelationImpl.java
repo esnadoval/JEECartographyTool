@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.ElementRelationImpl#getSrc <em>Src</em>}</li>
  *   <li>{@link CartographyDescription.impl.ElementRelationImpl#getDest <em>Dest</em>}</li>
  *   <li>{@link CartographyDescription.impl.ElementRelationImpl#getRelationType <em>Relation Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

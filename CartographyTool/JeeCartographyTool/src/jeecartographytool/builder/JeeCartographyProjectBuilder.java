@@ -21,7 +21,7 @@ public class JeeCartographyProjectBuilder implements IProjectNature {
 	public static String CARTOGRAPHY_DIR = "Cartography Definition";
 
 	public static String ICONS_DIR = "Icons";
-	public static String DESTINATION_APPS_DIR = "src";
+	public static String DESTINATION_APPS_DIR = "Reorganized Projects";
 	
 
 

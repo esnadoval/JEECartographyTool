@@ -10,11 +10,11 @@ package CartographyDescription;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.Attribute#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link CartographyDescription.Attribute#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getAttribute()
  * @model

@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.ClassImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link CartographyDescription.impl.ClassImpl#getAttributes <em>Attributes</em>}</li>
@@ -41,7 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link CartographyDescription.impl.ClassImpl#getExtends <em>Extends</em>}</li>
  *   <li>{@link CartographyDescription.impl.ClassImpl#getOriginalFileName <em>Original File Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

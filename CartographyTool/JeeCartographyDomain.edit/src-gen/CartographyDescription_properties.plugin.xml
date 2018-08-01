@@ -188,6 +188,30 @@
                id="CartographyDescription.section.Exception"
                tab="Base">
          </propertySection>
+         <propertySection
+               class="CartographyDescription.parts.forms.EnumerationPropertiesEditionPartForm"
+               filter="CartographyDescription.providers.EnumerationPropertiesEditionProvider$EditionFilter"
+               id="CartographyDescription.section.Enumeration"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="CartographyDescription.parts.forms.EnumLiteralPropertiesEditionPartForm"
+               filter="CartographyDescription.providers.EnumLiteralPropertiesEditionProvider$EditionFilter"
+               id="CartographyDescription.section.EnumLiteral"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="CartographyDescription.parts.forms.EnumLiteralvaluePropertiesEditionPartForm"
+               filter="CartographyDescription.providers.EnumLiteralvaluePropertiesEditionProvider$EditionFilter"
+               id="CartographyDescription.section.EnumLiteralvalue"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="CartographyDescription.parts.forms.ConstructorPropertiesEditionPartForm"
+               filter="CartographyDescription.providers.ConstructorPropertiesEditionProvider$EditionFilter"
+               id="CartographyDescription.section.Constructor"
+               tab="Base">
+         </propertySection>
       </propertySections>
    </extension>
  </plugin>

@@ -8,7 +8,7 @@ import CartographyDescription.CartographyDescriptionPackage;
 
 import CartographyDescription.parts.CartographyDescriptionViewsRepository;
 import CartographyDescription.parts.ExceptionPropertiesEditionPart;
-import CartographyDescription.Exception;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.BasicDiagnostic;
@@ -71,7 +71,7 @@ public class ExceptionPropertiesEditionComponent extends SinglePartPropertiesEdi
 		if (editingPart != null && key == partKey) {
 			editingPart.setContext(elt, allResource);
 			
-			final Exception exception = (Exception)elt;
+			final CartographyDescription.Exception exception = (CartographyDescription.Exception)elt;
 			final ExceptionPropertiesEditionPart basePart = (ExceptionPropertiesEditionPart)editingPart;
 			// init values
 			if (isAccessible(CartographyDescriptionViewsRepository.Exception.Properties.name))
@@ -107,7 +107,7 @@ public class ExceptionPropertiesEditionComponent extends SinglePartPropertiesEdi
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
-		Exception exception = (Exception)semanticObject;
+		CartographyDescription.Exception exception = (CartographyDescription.Exception)semanticObject;
 		if (CartographyDescriptionViewsRepository.Exception.Properties.name == event.getAffectedEditor()) {
 			exception.setName((java.lang.String)EEFConverterUtil.createFromString(EcorePackage.Literals.ESTRING, (String)event.getNewValue()));
 		}

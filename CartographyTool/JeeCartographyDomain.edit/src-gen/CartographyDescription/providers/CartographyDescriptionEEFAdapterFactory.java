@@ -197,5 +197,37 @@ public class CartographyDescriptionEEFAdapterFactory extends CartographyDescript
 	public Adapter createExceptionAdapter() {
 		return new ExceptionPropertiesEditionProvider();
 	}
+	/**
+	 * {@inheritDoc}
+	 * @see .CartographyDescription.util.CartographyDescriptionAdapterFactory#createEnumerationAdapter()
+	 * 
+	 */
+	public Adapter createEnumerationAdapter() {
+		return new EnumerationPropertiesEditionProvider();
+	}
+	/**
+	 * {@inheritDoc}
+	 * @see .CartographyDescription.util.CartographyDescriptionAdapterFactory#createEnumLiteralAdapter()
+	 * 
+	 */
+	public Adapter createEnumLiteralAdapter() {
+		return new EnumLiteralPropertiesEditionProvider();
+	}
+	/**
+	 * {@inheritDoc}
+	 * @see .CartographyDescription.util.CartographyDescriptionAdapterFactory#createEnumLiteralvalueAdapter()
+	 * 
+	 */
+	public Adapter createEnumLiteralvalueAdapter() {
+		return new EnumLiteralvaluePropertiesEditionProvider();
+	}
+	/**
+	 * {@inheritDoc}
+	 * @see .CartographyDescription.util.CartographyDescriptionAdapterFactory#createConstructorAdapter()
+	 * 
+	 */
+	public Adapter createConstructorAdapter() {
+		return new ConstructorPropertiesEditionProvider();
+	}
 
 }

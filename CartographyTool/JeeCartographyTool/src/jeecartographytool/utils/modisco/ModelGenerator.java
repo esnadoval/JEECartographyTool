@@ -44,13 +44,13 @@ public class ModelGenerator {
 			
 			for (File file : compilationUnits) {
 				
-				String relative = getPackageFromDir(file);
 				
-				IFile sourceFolderTemp = project.getFile("src/java/"+relative);
+				
+				IFile sourceFolderTemp = project.getFile("src/java/vrt/"+file.getName());
 				
 				FileUtils.prepareFolder((IFolder) sourceFolderTemp.getParent()); 
 				
-				System.out.println("FIL> "+relative);
+				System.out.println("FIL> src/java/vrt/"+file.getName());
 				//IFile filetemp = sourceFolderTemp.getFile(file.getName()); // such
 				if(!sourceFolderTemp.exists()){
 				sourceFolderTemp.create(new FileInputStream(file), false, null);
@@ -86,7 +86,7 @@ public class ModelGenerator {
 	
 	
 
-	
+	/*
 	private String getPackageFromDir(File fil){
 		String[] subDirs = fil.getAbsolutePath().split("\\\\");
 		String packageStr = "/"+subDirs[subDirs.length - 1];
@@ -103,7 +103,7 @@ public class ModelGenerator {
 		}
 		System.out.println("PCKG>"+packageStr);
 		return packageStr.substring(1);
-		}
+		}*/
 	public IProgressMonitor getMonitor() {
 		return monitor;
 	}

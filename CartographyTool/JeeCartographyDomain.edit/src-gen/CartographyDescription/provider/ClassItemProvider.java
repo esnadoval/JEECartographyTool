@@ -231,6 +231,11 @@ public class ClassItemProvider extends CartographyElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CartographyDescriptionPackage.Literals.CLASS__METHODS,
+				 CartographyDescriptionFactory.eINSTANCE.createConstructor()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CartographyDescriptionPackage.Literals.CLASS__MODISCO_CLASS_DECLARATION,
 				 CartographyDescriptionFactory.eINSTANCE.createStaticMetrics()));
 
@@ -343,6 +348,26 @@ public class ClassItemProvider extends CartographyElementItemProvider {
 			(createChildParameter
 				(CartographyDescriptionPackage.Literals.CLASS__MODISCO_CLASS_DECLARATION,
 				 CartographyDescriptionFactory.eINSTANCE.createException()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CartographyDescriptionPackage.Literals.CLASS__MODISCO_CLASS_DECLARATION,
+				 CartographyDescriptionFactory.eINSTANCE.createEnumeration()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CartographyDescriptionPackage.Literals.CLASS__MODISCO_CLASS_DECLARATION,
+				 CartographyDescriptionFactory.eINSTANCE.createEnumLiteral()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CartographyDescriptionPackage.Literals.CLASS__MODISCO_CLASS_DECLARATION,
+				 CartographyDescriptionFactory.eINSTANCE.createEnumLiteralvalue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CartographyDescriptionPackage.Literals.CLASS__MODISCO_CLASS_DECLARATION,
+				 CartographyDescriptionFactory.eINSTANCE.createConstructor()));
 
 		newChildDescriptors.add
 			(createChildParameter

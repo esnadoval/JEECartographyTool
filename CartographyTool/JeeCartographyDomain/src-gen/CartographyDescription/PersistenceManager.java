@@ -10,10 +10,10 @@ package CartographyDescription;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.PersistenceManager#getPersistenceType <em>Persistence Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see CartographyDescription.CartographyDescriptionPackage#getPersistenceManager()
  * @model

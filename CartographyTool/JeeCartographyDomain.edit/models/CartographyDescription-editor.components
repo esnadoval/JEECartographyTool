@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eef-components="http://www.eclipse.org/emf/eef/components/1.0.0" xmlns:eef-ext-edt="http://www.eclipse.org/emf/eef/extended/editor/1.0.0" xmlns:eef-views="http://www.eclipse.org/emf/eef/views/1.0.0">
-  <eef-components:PropertiesEditionContext xmi:id="_DWfmsPD-EeSLnaDcLqfUGg" documentation="Editor contribution for CartographyDescription GenPackage">
-    <categories xsi:type="eef-ext-edt:EEFEditorContributions" xmi:id="_DWfmsfD-EeSLnaDcLqfUGg" name="CartographyDescription contributions">
-      <bindings xsi:type="eef-ext-edt:StaticEEFEditorContribution" xmi:id="_DWfmsvD-EeSLnaDcLqfUGg" name="Main contribution" views="_DWfmtvD-EeSLnaDcLqfUGg">
-        <input xsi:type="eef-ext-edt:AllResourcesRootsRelativeInput" xmi:id="_DWfms_D-EeSLnaDcLqfUGg"/>
+  <eef-components:PropertiesEditionContext xmi:id="_OzWtwGm5EeiYgb2qNwtZXQ" documentation="Editor contribution for CartographyDescription GenPackage">
+    <categories xsi:type="eef-ext-edt:EEFEditorContributions" xmi:id="_OzXU0Gm5EeiYgb2qNwtZXQ" name="CartographyDescription contributions">
+      <bindings xsi:type="eef-ext-edt:StaticEEFEditorContribution" xmi:id="_OzXU0Wm5EeiYgb2qNwtZXQ" name="Main contribution" views="_OzXU1Wm5EeiYgb2qNwtZXQ">
+        <input xsi:type="eef-ext-edt:AllResourcesRootsRelativeInput" xmi:id="_OzXU0mm5EeiYgb2qNwtZXQ"/>
       </bindings>
     </categories>
     <model href="platform:/resource/JeeCartographyDomain/CartographyDescription.genmodel#//CartographyDescription"/>
   </eef-components:PropertiesEditionContext>
-  <eef-views:ViewsRepository xmi:id="_DWfmtPD-EeSLnaDcLqfUGg" documentation="Editor pages for CartographyDescription GenPackage" name="CartographyDescription editor">
+  <eef-views:ViewsRepository xmi:id="_OzXU02m5EeiYgb2qNwtZXQ" documentation="Editor pages for CartographyDescription GenPackage" name="CartographyDescription editor">
     <RepositoryKind>Editor</RepositoryKind>
-    <categories xsi:type="eef-ext-edt:EEFEditorPages" xmi:id="_DWfmtfD-EeSLnaDcLqfUGg" name="CartographyDescription editor pages">
-      <views xsi:type="eef-ext-edt:TreeMasterPage" xmi:id="_DWfmtvD-EeSLnaDcLqfUGg" name="main" title="CartographyDescription"/>
+    <categories xsi:type="eef-ext-edt:EEFEditorPages" xmi:id="_OzXU1Gm5EeiYgb2qNwtZXQ" name="CartographyDescription editor pages">
+      <views xsi:type="eef-ext-edt:TreeMasterPage" xmi:id="_OzXU1Wm5EeiYgb2qNwtZXQ" name="main" title="CartographyDescription"/>
     </categories>
   </eef-views:ViewsRepository>
 </xmi:XMI>

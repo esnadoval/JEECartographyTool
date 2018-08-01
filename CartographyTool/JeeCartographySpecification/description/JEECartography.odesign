@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="cartography" version="8.1.0">
-  <ownedViewpoints name="JEECartography" label="JEECartography" modelFileExtension="xmi">
+  <ownedViewpoints name="JEECartography" label="JEECartography" modelFileExtension="jcp">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="RadialModulesView" label="RadialModulesView" initialisation="true" domainClass="Module">
       <defaultLayer name="Elements" label="Show Elements">
-        <nodeMappings name="ModuleElementModulesView" semanticCandidatesExpression="feature:subModules" domainClass="Module">
+        <nodeMappings name="ModuleElementModulesView" semanticCandidatesExpression="feature:subModules" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='RadialModulesView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" domainClass="Module">
           <style xsi:type="style:EllipseNodeDescription" labelFormat="bold" showIcon="false" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[((((''+self.eGet('weight')).toInteger() / (''+self.eContainer().eGet('maxWeight')).toInteger())*10)+9).floor()/]" verticalDiameterComputationExpression="[((((''+self.eGet('weight')).toInteger() / (''+self.eContainer().eGet('maxWeight')).toInteger())*10)+9).floor()/]">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
+        <toolSections name="dblclkspropertiesview">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="dblProps" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='RadialModulesView']/@defaultLayer/@nodeMappings[name='ModuleElementModulesView']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="dblpropext" id="JeeCartographyTool.setpropsview"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
       <additionalLayers name="Relations" label="Show Relations" activeByDefault="true">
         <edgeMappings name="RelationElementModulesView" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='RadialModulesView']/@defaultLayer/@nodeMappings[name='ModuleElementModulesView']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='RadialModulesView']/@defaultLayer/@nodeMappings[name='ModuleElementModulesView']" targetFinderExpression="[self.cartographyElements-> collect(r|r.migRelations) ->select(r|r.dest.parentModule.eGet('name') &lt;>self.name) -> collect(c|c.dest.parentModule)/]">
@@ -41,10 +50,13 @@
       <filters xsi:type="filter:CompositeFilterDescription" name="HideTstR" label="Hide Test Relations">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView']" semanticConditionExpression="[self.eGet('relationType') = RelationType::test /]"/>
       </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="ShowAnotableElements" label="Show Anotable Elements">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']" semanticConditionExpression="[self.eClass().name = 'Bussiness' /]"/>
+      </filters>
       <layout xsi:type="description_1:OrderedTreeLayout" childrenExpression="[self.eGet('migRelations') -> collect(t|t.eGet('dest'))/]" nodeMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']"/>
       <defaultLayer name="Elements" label="Show Elements">
         <containerMappings name="ModuleContentLayer" semanticCandidatesExpression="feature:layers" domainClass="Layer">
-          <subNodeMappings name="ModuleContentCompilationUnit" semanticCandidatesExpression="feature:compilationUnits" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblOpenClass']" domainClass="Class">
+          <subNodeMappings name="ModuleContentCompilationUnit" semanticCandidatesExpression="feature:compilationUnits" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" domainClass="Class">
             <conditionnalStyles predicateExpression="[self.eClass().name = 'Interface'/]">
               <style xsi:type="style:SquareDescription" labelFormat="bold" showIcon="false" labelPosition="node" resizeKind="NSEW" width="20" height="5">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -109,18 +121,18 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
-        <toolSections name="extFunctions">
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="dblOpenClass" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']">
+        <toolSections name="dblclkspropertiesview">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="dblProps" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit'] //@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="openaclass" id="JeeCartographyTool.openclass"/>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="dblpropext" id="JeeCartographyTool.setpropsview"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
       <additionalLayers name="Relations" label="Show Relations" activeByDefault="true">
-        <edgeMappings name="RelationElementModulesContentView" semanticCandidatesExpression="[self.cartographyElements -> collect(s|s.migRelations)/]" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']" targetFinderExpression="feature:dest" sourceFinderExpression="feature:src" domainClass="ElementRelation" useDomainElement="true">
+        <edgeMappings name="RelationElementModulesContentView" semanticCandidatesExpression="[self.cartographyElements -> collect(s|s.migRelations)/]" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']" targetFinderExpression="feature:dest" sourceFinderExpression="feature:src" domainClass="ElementRelation" useDomainElement="true">
           <style sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription>
@@ -198,9 +210,18 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
+        <toolSections name="dblclkspropertiesview">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="dblProps" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleLayersView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesLayersView']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="dblpropext" id="JeeCartographyTool.setpropsview"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
       <additionalLayers name="Relations" label="Show Relations" activeByDefault="true">
-        <edgeMappings name="RelationElementModulesLayersView" semanticCandidatesExpression="[self.cartographyElements -> collect(s|s.migRelations) -> select(r|r.dest.parentLayer.eGet('name') &lt;> r.src.parentLayer.eGet('name') )/]" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleLayersView']/@defaultLayer/@nodeMappings[name='LayerLayersView']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleLayersView']/@defaultLayer/@nodeMappings[name='LayerLayersView']" targetFinderExpression="[self.dest.parentModule.layers -> select(e|e.name = self.dest.parentLayer.name)/]" sourceFinderExpression="[self.src.parentModule.layers -> select(e|e.name = self.src.parentLayer.name)/]" domainClass="ElementRelation" useDomainElement="true">
+        <edgeMappings name="RelationElementModulesLayersView" semanticCandidatesExpression="[self.cartographyElements -> collect(s|s.migRelations) -> select(r|r.dest.parentLayer.eGet('name') &lt;> r.src.parentLayer.eGet('name') )/]" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleLayersView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleLayersView']/@defaultLayer/@nodeMappings[name='LayerLayersView']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleLayersView']/@defaultLayer/@nodeMappings[name='LayerLayersView']" targetFinderExpression="[self.dest.parentModule.layers -> select(e|e.name = self.dest.parentLayer.name)/]" sourceFinderExpression="[self.src.parentModule.layers -> select(e|e.name = self.src.parentLayer.name)/]" domainClass="ElementRelation" useDomainElement="true">
           <conditionnalStyles predicateExpression="[self.eGet('relationType') = RelationType::use /]">
             <style lineStyle="dash" sizeComputationExpression="1">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -263,8 +284,11 @@
       <filters xsi:type="filter:CompositeFilterDescription" name="HideTstR" label="Hide Test Relations">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementLayersContentView']" semanticConditionExpression="[self.eGet('relationType') = RelationType::test /]"/>
       </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="ShowAnotableElements" label="Show Anotable Elements">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ModuleContentView']/@defaultLayer/@containerMappings[name='ModuleContentLayer']/@subNodeMappings[name='ModuleContentCompilationUnit']" semanticConditionExpression="[self.eClass().name = 'Bussiness' /]"/>
+      </filters>
       <defaultLayer name="Elements" label="Show Elements">
-        <nodeMappings name="LayerContentCompilationUnit" semanticCandidatesExpression="feature:compilationUnits" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@toolSection/@ownedTools[name='dblOpenClass']" domainClass="Class">
+        <nodeMappings name="LayerContentCompilationUnit" semanticCandidatesExpression="feature:compilationUnits" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" domainClass="Class">
           <conditionnalStyles predicateExpression="[self.eClass().name = 'Interface'/]">
             <style xsi:type="style:SquareDescription" labelFormat="bold" showIcon="false" labelPosition="node" resizeKind="NSEW" width="20" height="5">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -322,9 +346,18 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
+        <toolSections name="dblclkspropertiesview">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="dblProps" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@nodeMappings[name='LayerContentCompilationUnit'] //@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementLayersContentView']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="dblpropext" id="JeeCartographyTool.setpropsview"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
       <additionalLayers name="Relations" label="Show Relations" activeByDefault="true">
-        <edgeMappings name="RelationElementLayersContentView" semanticCandidatesExpression="[self.compilationUnits-> collect(s|s.migRelations)/]" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@nodeMappings[name='LayerContentCompilationUnit']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@nodeMappings[name='LayerContentCompilationUnit']" targetFinderExpression="feature:dest" sourceFinderExpression="feature:src" domainClass="ElementRelation" useDomainElement="true">
+        <edgeMappings name="RelationElementLayersContentView" semanticCandidatesExpression="[self.compilationUnits-> collect(s|s.migRelations)/]" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@nodeMappings[name='LayerContentCompilationUnit']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@nodeMappings[name='LayerContentCompilationUnit']" targetFinderExpression="feature:dest" sourceFinderExpression="feature:src" domainClass="ElementRelation" useDomainElement="true">
           <style sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription>
@@ -373,17 +406,8 @@
           </conditionnalStyles>
         </edgeMappings>
       </additionalLayers>
-      <toolSection name="extFunctions">
-        <ownedTools xsi:type="tool:DoubleClickDescription" name="dblOpenClass" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='LayerGridContentView']/@defaultLayer/@nodeMappings[name='LayerContentCompilationUnit']">
-          <element name="element"/>
-          <elementView name="elementView"/>
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="openaclass" id="JeeCartographyTool.openclass"/>
-          </initialOperation>
-        </ownedTools>
-      </toolSection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" name="SummaryView" label="SummaryView" initialisation="true" showOnStartup="true" domainClass="CartographyDescription.Application">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="SummaryView" label="SummaryView" initialisation="true" domainClass="CartographyDescription.Application">
       <subItemMappings name="RootsModuleView" domainClass="CartographyDescription.Module" semanticCandidatesExpression="feature:modules">
         <defaultStyle iconPath="JeeCartographyTool/icons/fgicon.gif">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -399,8 +423,9 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </defaultStyle>
-            <popupMenus name="Details">
-              <menuItemDescriptions xsi:type="tool_1:ExternalJavaAction" name="openClass" label="Open Source Code" id="JeeCartographyTool.openclass"/>
+            <popupMenus name="EditClass" label="Options">
+              <menuItemDescriptions xsi:type="tool_1:ExternalJavaAction" name="OpenDlg" label="Edit Contents" id="org.eclipse.sirius.eef.actions.openPropertiesWizard"/>
+              <menuItemDescriptions xsi:type="tool_1:ExternalJavaAction" name="vwDetails" label="View Details" id="JeeCartographyTool.setpropsview"/>
             </popupMenus>
           </subItemMappings>
           <subItemMappings name="ModuleSummaryModuleView" domainClass="CartographyDescription.Module" semanticCandidatesExpression="feature:subModules" reusedTreeItemMappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='SummaryView']/@subItemMappings[name='RootsModuleView']/@subItemMappings[name='ModuleSummaryView']/@subItemMappings[name='ModuleSummaryModuleView']">
@@ -409,8 +434,122 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </defaultStyle>
           </subItemMappings>
+          <popupMenus name="EditModul" label="Options">
+            <menuItemDescriptions xsi:type="tool_1:ExternalJavaAction" name="OpenDlg" label="Edit Contents" id="org.eclipse.sirius.eef.actions.openPropertiesWizard"/>
+            <menuItemDescriptions xsi:type="tool_1:ExternalJavaAction" name="vwDetails" label="View Details" id="JeeCartographyTool.setpropsview"/>
+          </popupMenus>
         </subItemMappings>
+        <popupMenus name="EditRoot" label="Options">
+          <menuItemDescriptions xsi:type="tool_1:ExternalJavaAction" name="OpenDlg" label="Edit Contents" id="org.eclipse.sirius.eef.actions.openPropertiesWizard"/>
+          <menuItemDescriptions xsi:type="tool_1:ExternalJavaAction" name="vwDetails" label="View Details" id="JeeCartographyTool.setpropsview"/>
+        </popupMenus>
       </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ServicesContentView" initialisation="true" domainClass="Module">
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideElements" label="Hide Single Elements">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@containerMappings[name='ServiceClassUnit']/@subNodeMappings[name='ServiceMethod']" viewConditionExpression="[self.eGet('outgoingEdges')->select(o|o.eGet('visible')=true) -> size() > 0 or self.eGet('incomingEdges')->select(o|o.eGet('visible')=true)-> size() > 0/]"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideUseR" label="Hide Assosiation Relations">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView']" semanticConditionExpression="[self.eGet('relationType') = RelationType::use /]"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideAsocR" label="Hide Usage Relations">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView']" semanticConditionExpression="[self.eGet('relationType') = RelationType::asosiation /]"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideRealR" label="Hide Realization Relations">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView']" semanticConditionExpression="[self.eGet('relationType') = RelationType::realization/]"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideImplR" label="Hide Implemetation Relations">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView']" semanticConditionExpression="[self.eGet('relationType') = RelationType::implements /]"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideTstR" label="Hide Test Relations">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView']" semanticConditionExpression="[self.eGet('relationType') = RelationType::test /]"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="ShowAnotableElements" label="Show Anotable Elements">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@containerMappings[name='ServiceClassUnit']/@subNodeMappings[name='ServiceMethod']" semanticConditionExpression="[self.eClass().name = 'Bussiness' /]"/>
+      </filters>
+      <defaultLayer name="Elements" label="Show Elements">
+        <nodeMappings name="Entities" label="Entities" semanticCandidatesExpression="feature:cartographyElements" domainClass="Entity">
+          <style xsi:type="style:SquareDescription" labelFormat="bold" showIcon="false" labelPosition="node" resizeKind="NSEW" width="20" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <containerMappings name="ServiceClassUnit" semanticCandidatesExpression="feature:cartographyElements" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" domainClass="Service">
+          <subNodeMappings name="ServiceMethod" label="ServiceMethod" semanticCandidatesExpression="feature:methods" domainClass="Method">
+            <style xsi:type="style:SquareDescription" labelFormat="bold" showIcon="false" labelPosition="node" resizeKind="NSEW" width="20" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" labelFormat="bold" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="dblclkspropertiesview">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="dblProps" mappings="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@additionalLayers[name='Relations']/@edgeMappings[name='RelationElementModulesContentView'] //@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@containerMappings[name='ServiceClassUnit']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="dblpropext" id="JeeCartographyTool.setpropsview"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Relations" label="Show Relations" activeByDefault="true">
+        <edgeMappings name="RelationElementModulesContentView" semanticCandidatesExpression="[self.cartographyElements -> collect(s|s.migRelations)/]" doubleClickDescription="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@toolSections.0/@ownedTools[name='dblProps']" sourceMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@containerMappings[name='ServiceClassUnit']" targetMapping="//@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@containerMappings[name='ServiceClassUnit']/@subNodeMappings[name='ServiceMethod'] //@ownedViewpoints[name='JEECartography']/@ownedRepresentations[name='ServicesContentView']/@defaultLayer/@nodeMappings[name='Entities']" targetFinderExpression="feature:dest" sourceFinderExpression="feature:src" domainClass="ElementRelation" useDomainElement="true">
+          <style sizeComputationExpression="1">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[self.eGet('relationType') = RelationType::use /]">
+            <style lineStyle="dash" sizeComputationExpression="1">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.eGet('relationType') = RelationType::asosiation /]">
+            <style sizeComputationExpression="1">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.eGet('relationType') = RelationType::realization/]">
+            <style targetArrow="InputClosedArrow" sizeComputationExpression="1">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.eGet('relationType') = RelationType::implements /]">
+            <style targetArrow="InputFillClosedArrow" sizeComputationExpression="1">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.eGet('relationType') = RelationType::test /]">
+            <style sizeComputationExpression="1">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+      </additionalLayers>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>

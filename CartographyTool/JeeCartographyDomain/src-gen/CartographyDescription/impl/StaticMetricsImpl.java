@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link CartographyDescription.impl.StaticMetricsImpl#getLocs <em>Locs</em>}</li>
  *   <li>{@link CartographyDescription.impl.StaticMetricsImpl#getComments <em>Comments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
